@@ -1,0 +1,17 @@
+/*
+*Selector: el elemento al que vamos a aplicar estilos
+*Propiedad: lo que vamos a cambiar
+*Valor: el nuevo valor que le vamos a dar a la propiedad
+*Declaracion: el conjunto de propiedad y valor
+*Regla: conjunto de selector+declaracion(es)
+*/
+/*
+selector{
+    propiedad:valor;
+    propiedad2:valor;
+    propiedad3:valor
+}
+*/
+*{
+    background-color: cadetblue;
+}

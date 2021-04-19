@@ -1,0 +1,67 @@
+/*SELECTORES*/
+
+
+/* 
+    Selectores Simples
+        Selectores elementales
+            Selector Universal -> *
+            Selector de tipo o etiqueta -> nombre de la etiqueta
+        Selectoes de atributo
+        id -> #(no se recomienda usar)
+        clase -> .
+        otros atributos
+            [atributo]
+            [atributo=valor]
+            [atributo^=valor] ==> busca el atributo que tenga el valor en la primer posicion.
+            [atributo*=valor] ==> busca el atributo que tenga el valor en cualquier posicion.
+            [atributo$=valor] ==> busca el atributo que tenga el valor en la ultima posicion.
+            [atributo|=valor] ==> busca el atributo que tenga el valor en la primer posicion sin importar que tenga un guion(-) delante de la palagra,funciona para lang.
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores Combinadores
+        Pseudoclases - Pseudoelementos
+*/
+
+*{
+    background-color: silver;
+}
+
+/* h1{
+    background-color: skyblue;
+}
+
+p{
+    background-color: slategray;
+} */
+
+#title{
+    background-color: seashell;
+}
+
+.text{
+    background-color: slategray;
+}
+
+[href]{
+    background-color: cornflowerblue;
+}
+
+[href="https//:www.google.com"]{
+    background-color: cornsilk;
+}
+
+[href^="color"]{
+    background-color: darksalmon;
+}
+
+[href*="verde"]{
+    background-color: green;
+}
+
+[href$="ultimo"]{
+    background-color: greenyellow;
+}
+
+[lang|="en"]{
+    background-color: skyblue;
+}
