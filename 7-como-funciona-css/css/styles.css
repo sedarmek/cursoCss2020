@@ -1,0 +1,44 @@
+/*
+COMO FUNCIONA CSS
+*Especificidad -> establece lo especifico de un elemento para saber que estilo aplicar.
+Formula:
+            Etiquetas y pseudoelementos 001
+            clases, atributos y pseudoclases 010
+            Ids 100
+            Estilos en linea 1000
+            ***!important tiene priodad en todos, pero no se debe usar nunca.
+*Cascada -> Funciona siempre que la especificidad tenga el mismo valor en los elementos.
+
+*Herencia -> Es la capacidad de un elemento de heredar sus propiedades, con inherit se obtiene explicitamente la herencia, y con initial se obtiene las propiedades por defecto.
+
+*/
+/*Especificidad ejemplos
+h1{
+    background-color: cornflowerblue;
+}
+
+h1.title#title{
+    background-color: crimson;
+}
+
+h1.title{
+    background-color: cornsilk;
+}*/
+
+/*Herencia*/
+
+.title{
+    color: cadetblue;
+}
+
+span{
+    color: initial;
+}
+
+.text-sin-div{
+    color:cornflowerblue;
+}
+
+.text-sin-div #link-inherit{
+    color: inherit;
+}

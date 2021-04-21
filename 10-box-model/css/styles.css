@@ -1,0 +1,30 @@
+/*BOX MODEL
+Las propiedades width y height funcionan en los bloques, pero en las lineas no.
+
+Margin: funciona en los elementos de bloque y en los elementos de linea, pero en estos ultimos solo con left y right.
+margin-top,margin-right,margin-bottom,margin-left.
+4 elementos -> top,right,botton,left.
+3 elementos -> top,right/left,bottom.
+2 elementos -> top/botton,right/left.
+1 elemento -> top/bottom/right/left.
+
+
+
+*/
+
+
+body{
+    background-color: #333;
+}
+
+.block{
+    background-color: skyblue;
+    width: 250px;
+    height: 250px;
+}
+/*No funciona en este elemento*/
+.inline{
+    background-color: purple;
+    width: 250px;
+    height: 250px;
+}

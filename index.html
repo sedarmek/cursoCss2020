@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Forma 1 y correcta de conectar css-->
-    <link rel="stylesheet" href="6-selectores/css/styles.css">
+    <link rel="stylesheet" href="8-estilos-por-defecto/Normalize.css">
+    <link rel="stylesheet" href="9-prepros/css/styles-dist.css">
 
     <!--Forma 2 de conectar css, se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.-->
     <!--
@@ -23,21 +24,30 @@
     -->
     <title>Document</title>
 </head>
-<body>
-    <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
-    <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
-    -->
-    <h1 id="title">Conectar html y css</h1>
-    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt placeat saepe, rem corrupti in tenetur ea eaque dolor soluta beatae nisi temporibus debitis laborum, harum non excepturi recusandae suscipit.</p>
+    <body>
+        <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
+        <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
+        -->
+        <h1 class="title" id="title">Conectar html <span> y </span> css</h1>
+        
+        <a href="https//:www.google.com">Pagina de google</a>
+        <a href="color-modo-random">Color random</a>
+        <a href="#seccion-verde-ultimo">Color verde</a>
+        <a href="color-rojo">Color rojo</a>
 
-    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsam tempore enim, ea esse provident aliquam illo neque et. Eos sit provident quod eum laboriosam, placeat eaque consequuntur maxime fuga?</p>
+        <p class="text-sin-div">Lorem ipsum dolor sit amet consectetur <a id="link-inherit" href="#">link</a> adipisicing elit. Eligendi <a href="#">otro link</a> magnam nobis minus nam necessitatibus amet, dolore provident eius magni aperiam harum velit quis veniam in vitae. Natus labore ipsa vero!</p>
 
-    <a href="https//:www.google.com">Pagina de google</a>
-    <a href="color-modo-random">Color random</a>
-    <a href="#seccion-verde-ultimo">Color verde</a>
-    <a href="color-rojo">Color rojo</a>
+        <div>
 
-    <p lang="en-USA">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquid rerum libero modi, dignissimos, dolores, enim blanditiis officia ipsa eligendi qui. Ipsum vitae fugit nisi rerum, quia adipisci praesentium ut!</p>
-    
-</body>
+            <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt placeat saepe, rem corrupti in tenetur ea eaque dolor soluta beatae nisi temporibus debitis laborum, hlarum non excepturi recusandae suscipit.</p>
+            
+            <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsam tempore enim, ea esse provident aliquam illo neque et. Eos sit provident quod eum laboriosam, placeat eaque consequuntur maxime fuga?</p>
+            
+            
+            <p class="text-3" lang="en-USA">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquid rerum libero modi, dignissimos, dolores, enim blanditiis officia ipsa eligendi qui. Ipsum vitae fugit nisi rerum, quia adipisci praesentium ut!</p>
+        </div>
+
+        <p class="text-sin-div-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eveniet quas commodi, praesentium blanditiis soluta, omnis pariatur, ullam atque quaerat facere nostrum. Minus unde exercitationem iusto nostrum. Tempore, assumenda quod?</p>
+        
+    </body>
 </html>

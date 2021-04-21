@@ -2,13 +2,15 @@
 
 
 /* 
-    Selectores Simples
+    Selectores Simples---------------------
         Selectores elementales
             Selector Universal -> *
             Selector de tipo o etiqueta -> nombre de la etiqueta
+
         Selectoes de atributo
         id -> #(no se recomienda usar)
         clase -> .
+
         otros atributos
             [atributo]
             [atributo=valor]
@@ -16,32 +18,39 @@
             [atributo*=valor] ==> busca el atributo que tenga el valor en cualquier posicion.
             [atributo$=valor] ==> busca el atributo que tenga el valor en la ultima posicion.
             [atributo|=valor] ==> busca el atributo que tenga el valor en la primer posicion sin importar que tenga un guion(-) delante de la palagra,funciona para lang.
-    Selectores Compuestos
-        Selectores Agrupados
+
+    Selectores Compuestos-----------------------
+        Selectores Agrupados: usan comas para trabajar con mas de un elemento.
+        
         Selectores Combinadores
+            Selector descente: se usa el espacio para seleccionar el atributo hijo, por buena practica se recomienda no mas de dos.
+            Selector de hermano siguiente "+": selecciona al hermano adyacente.
+            Selector de hermanos siguientes "~": selecciona a todos los hermanos siguientes.
+            Selector de hijos directos ">": selecciona solo los hijos directos.
+
         Pseudoclases - Pseudoelementos
 */
 
 *{
     background-color: silver;
 }
-
-/* h1{
+/*Selector de tipo
+h1{
     background-color: skyblue;
 }
 
 p{
     background-color: slategray;
 } */
-
+/*Selector de atributo por id
 #title{
     background-color: seashell;
 }
-
+Selector de atributo por clase
 .text{
     background-color: slategray;
 }
-
+Selector de otros tipos de atributos "[]"
 [href]{
     background-color: cornflowerblue;
 }
@@ -64,4 +73,30 @@ p{
 
 [lang|="en"]{
     background-color: skyblue;
+}
+*/
+/*Selector agrupado
+.text-1,
+.text-2,
+.text-3{
+    background-color: slategray;
+}
+*/
+
+/*Selector descendente
+div p{
+    background-color: cadetblue;
+}
+*/
+/*Selector de hermano siguiente
+h1 + a{
+    background-color: chartreuse;
+}*/
+/*Selector de hermanos siguientes
+.text-1 ~ p{
+    background-color: chocolate;
+}*/
+
+body > p{
+    background-color: cornflowerblue;
 }

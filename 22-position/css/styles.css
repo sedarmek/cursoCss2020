@@ -1,0 +1,78 @@
+/*POSITION*/
+
+/*Position relative: conserva el espacio reservado, se coloca respecto a su misma posicion.
+Position absolute: no conserva el espacio reservado, se coloca respecto al contenedor mas cercano.
+*/
+/*
+.box-3 span{
+    font-size: initial;
+}
+.box-1, .box-2, .box-3{
+    width: 250px;
+    height: 250px;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.box-1{
+    background-color: grey;
+    position:relative;
+    left:25px;
+    top:50px;
+    z-index: 1;
+}
+
+.box-2{
+    background-color:slategrey;
+    position:relative;
+}
+
+.box-3{
+    background-color: slategrey;
+    position: relative;
+    top: 80px;
+}*/
+/*Position Absolute*/
+.container{
+    width: 400px;
+    height: 400px;
+    border: 3px solid black;
+    /*Se asigna position al container para que pueda funcionar como contenedor de las cajas.*/
+    position:relative;
+}
+
+[class ^= box]{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+.box1{
+    border: 3px solid rebeccapurple;
+    left: 0px;
+    top: 0px;
+}
+.box2{
+    border: 3px solid red;
+    top: 0px;
+    right: 0px;
+}
+.box3{
+    border: 3px solid blue;
+    bottom: 0px;
+    left: 0px;
+}
+.box4{
+    border: 3px solid green;
+    right: 0px;
+    bottom: 0px;
+}
+.box5{
+    border: 3px solid skyblue;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
