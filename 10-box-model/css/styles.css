@@ -1,5 +1,5 @@
 /*BOX MODEL
-Las propiedades width y height funcionan en los bloques, pero en las lineas no.
+Las propiedades width y height funcionan en los bloques, pero en los elementos de linea no.
 
 Margin: funciona en los elementos de bloque y en los elementos de linea, pero en estos ultimos solo con left y right.
 margin-top,margin-right,margin-bottom,margin-left.
@@ -7,7 +7,7 @@ margin-top,margin-right,margin-bottom,margin-left.
 3 elementos -> top,right/left,bottom.
 2 elementos -> top/botton,right/left.
 1 elemento -> top/bottom/right/left.
-
+nota--Para que un elemento se mueva al usar margin a los lados, debes asignarle un ancho.
 
 
 */
@@ -17,14 +17,26 @@ body{
     background-color: #333;
 }
 
+.title{
+    background-color: steelblue;
+    width: 200px;
+    margin-left: 50px;
+}
+/*Elemento de bloque*/
 .block{
     background-color: skyblue;
     width: 250px;
     height: 250px;
+    /*margin: 60px 20px 20px 0px;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
 }
-/*No funciona en este elemento*/
+/*Elemento de linea*/
 .inline{
     background-color: purple;
     width: 250px;
     height: 250px;
+    margin-left: 25px;
 }
