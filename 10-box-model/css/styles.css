@@ -7,16 +7,58 @@ margin-top,margin-right,margin-bottom,margin-left.
 3 elementos -> top,right/left,bottom.
 2 elementos -> top/botton,right/left.
 1 elemento -> top/bottom/right/left.
-nota--Para que un elemento se mueva al usar margin a los lados, debes asignarle un ancho.
+nota--Para que un elemento se mueva a los lados al usar margin, debes  asignarle un ancho.
+El margin por defectos es de 8 pixeles.
 
 
+Malas practicas
+1.- Usar el selector universal y asignar margin y padding 0
+*{
+    margin: 0;
+    paddin: 0;
+}
+2.- Asignar un pading 0 al body, ya que no tiene sentido.
+
+Padding: funciona en los elementos de bloque y de linea.
+padding-top,padding-right,padding-left,padding-bottom.
+4 elementos -> top,right,botton,left.
+3 elementos -> top,right/left,bottom.
+2 elementos -> top/botton,right/left.
+1 elemento -> top/bottom/right/left.
+nota--El padding puede modificar el tamano del elemento.
+
+Border: es el borde.
+    "border: width style color;"
+    border-width
+        top/right/bottom/left
+        (border-top-width)
+    border-style
+        top/right/bottom/left
+    border-color
+        top/right/bottom/left
+
+Box sizing>>border box: calcula las dimensiones del contenido automaticamente cuando se modifica el padding o el border para que el elemento no cambie su tamano.
+
+Border radius: es un short hand
+border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius.
+
+4 elementos -> esq.sup.izq./esq.sup.der./esq.inf.der/esq.inf.izq
+3 elementos -> esq.sup.izq. ,esq.sup.der./esq.inf.izq,esq.inf.der.
+2 elementos -> esq.sup.izq/esq.inf.der.,esq.sup.der./esq.inf.izq.
+1 elemento -> todas las esquinas.
 */
 
-
+/*Elemento de bloque*/
 body{
     background-color: #333;
+    margin: 0px;
 }
-
+/*Elemento de bloque*/
+.header{
+    background-color: green;
+    height: 50px;
+}
+/*Elemento de bloque*/
 .title{
     background-color: steelblue;
     width: 200px;
@@ -25,18 +67,66 @@ body{
 /*Elemento de bloque*/
 .block{
     background-color: skyblue;
-    width: 250px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
     /*margin: 60px 20px 20px 0px;*/
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    border: 5px solid black;
+    padding: 20px;
+    /*border box ajusta las medidas automaticamente*/
+    box-sizing: border-box;
 
 }
 /*Elemento de linea*/
 .inline{
-    background-color: purple;
+    background-color: darkslategrey;
     width: 250px;
     height: 250px;
     margin-left: 25px;
+}
+
+.botons{
+    background-color: slateblue;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.boton{
+    background-color: cadetblue;
+    /*Margin*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    /*Padding*/
+    padding: 15px 30px;
+    /*Border*/
+    /*border: 5px solid red;*/
+    border-width: 8px;
+    border-style: ridge;
+    border-color: aquamarine;
+    border-right-width: 15px;
+    border-left-style:double;
+    border-top-color: #000;
+}
+
+.border-radius{
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 30px auto;
+    /*radius*/
+    border-radius: 10px 20px 30px 40px;
+    
+}
+
+.border-radius-elipse{
+    width: 50px;
+    height: 50px;
+    background-color: aquamarine;
+    margin: 15px auto;
+    /*radio eliptico*/
+    border-radius: 20px / 10px;
 }
