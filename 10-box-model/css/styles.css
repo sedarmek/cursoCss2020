@@ -46,6 +46,8 @@ border-top-left-radius, border-top-right-radius, border-bottom-right-radius, bor
 3 elementos -> esq.sup.izq. ,esq.sup.der./esq.inf.izq,esq.inf.der.
 2 elementos -> esq.sup.izq/esq.inf.der.,esq.sup.der./esq.inf.izq.
 1 elemento -> todas las esquinas.
+
+Overflow: hidden,scroll, auto.
 */
 
 /*Elemento de bloque*/
@@ -55,20 +57,37 @@ body{
 }
 /*Elemento de bloque*/
 .header{
-    background-color: green;
-    height: 50px;
+    background-color: cadetblue;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 10px;
 }
+/*Elemento de linea y bloque*/
+.menu li{
+    background-color: rgba(9, 122, 92, 0.5);
+    list-style: none;
+    display: inline-block;
+}
+
+.menu li:hover{
+    background-color: rgba(9, 122, 92, 1);
+}
+
 /*Elemento de bloque*/
 .title{
     background-color: steelblue;
     width: 200px;
     margin-left: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rosybrown;
+    text-shadow: 3px 2px royalblue;
 }
 /*Elemento de bloque*/
 .block{
     background-color: skyblue;
     width: 100px;
     height: 100px;
+    border-radius: 5px;
     /*margin: 60px 20px 20px 0px;*/
     margin-left: auto;
     margin-right: auto;
@@ -82,13 +101,13 @@ body{
 /*Elemento de linea*/
 .inline{
     background-color: darkslategrey;
-    width: 250px;
-    height: 250px;
-    margin-left: 25px;
+    margin-left: 150px;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .botons{
-    background-color: slateblue;
+    background-color: rgb(147, 132, 243);
     margin-top: 25px;
     padding-bottom: 10px;
 }
@@ -113,20 +132,44 @@ body{
 
 .border-radius{
     background-color: yellow;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
     position: relative;
-    margin: 30px auto;
+    margin: 15px;
     /*radius*/
     border-radius: 10px 20px 30px 40px;
-    
+    float: left;
+    text-align: center;
+    font-size:small;
+    padding: 3px;
+
 }
 
 .border-radius-elipse{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
     background-color: aquamarine;
-    margin: 15px auto;
+    margin: 15px;
     /*radio eliptico*/
     border-radius: 20px / 10px;
+    float: left;
+    font-size: small;
+    text-align: center;
+    padding: 3px;
+}
+
+.overflow{
+    width: 120px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: thistle;
+    margin: 15px;
+    font-size: small;
+    overflow: auto;
+}
+.overflow p{
+    background-color: coral;
+    margin: 0px;
 }
