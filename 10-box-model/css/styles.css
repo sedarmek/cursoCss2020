@@ -48,6 +48,9 @@ border-top-left-radius, border-top-right-radius, border-bottom-right-radius, bor
 1 elemento -> todas las esquinas.
 
 Overflow: hidden,scroll, auto.
+
+Outline: tiene similitudes con border, pero no esta dentro del modelo de cajas.
+Diferencias: no tiene la opcion de trabajar cada lado por separado, no modifica el flujo de trabajo, puede ser interno o externo, y ademas, tiene un separamiento.
 */
 
 /*Elemento de bloque*/
@@ -108,8 +111,6 @@ body{
 
 .botons{
     background-color: rgb(147, 132, 243);
-    margin-top: 25px;
-    padding-bottom: 10px;
 }
 
 .boton{
@@ -117,7 +118,7 @@ body{
     /*Margin*/
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 300px;
+    margin-left: 250px;
     /*Padding*/
     padding: 15px 30px;
     /*Border*/
@@ -127,7 +128,18 @@ body{
     border-color: aquamarine;
     border-right-width: 15px;
     border-left-style:double;
-    border-top-color: #000;
+    border-top-color: rgb(75, 71, 71);
+    border-radius: 10px;
+}
+.boton-outline{
+    background-color: aquamarine;
+    width: 60px;
+    height: 50px;
+    margin-left: 35px;
+    outline: 5px solid rgb(73, 123, 143);
+    outline-offset: -9px;
+    outline
+    border-radius: 5px;
 }
 
 .border-radius{
