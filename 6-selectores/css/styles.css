@@ -30,73 +30,79 @@
 
         Pseudoclases - Pseudoelementos
 */
-
+/*Selector universal*/
 *{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+/*Selector de tipo*/
+body{
     background-color: silver;
+    margin: 10px;
+    border: 3px solid gray;
+    border-radius: 5px;
+} 
+/*Selector de atributo por id*/
+#titulo-principal{
+    background-color: rgb(148, 166, 199);
 }
-/*Selector de tipo
-h1{
-    background-color: skyblue;
+/*Selector de atributo por clase*/
+.menu{
+    background-color: rgb(113, 165, 216);
 }
-
-p{
-    background-color: slategray;
-} */
-/*Selector de atributo por id
-#title{
-    background-color: seashell;
-}
-Selector de atributo por clase
-.text{
-    background-color: slategray;
-}
-Selector de otros tipos de atributos "[]"
+/*Selector de otros tipos de atributos "[]"*/
 [href]{
     background-color: cornflowerblue;
 }
-
+/*Selector con un valor definido*/
 [href="https//:www.google.com"]{
     background-color: cornsilk;
 }
-
-[href^="color"]{
+/*Selector con valor al princio*/
+[href^="al-principio"]{
     background-color: darksalmon;
 }
-
-[href*="verde"]{
+/*Selector con valor en cualquier posicion*/
+[href*="cualquier"]{
     background-color: green;
 }
-
-[href$="ultimo"]{
+/*Selector con valor al final*/
+[href$="final"]{
     background-color: greenyellow;
 }
-
-[lang|="en"]{
+/*Selector con valor al inicio que tolera el "-" */
+[href|="es"]{
     background-color: skyblue;
 }
-*/
-/*Selector agrupado
-.text-1,
-.text-2,
-.text-3{
-    background-color: slategray;
-}
-*/
 
-/*Selector descendente
-div p{
+/*Selector agrupado*/
+.texto-1,
+.texto-2{
+    background-color: slategray;
+    margin: 5px;
+    font-size: small;
+}
+
+
+/*Selector descendente*/
+.descendente p{
     background-color: cadetblue;
 }
-*/
-/*Selector de hermano siguiente
-h1 + a{
-    background-color: chartreuse;
-}*/
-/*Selector de hermanos siguientes
-.text-1 ~ p{
-    background-color: chocolate;
-}*/
+.seccion-principal article{
+    border: 2px solid grey;
+    margin: 15px 5px;
+}
 
-body > p{
+/*Selector de hermano siguiente*/
+.primer-hermano + p{
+    background-color: chartreuse;
+}
+/*Selector de hermanos siguientes*/
+.hermano-1 ~ p{
+    background-color: chocolate;
+}
+/*Selector de hijos directos*/
+.padre > div{
     background-color: cornflowerblue;
 }

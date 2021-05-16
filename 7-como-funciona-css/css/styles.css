@@ -12,7 +12,7 @@ Formula:
 *Herencia -> Es la capacidad de un elemento de heredar sus propiedades, con inherit se obtiene explicitamente la herencia, y con initial se obtiene las propiedades por defecto.
 
 */
-/*Especificidad ejemplos
+/*Especificidad ejemplos*/
 h1{
     background-color: cornflowerblue;
 }
@@ -23,7 +23,7 @@ h1.title#title{
 
 h1.title{
     background-color: cornsilk;
-}*/
+}
 
 /*Herencia*/
 

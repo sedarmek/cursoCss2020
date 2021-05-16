@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Forma 1 y correcta de conectar css-->
     <link rel="stylesheet" href="8-estilos-por-defecto/Normalize.css">
-    <link rel="stylesheet" href="9-prepros/css/styles-dist.css">
+    <link rel="stylesheet" href="conectar-html-y-css/css/styles.css">
 
     <!--Forma 2 de conectar css, se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.-->
     <!--
@@ -22,32 +22,40 @@
         @import url(css/styles.css);
         </style>
     -->
-    <title>Document</title>
+    <title>Curso Css</title>
 </head>
     <body>
-        <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
-        <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
-        -->
-        <h1 class="title" id="title">Conectar html <span> y </span> css</h1>
-        
-        <a href="https//:www.google.com">Pagina de google</a>
-        <a href="color-modo-random">Color random</a>
-        <a href="#seccion-verde-ultimo">Color verde</a>
-        <a href="color-rojo">Color rojo</a>
-
-        <p class="text-sin-div">Lorem ipsum dolor sit amet consectetur <a id="link-inherit" href="#">link</a> adipisicing elit. Eligendi <a href="#">otro link</a> magnam nobis minus nam necessitatibus amet, dolore provident eius magni aperiam harum velit quis veniam in vitae. Natus labore ipsa vero!</p>
-
-        <div>
-
-            <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt placeat saepe, rem corrupti in tenetur ea eaque dolor soluta beatae nisi temporibus debitis laborum, hlarum non excepturi recusandae suscipit.</p>
-            
-            <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsam tempore enim, ea esse provident aliquam illo neque et. Eos sit provident quod eum laboriosam, placeat eaque consequuntur maxime fuga?</p>
-            
-            
-            <p class="text-3" lang="en-USA">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquid rerum libero modi, dignissimos, dolores, enim blanditiis officia ipsa eligendi qui. Ipsum vitae fugit nisi rerum, quia adipisci praesentium ut!</p>
+        <div class="container">
+            <header>
+                <nav class="menu">
+                    <ul class="list-menu">
+                        <li><a href="./index.html">Inicio</a>
+                        </li>
+                        <li>Contacto</li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="seccion">
+                <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
+                    <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
+                -->
+                <h1 class="title" id="title">Curso Css 2020</h1>
+                <h2>Conectar html y css</h2>
+                <article>
+                    <figure id="img-inicio">
+                        <img src="https://www.codigosinformaticos.com/wp-content/uploads/2019/04/html-y-cssb-.jpg" alt="">
+                        <figcaption>En este curso veremos los temas mas relevantes de css y su funcionamiento junto con html</figcaption>
+                    </figure>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li>Selectores</li>
+                    <li>Box model</li>
+                    <li>Position</li>
+                </ul>
+            </aside>
+            <footer class="footer">Seda</footer>
         </div>
-
-        <p class="text-sin-div-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eveniet quas commodi, praesentium blanditiis soluta, omnis pariatur, ullam atque quaerat facere nostrum. Minus unde exercitationem iusto nostrum. Tempore, assumenda quod?</p>
-        
     </body>
 </html>
