@@ -6,15 +6,32 @@ Position absolute: no conserva el espacio reservado, se coloca respecto al conte
 
 Posicion fixed: no conserva el espacio reservado, se posiciona de acuerdo al DOM html y no cambia su posicion al hacer scroll.
 
-posicion sticky: tiene un espacio reservado con el cual forma parte del flujo normal html, pero se comporta como fixed cuando se cumple una condicion sobre su posicion.
+Posicion sticky: tiene un espacio reservado con el cual forma parte del flujo normal html, pero se comporta como fixed cuando se cumple una condicion sobre su posicion.
 Necesita un contenerdor con altura, ademas de contar con overflow: visible.
+
+Z-index: indice que puede tener numeros enteros negativos y positivos que sirver para posicionar un elemento sobre otro o visceversa.
+
+Stacking context:
+    1.Elemento posicionado con z-index
+    2.Elemento posicionado sin z-index
+    3.Elemento no posicionado
+    4.Elemento con z-index negativo
+
+    ORDEN
+    1.Orden de las propiedades:
+    2.Posicionamiento
+    3.Box model
+    4.Texto
+    5.Visuales
+    6.Varios
+
 */
 *{
     padding: 0px;
     margin: 0px;
 }
 body{
-    background: linear-gradient(-125deg, rgb(139, 138, 138) 20% ,white);
+    background: linear-gradient(-125deg, rgb(139, 138, 138) 50% ,white);
 }
 
 .caja-3 span{
@@ -107,12 +124,58 @@ body{
 
 /*Position sticky*/
 .container-sticky{
-    background-color: tomato;
-    height: 1000px;
+    background-color: rgb(158, 157, 157);
     text-align: center;
 }
 .caja-sticky{
     background-color: turquoise;
     position: sticky;
     top: 0px;
+}
+/*Z index*/
+.container-index, .container-index-2{
+    margin: 5px;
+}
+
+.container-index div{
+    color: white;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid rgb(51, 51, 51);
+}
+#index-1{
+    background-color: rgb(75, 73, 73);
+    left: 40px;
+    z-index: 1;
+}
+#index-10{
+    background-color: rgb(87, 85, 85);
+    z-index: 10;
+    top: 5px;
+}
+#index-12{
+    background-color: rgb(119, 116, 116);
+    z-index: 12;
+    right: 30px;
+}
+
+.padre-index{
+    background-color: teal;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    position: relative;
+}
+.hijo-index{
+    background-color: rgb(58, 179, 179);
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: 80px;
+    top: 10px;
+    z-index: -1;
 }
