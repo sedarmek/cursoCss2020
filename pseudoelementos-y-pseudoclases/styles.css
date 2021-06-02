@@ -1,0 +1,152 @@
+/*
+PSEUDOELEMENTOS
+    elemento::first-letter(elemento de bloque)
+            selecciona la primer litra del elemento
+    elemento::first-line(elemento de bloque)
+            selecciona la primer linea de parrafo del elemento
+    elemento::selection
+             selecciona caracteristicas del seleccionamiento
+    elemento::before
+            selecciona la parte anterior del elemento
+            la propiedad content es obligatoria
+            elemento de linea por defecto
+            es hijo del elemento al que pertenece
+    elemento::after
+            selecciona la parte posterior del elemento
+            la propiedad content es obligatoria
+            elemento de linea por defecto
+            es hijo del elemento al que pertenece
+
+PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
+    Dinamic
+        :link --->link no visitado
+        :visited --->link visitado
+        :active -->link al momento del click
+        :hover --->cuando el puntero del mouse esta sobre el elemento
+        :focus -->cuando se centra la atencion en el elemento
+    Target
+        elemento:target 
+                elemento que es objetivo de marcador o ancla
+    Language
+        elemento:lang()
+                elemento que contiene el atributo lang que especifiquemos
+    UI States para formularios
+        elemento:enabled
+        elemento:disabled
+        elemento:checked
+        elemento:in-range
+        elemento:out-of-range
+        elemento:optional
+        elemento:required
+        elemento:valid
+        elemento:invalid
+        elemento:read-only
+        elemento:read-write
+*/
+
+/*Pseudoelementos*/
+.pseudoelementos h2::first-letter{
+    color: red;
+    font-size: 1.5em;
+}
+.first-line::first-line{
+    color: silver;
+}
+.first-line::selection{
+    background-color: rgb(145, 134, 216);
+    color: white;
+}
+.dolar::before{
+    content:"$";
+}
+.dolar::after{
+    content:".00";
+}
+
+/*Pseudoclases*/
+/*dinamic*/
+.link-visitado,.boton,.focus{
+    display: block;
+}
+:link{
+    color: rgb(45, 197, 146);
+}
+.link-visitado:visited{
+    color: gray;
+}
+.link-visitado:active{
+    color: red;
+}
+.boton:hover{
+    background-color: rgb(122, 119, 119);
+}
+.focus:focus{
+    background-color: rgb(133, 129, 129);
+    color: white;
+}
+/*Target*/
+.target{
+    background-color: teal;
+    display: block;
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    position: sticky;
+    top: 0px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+#texto{
+    /*
+    margin-top: 500px;
+    margin-bottom: 500px;*/
+    background-color: rgb(121, 199, 199);
+}
+#texto:target{
+    padding-top: 70px;
+}
+/*Language*/
+.span{
+    display: block;
+}
+.span:lang(en){
+    color: violet;
+}
+.span:lang(es){
+    color: turquoise;
+}
+/*UI states*/
+.form,.form2,.form3{
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.form:enabled{
+    background-color: gray;
+}
+.form:disabled{
+    background-color: rgb(235, 132, 132);
+}
+.form:checked + label{
+    color: rgb(121, 199, 199);
+}
+.form:in-range{
+    background-color: rgb(145, 134, 216);
+}
+.form:out-of-range{
+    background-color: rgb(228, 152, 152);
+}
+.form2:optional{
+    background-color: rgb(121, 204, 121);
+}
+.form2:required{
+    background-color: rgb(231, 142, 187);
+}
+.form3:valid{
+    background-color: rgb(161, 212, 110);
+}
+.form3:invalid{
+    background-color: rgb(235, 132, 132);
+}

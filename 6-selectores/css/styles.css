@@ -23,10 +23,10 @@
         Selectores Agrupados: usan comas para trabajar con mas de un elemento.
         
         Selectores Combinadores
-            Selector descente: se usa el espacio para seleccionar el atributo hijo, por buena practica se recomienda no mas de dos.
-            Selector de hermano siguiente "+": selecciona al hermano adyacente.
-            Selector de hermanos siguientes "~": selecciona a todos los hermanos siguientes.
-            Selector de hijos directos ">": selecciona solo los hijos directos.
+            *Selector descente: se usa el espacio para seleccionar el atributo hijo, por buena practica se recomienda no mas de dos.
+            *Selector de hermano siguiente "+": selecciona al hermano adyacente.
+            *Selector de hermanos siguientes "~": selecciona a todos los hermanos siguientes.
+            *Selector de hijos directos ">": selecciona solo los hijos directos.
 
         Pseudoclases - Pseudoelementos
 */
