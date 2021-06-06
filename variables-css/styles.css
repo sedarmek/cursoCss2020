@@ -1,0 +1,34 @@
+/*
+Variables css
+Necesitan estar dentro de un selector
+Tienen herencia y cascada
+Pueden ser globales y locales
+Sintaxis:
+        selector{
+            --variable:valor;
+        }
+        propiedad: var(--variable);
+*/
+
+:root{
+    --background-color: gray;
+    --long: 200px;
+    --border-radius: 10px;
+    --border: 3px solid rgb(43, 41, 41);
+}
+.cubo1{
+    --long:400px;/*<--- se modifica la variable pero solo de forma local*/
+    width: var(--long);
+    height: var(--long);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    margin-bottom: 10px;
+}
+.cubo2{
+    width: var(--long);
+    height: var(--long);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: var(--border);
+}

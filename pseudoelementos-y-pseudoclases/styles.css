@@ -31,17 +31,40 @@ PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
         elemento:lang()
                 elemento que contiene el atributo lang que especifiquemos
     UI States para formularios
-        elemento:enabled
-        elemento:disabled
-        elemento:checked
-        elemento:in-range
-        elemento:out-of-range
-        elemento:optional
-        elemento:required
-        elemento:valid
-        elemento:invalid
-        elemento:read-only
-        elemento:read-write
+        :enabled
+        :disabled
+        :checked
+        :in-range
+        :out-of-range
+        :optional
+        :required
+        :valid
+        :invalid
+        :read-only
+        :read-write
+    Structural
+        :root ---> representa la raiz del documento(html), pero con mas especificidad.
+        :empty ---> aplica para los elementos vacios.
+        -child
+            :first-child ---> selecciona al primer hijo
+            :last-child ---> selecciona al ultimo hijo
+            :nth-child(n) ---> selecciona al hijo n
+            :nth-last-child(n) ---> selecciona al hijo n empezando del final
+            :only-child ---> selecciona al hijo unico
+        -type
+            :first-of-type
+            :last-of-type
+            :nth-of-type(n)
+            :nth-last-of-type(n)
+            :only-of-type
+                Valores posibles
+                    odd-impares
+                    even-pares
+                    enteros
+                    equaciones ...n es un multiplicador
+        Negation
+            :not() ---> selecciona el elemento que no cumpla la condicion
+    
 */
 
 /*Pseudoelementos*/
@@ -149,4 +172,46 @@ PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
 }
 .form3:invalid{
     background-color: rgb(235, 132, 132);
+}
+/*Structural*/
+:root{
+    background-color: rgb(163, 163, 231);
+}
+h5:empty{
+    background-color: rgb(187, 120, 120);
+    width: 100px;
+    height: 30px;
+}
+.hijo:first-child{
+    background-color: red;
+}
+.hijo:last-child{
+    background-color: blueviolet;
+}
+.hijo:nth-child(3){
+    background-color: brown;
+}
+.hijo:nth-last-child(4){
+    background-color: burlywood;
+}
+.hijo-unico:only-child{
+    background-color: cadetblue;
+}
+.type:first-of-type{
+    background-color: chartreuse;
+}
+.type:last-of-type{
+    background-color: chocolate;
+}
+.type:nth-of-type(2){
+    background-color: #fff;
+}
+.type:nth-last-of-type(2){
+    background-color: coral;
+}
+h6:only-of-type{
+    background-color: darkgray;
+}
+.hijos:not(h6){
+    background-color: darkolivegreen;
 }
