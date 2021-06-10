@@ -1,0 +1,46 @@
+/* Tipografias 
+Familias tipograficas
+    Tienen nombre propio
+        Arial, Times New Roman, open sans, ubuntu
+Familias genericas o seguras
+    Su nombre se basa en sus caracteristicas
+        serif: tiene un adorno en los renates
+        sans-serif: tiene un corte seco en los renates
+        cursive: emula tipografia manuscrita
+        fantasy: letra decoorativa
+        nonospace: los caracteres tienen el mismo ancho
+FONT
+    font-family: establece la familia tipografica
+        se usa el nombre propio de la fuente, la familia generica y se recomienda usar fuentes de reserva
+    font-size: establece el tamaño de la fuente
+        se define en unidades:
+            px: pixeles
+            em: medida relativa al contexto(padre)
+            rem: medida relativa al html
+            %: medida relativa al tamaño actual
+
+            vh: medida relativa al height del viewport
+            vw: medida relativa al width del viewport
+            vmin: medida relativa al valor minimo de viewport, se usa para responsive(en celulares)
+            vmax: medida relativa al valor maximo de viewport
+
+    font-weight: establece el grosor de la fuente
+        bold | normal | 100-900
+    font-style: establece el estilo de la tipografia
+        normal | italic | oblique
+
+*/
+
+.title{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 5vmin;
+}
+.span{
+    font-size: 2em;
+}
+.bold{
+    font-weight: bold;
+}
+.style{
+    font-style: italic;
+}

@@ -1,0 +1,67 @@
+
+
+[class ^= "bg"]{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30%;
+    height: 150px;
+    border: 3px solid red;
+    margin: 3px;
+}
+.bg-color{
+    background-color: aquamarine;
+}
+.bg-img{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+}
+/*cover estira la imagen*/
+.bg-size{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: cover;
+}
+.bg-repeat{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: 30%;
+    background-repeat:repeat;
+}
+.bg-position{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: 30%;
+    background-repeat:no-repeat;
+    background-position: bottom right;
+}
+.bg-clip{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px;
+    border: 5px dotted red;
+
+    background-clip:content-box;
+}
+.bg-origin{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px;
+    border: 5px dotted red;
+
+    background-origin:content-box;
+}
+.bg-attachment{
+    background-image: url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment:fixed;
+}
+.bg-multiple{
+    background-image: 
+        url(https://e7.pngegg.com/pngimages/180/102/png-clipart-pug-dog-breed-companion-dog-cat-puppy-cat.png),
+        url(https://www.mividaporunperro.com/wp-content/uploads/2020/08/cual-es-la-raza-del-perro-del-meme-cheems-1.jpg);
+    background-size: 40%,cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, center center;
+}
+footer{
+    margin-top: 500px;
+}
