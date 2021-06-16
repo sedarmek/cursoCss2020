@@ -28,9 +28,28 @@ FONT
         bold | normal | 100-900
     font-style: establece el estilo de la tipografia
         normal | italic | oblique
+TEXT
+    text-transform: transforma el texto a mayusculas, minusculas, etc.
+        lowercase | uppercase | capitalize(primera letra en mayuscula)
+    text-align: alinea el texto del elemento a la izquierda, derecha, etc. Solo funciona con elementos de bloque y botones.
+        center | left | right | justify
+    text-decoration: establece la decoracion del texto.
+        overline | line-through | underline | none
+    text-indent: mueve la primera linea de un texto. Solo en elementos de bloque.
+OTHER
+    line-height: establece la altura de la linea, se usa para centrar un texto en la altura.Solo en elementos de bloque.
+    letter-spacing: establece la separacion de las letras con una media en cualquier unidad.
 
+GOOGLE FONTS Y @FONT-FACE
+    https://fonts.google.com/
+
+    https://www.dafont.com/es/
+
+    Analizar fuentes web
+        whatfont
 */
 
+/* font */
 .title{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 5vmin;
@@ -43,4 +62,39 @@ FONT
 }
 .style{
     font-style: italic;
+}
+/*text & other*/
+.item-1{
+    text-transform: lowercase;
+}
+.item-2{
+    text-transform: uppercase;
+}
+.texto{
+    text-align: left;
+    text-indent: 30px;
+    letter-spacing: 2px;
+}
+.enlace{
+    display: block;
+    text-decoration: none;
+}
+.line-h{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    line-height: 100px;
+    text-align: center;
+}
+/*Google font*/
+.title-2{
+    font-family: 'Major Mono Display', monospace;
+}
+/*font-face*/
+@font-face {
+    font-family: 'mifuente';
+    src: url('assets/fonts/LazySunday-Regular.ttf');
+}
+.lorem-2{
+    font-family: mifuente,sans-serif;
 }

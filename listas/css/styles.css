@@ -1,0 +1,57 @@
+/*
+Resetar estilos por defecto de una lista
+    margin-top:0
+    margin-bottom:0
+    margin-left:0
+
+Hay 3 propiedades para las listas, se puede aplicar al padre o a los elementos de lista:
+    ul | ol | otro
+
+list-style-type: establece el estilo de viñeta
+    disc
+    circle
+    square
+    decimal
+    decimal-leading-zero
+    lower-roman
+    upper-roman
+    lower-greek
+    lowwer-latin
+    upprt-latin
+    armenian
+    georgian
+    lower-alpha
+    upper-alpha
+
+list-style-position: hace que las viñetas se coloquen por dentro o por fuera del elemento
+    inside | outside
+
+list-style-image: pone una imagen en lugar de la viñeta, no se suele usar
+    url(image)
+
+*Normalmente se suele usar el shorthand list-style.
+*/
+
+.lista{
+    background-color: rgb(190, 220, 238);
+    width: 70px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    list-style-type: lower-greek;
+    list-style-position: outside;
+    list-style-type: none;
+}
+.item{
+    border: 2px solid rgb(100, 100, 206);
+}
+.item::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-image: url(https://img2.freepng.es/20180203/hfe/kisspng-arrow-icon-right-arrow-png-image-5a7589d14c14c7.5020417515176524333116.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
