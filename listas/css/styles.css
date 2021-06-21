@@ -1,4 +1,5 @@
 /*
+LISTAS
 Resetar estilos por defecto de una lista
     margin-top:0
     margin-bottom:0
@@ -30,6 +31,41 @@ list-style-image: pone una imagen en lugar de la viñeta, no se suele usar
     url(image)
 
 *Normalmente se suele usar el shorthand list-style.
+
+TABLAS
+table-layout: define como se comportan las dimensiones de una tabla y los anchos por defecto.
+tabla y los anchos de las columnas
+    automatic: valor por defecto
+    fixed: necesita un width declarado, si no se le da un ancho a cada columna se distribuye equitativamente
+
+caption-side: define donde se coloca el caption de una tabla
+    top: valor por defecto
+    bottom: se coloca al pie de la tabla
+
+border-spacing: controla el espacion entre las celdas
+
+border-collaspse: controla si las celdas se mantienen juntas o separadas
+    separate: valor por defecto
+    collapse: junta las celdas
+
+empty-cells: controla que hacer con las celdas vacias
+    show: valor por defecto
+    hide: oculta las celdas vacias
+
+IMAGENES
+    No existen propiedades para imagenes en CSS
+    1.Imagenes responsive ---> img{max-width: 100%}
+
+    2.Las imagenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos maneras:
+        line-height:0 | display: block.
+
+    3.Centrado horizontal
+        en elementos inline ---> text-align: center
+        en elementos bloque ---> margenes laterales automaticos
+    
+    4. Centrado vertical
+        Flexbox
+        vertical-align: middle. A la imagen y al texto
 */
 
 .lista{
@@ -43,7 +79,7 @@ list-style-image: pone una imagen en lugar de la viñeta, no se suele usar
     list-style-type: none;
 }
 .item{
-    border: 2px solid rgb(100, 100, 206);
+    border: 2px solid rgb(161, 161, 236);
 }
 .item::before{
     content: '';
@@ -54,4 +90,40 @@ list-style-image: pone una imagen en lugar de la viñeta, no se suele usar
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
+}
+/*TABLE*/
+.table{
+    border: 5px solid rgb(187, 134, 236);
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-spacing: 30px 10px;
+    border-collapse: separate;
+    empty-cells: hide;
+}
+.caption{
+    caption-side: bottom;
+}
+.tData{
+    background-color: rgb(207, 189, 236);
+}
+.table-container{
+    overflow-x: auto;
+}
+/*IMAGENES*/
+.img{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-container{
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    /* line-height: 0px;
+    text-align: center; */
+    display: flex;
+    align-items: center;
 }
