@@ -66,6 +66,28 @@ IMAGENES
     4. Centrado vertical
         Flexbox
         vertical-align: middle. A la imagen y al texto
+
+    object-fit: se usa para especificar como se debe cambiar el tamaño de la imagen o video para que se ajuste a su contenedor.
+        fill: valor por defecto.Deforma la imagen para que ocupe todo el contenedor.
+        contain: el contenido se ajustara hasta rellenar de forma horizontal o vertical el contenedor sin deformarse.Muestra la imagen completa, pero se encoge.
+        cover: el contenido se ajustara hasta rellenar de forma horizontal y vertical el contenedor sin deformarse.Solo muestra una parte de la imagen ya que se agranda.
+        none: el contenido no se redimensiona y mantiene su tamaño original mostrando solo el trozo de las dimensiones especificadas.
+        scale-down: selecciona el menor de la comparacion entre none y contain.
+
+    object-position: coloca la imagen cuando esta no se muestra completa en el contener.
+
+    filter:
+        none
+        blur(px): desenfoque
+        brightness(%): brillo. De 0 a 1 oscuridad y mayor a 1 sobreexposicion.
+        contrast(%): contraste. De 0 es negro y de 1 da mas contraste.
+        drop-shadow(h-shadow v-shadow blur spread color): sombra.
+        grayscale(%): 0 es el original y 1 es blanco y negro.
+        hue-rotate(deg): añade matriz de color segun la rueda cromatica.
+        invert(%): invierte el color. 0 es el original y 1 es invertido completamente.
+        opacity(%): opacidad. 1 es el original y 0 es transparente.
+        saturate(%): saturacion. 1 es el original, 0 es desaturada y mayor a 1 es sobresaturada.
+        sepia(%): 0 es el original y 1 es totalmente sepia.
 */
 
 .lista{
@@ -111,19 +133,28 @@ IMAGENES
     overflow-x: auto;
 }
 /*IMAGENES*/
-.img{
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 .img-container{
     background-color: red;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     width: 200px;
     /* line-height: 0px;
     text-align: center; */
     display: flex;
     align-items: center;
+    
+}
+.img{
+    max-width: 100%;
+    display: block;
+}
+
+.img-2{
+    background-color: red;
+    width: 80px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    filter: sepia(0);
 }
