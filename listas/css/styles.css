@@ -88,6 +88,16 @@ IMAGENES
         opacity(%): opacidad. 1 es el original y 0 es transparente.
         saturate(%): saturacion. 1 es el original, 0 es desaturada y mayor a 1 es sobresaturada.
         sepia(%): 0 es el original y 1 es totalmente sepia.
+
+    clip-path: es una mascara que oculta partes de una caja.
+        circle(diametro at posX posY|palabras clave): dibuja un circulo.
+
+        ellipse(): dibuja una elipse, podemos especificar dos centros.
+
+        inset(all round 1px): dibuja un border transparente por dentro de la caja, existe la opcion de redondear las esquinas con la palabra clave round.
+
+        polygon(): especifica una serie de puntos para definir la zona visible siendo el punto 0 0 la esquina superior izquierda.
+        Generador de clip-path: https://bennettfeely.com/clippy/
 */
 
 .lista{
@@ -157,4 +167,24 @@ IMAGENES
     object-fit: cover;
     object-position: center;
     filter: sepia(0);
+}
+/*Clip-path*/
+.cont-path{
+    background-color: rgb(81, 100, 94);
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.path{
+    background-color: grey;
+    width: 150px;
+    height: 150px;
+    /* clip-path: circle(50px at left top); */
+    /* clip-path: ellipse(50px 25px at 65% 30%); */
+    /* clip-path: inset(15px 30px 45px 60px round 10px 20px 30px 50px); */
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.cont-path > .path:hover{
+    clip-path: polygon(41% 54%, 10% 74%, 14% 10%, 81% 12%, 60% 37%, 92% 70%, 72% 84%);
+    transition: clip-path 1s;
 }
