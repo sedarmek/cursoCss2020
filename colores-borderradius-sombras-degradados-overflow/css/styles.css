@@ -1,0 +1,30 @@
+/*COLORES
+
+*/
+body{
+    background-color: rgb(151, 167, 214);
+}
+[class^=cl]{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+.cl-color{
+    background-color: aquamarine;
+}
+.cl-rgb{
+    background-color: rgb(75, 0, 0);
+}
+.cl-rgba{
+    background-color: rgba(12, 30, 50, 0.75);
+}
+.cl-hexa{
+    background-color: #fe6;/*#ffee66*/
+}
+.cl-hsl{
+    background-color: hsl(10deg, 50%, 80%);
+}
+.cl-hsla{
+    background-color: hsla(180deg, 50%, 75%, 0.5);
+}
