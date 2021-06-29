@@ -1,5 +1,10 @@
 /*COLORES
 
+BOX SHADOW Y TEXT SHADOW
+    box-shadow ---> h-offset v-offset blur spread color inset/outset
+    text-shadow ---> h-offset v-offset blur color
+        blur: desenfoque, degradado
+        spread: propagacion
 */
 body{
     background-color: rgb(151, 167, 214);
@@ -27,4 +32,15 @@ body{
 }
 .cl-hsla{
     background-color: hsla(180deg, 50%, 75%, 0.5);
+}
+
+.box-shadow{
+    background-color: rebeccapurple;
+    width: 150px;
+    height: 150px;
+    box-shadow: -10px -6px 15px 1px black inset;
+}
+.text-shadow{
+    font-size: 40px;
+    text-shadow: 5px 5px 5px rebeccapurple, 10px 10px 15px black;
 }
