@@ -62,3 +62,21 @@ body{
     margin-left: 20px;
     background-image: radial-gradient(100px 50px at center bottom,transparent 50%,violet 53%);
 }
+.s-gradient{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    background-image: repeating-linear-gradient(90deg,
+    #da6969 0px,
+    #da6969 10px,
+    #6060e2 10px,
+    #6060e2 20px);
+}
+.p-gradient{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    background-image: repeating-radial-gradient(circle 20px at left top,#da6969 0,#da6969 10px,#6060e2 10px,#6060e2 20px);
+}
