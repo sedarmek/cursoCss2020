@@ -4,22 +4,74 @@ flex-direccion:  row | row-reverse | column | column-reverse
 
 flex-wrap:  nowrap | wrap | wrap-reverse
     controla si los hijos del contenedor haran salto de linea o no.
-*/
 
-.container{
+Alineamiento: se aplican al flex-container
+    main-axis: 
+        justify-content: flex-start | center | space-between | space-around | space-evenly | flex-end
+
+    cross-axis: 
+        align-items: una linea
+            flex-start | center | flex-end | stretch(por defecto,estira el contenido) | baseline
+        
+        align-content: varias lineas
+            flex-start | center | flex-end | stretch | baseline
+
+        align-self: un item especifico
+
+*/
+/*align-items*/
+.container, .container-2{
     background-color: salmon;
-    width: 150px;
+    width: 250px;
+    height: 150px;
     margin: 10px;
     padding: 5px;
-    display: flex;
+    display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 .children{
     background-color: #e25858;
     width: 30px;
-    height: 30px;
     margin: 5px;
     text-align: center;
     line-height: 25px;
+}
+/*align-content*/
+.container-2{
+    align-content: center;
+}
+/*Baseline y align-self*/
+.container-3{
+    display: flex;
+    align-items: baseline;
+    border: 3px solid blueviolet;
+    height: 300px;
+}
+.childrens{
+    width: 200px;
+    height: 200px;
+}
+.childrens:first-child{
+    background-color: #ce6464;
+    line-height: 20px;
+}
+.childrens:nth-child(2){
+    background-color: #a56ed8;
+    line-height: 10px;
+    align-self: center;
+}
+.childrens:nth-child(3){
+    background-color: burlywood;
+    line-height: 25px;
+}
+.childrens:nth-child(4){
+    background-color: cadetblue;
+    line-height: 15px;
+}
+.childrens:last-child{
+    background-color: #416d48;
+    line-height: 40px;
 }
