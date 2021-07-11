@@ -1,23 +1,37 @@
 /*
-flex-direccion:  row | row-reverse | column | column-reverse
-    controla la direccion de main axis y cross axis
+PARTE 1
+    shorthand ----> flex-flow: flex-direction flex-wrap
 
-flex-wrap:  nowrap | wrap | wrap-reverse
-    controla si los hijos del contenedor haran salto de linea o no.
+        flex-direccion:  row | row-reverse | column | column-reverse
+            controla la direccion de main axis y cross axis
 
-Alineamiento: se aplican al flex-container
-    main-axis: 
-        justify-content: flex-start | center | space-between | space-around | space-evenly | flex-end
+        flex-wrap:  nowrap | wrap | wrap-reverse
+            controla si los hijos del contenedor haran salto de linea o no.
 
-    cross-axis: 
-        align-items: una linea
-            flex-start | center | flex-end | stretch(por defecto,estira el contenido) | baseline
-        
-        align-content: varias lineas
-            flex-start | center | flex-end | stretch | baseline
 
-        align-self: un item especifico
+PARTE 2
+    Alineamiento: se aplican al flex-container
+        main-axis: 
+            justify-content: flex-start | center | space-between | space-around | space-evenly | flex-end
 
+        cross-axis: 
+            align-items: una linea
+                flex-start | center | flex-end | stretch(por defecto,estira el contenido) | baseline
+            
+            align-content: varias lineas
+                flex-start | center | flex-end | stretch | baseline
+
+            align-self: un item especifico
+
+PARTE 3 REPARTIMIENTO(TAMANIO)
+    Flexbox
+        shorthand--->   flex: 0 0 auto
+            
+            flex-grow: establece cuantas divisiones gana cuando hay espacio sobrante.
+            flex-shrink: establece cuantas diivisiones pierde cuando no hay espacio suficiente.
+            flex-basis: establece cuando espacio ocupa el item antes de encojer o extenderse.
+
+        order: establece que orden ocupara el elemento respecto al peso de los otros elementos.
 */
 /*align-items*/
 .container, .container-2{
@@ -74,4 +88,60 @@ Alineamiento: se aplican al flex-container
 .childrens:last-child{
     background-color: #416d48;
     line-height: 40px;
+}
+/*Parte 3 flex-grow*/
+.container-4{
+    background-color: #8e8ee6;
+    display: flex;
+    width: 300px;
+    height: 50px;
+}
+.hijos{
+    background-color: #6464c7;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #262664;
+    text-align: center;
+    line-height: 25px;
+}
+.hijos:first-child{
+    flex-grow: 1;
+}
+.hijos:nth-child(2){
+    flex-grow: 2;
+}
+.hijos:last-child{
+    flex-grow: 3;
+}
+/*flex-shrink*/
+.container-5{
+    background-color: #8e8ee6;
+    display: flex;
+    width: 300px;
+    height: 50px;
+}
+.hijos2{
+    background-color: #6464c7;
+    width: 100px;
+    height: 25px;
+    border: 1px solid #262664;
+    text-align: center;
+    line-height: 25px;
+}
+.hijos2:first-child{
+    /* flex-shrink: 1;
+    flex-basis: auto;*/
+    order: 3; 
+    flex: 0 2 auto;
+}
+.hijos2:nth-child(2){
+    order: 1;
+    /* flex-shrink: 2; */
+    flex: 0 2 auto;
+}
+.hijos2:last-child{
+    /* flex-basis: 100px;
+    flex-shrink: 1; */
+    order: 2;
+    flex: 0 1 100px;
 }
