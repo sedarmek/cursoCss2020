@@ -1,0 +1,38 @@
+/*
+GRID
+grid-template-columns: sirve para declara el tamanio y el numero de columnas
+grid-template-rows: sirve para declara el tamanio y el numero de filas
+grid-column-grap: sirve para declarar la separacion entre las columnas
+grid-row-grap: sirve para declarar la separacion entre las filas
+*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: aquamarine;
+    margin: 10px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50px 100px 70px 40px;
+    grid-template-rows: 30px 80px 50px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.children{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+}

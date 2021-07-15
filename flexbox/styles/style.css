@@ -41,8 +41,9 @@ PARTE 3 REPARTIMIENTO(TAMANIO)
     margin: 10px;
     padding: 5px;
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: stretch;
 }
