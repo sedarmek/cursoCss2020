@@ -4,6 +4,13 @@ grid-template-columns: sirve para declara el tamanio y el numero de columnas
 grid-template-rows: sirve para declara el tamanio y el numero de filas
 grid-column-grap: sirve para declarar la separacion entre las columnas
 grid-row-grap: sirve para declarar la separacion entre las filas
+
+grid-column: shorthand de indica la line-column de inicio y del final de cada elemento.
+grid-row: shorthand de indica la line-row de inicio y del final de cada elemento hijo.
+
+valor fr y auto para asignar un tamano a los hijos.
+fr: indica las divisiones que recibira cada elemento hijo
+auto: genera el tamanio minimo de acuerdo al contenido del elemento hijo
 */
 
 *{
@@ -24,7 +31,7 @@ body{
     margin: 10px;
     padding: 10px;
     display: grid;
-    grid-template-columns: 50px 100px 70px 40px;
+    grid-template-columns: 50px 10fr 1fr auto;
     grid-template-rows: 30px 80px 50px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
