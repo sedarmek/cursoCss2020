@@ -13,6 +13,20 @@ fr: indica las divisiones que recibira cada elemento hijo
 auto: genera el tamanio minimo de acuerdo al contenido del elemento hijo
 
 repeat(x, y z): repite un patron de medidas, donde X es el numero de repeticiones, e Y Z son medidas del patron.
+
+Explicid grid: es el grid que declaramos (
+    grid-template-columns | grid-template-rows
+    ).
+
+implicid grid: es el grid que no declaramos.
+    grid-auto-columns: establece que hacer con las columnas no definidas.
+    grid-auto-rows: estable que hacer con las filas no definidas.
+    gris-auto-flow: establece la direccion en la cual se pinta el implicid grid
+
+        row: se crearan filas adicionales
+        column: se crearan columnas adicionales
+        dense: establece que hacer con los huecos que deden
+
 */
 
 *{
@@ -108,4 +122,24 @@ body{
     justify-content: center;
     align-items: center;
     border: 2px solid grey;
+}
+/*implicid grid*/
+.container-4{
+    background-color: pink;
+    margin: 15px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(5,55px);
+    grid-template-rows: repeat(2, 40px);
+    grid-auto-columns: 30px;
+    grid-auto-rows: 10px;/*<---no toma el valor por que tiene prioridad el "grid-template-rows" por el 'grid-auto-flow:column'.*/
+    grid-auto-flow: column;
+}
+.children-4{
+    background-color: plum;
+    border: 1px solid grey;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
