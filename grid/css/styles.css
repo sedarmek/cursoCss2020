@@ -86,7 +86,7 @@ body{
     align-items: center;
     border: 2px solid grey;
 }
-/*Parte 2*/
+/*Parte 2 grid lines (numbers)*/
 .container-2{
     background-color: #8c77a0;
     margin: 10px;
@@ -253,4 +253,32 @@ body{
     justify-content: center;
     align-content: center;
     grid-area: footer;
+}
+/*grid lines*/
+.container-8{
+    background-color: #408688;
+    margin: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: [f-c-line] 30px [s-c-line] 30px [t-c-line] 30px [f-c-line];
+    grid-template-rows: [f-r-line] 30px [s-r-line] 30px [t-r-line] 30px [f-r-line];
+    grid-auto-columns: 25px;
+    grid-auto-rows: 20px;
+    grid-auto-flow: row;
+    grid-gap: 5px;
+}
+.children-8{
+    background-color: #50a5a8;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.children-8:first-child{
+    background-color: #5a7242;
+    grid-column: s-c-line / t-c-line;
+}
+.children-8:nth-child(4){
+    background-color: darkgoldenrod;
+    grid-column: f-c-line / s-c-line;
+    grid-row: f-r-line / t-r-line;
 }
