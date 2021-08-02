@@ -3,16 +3,20 @@ GRID
 PARTE 1
     grid-template-columns: sirve para declara el tamanio y el numero de columnas
     grid-template-rows: sirve para declara el tamanio y el numero de filas
-    grid-column-grap: sirve para declarar la separacion entre las columnas
-    grid-row-grap: sirve para declarar la separacion entre las filas
+    grid-column-gap: sirve para declarar la separacion entre las columnas
+    grid-row-gap: sirve para declarar la separacion entre las filas
+    gri-gap: shorthand.
+
 PARTE 2
-    grid-column: shorthand de indica la line-column de inicio y del final de cada elemento.
-    grid-row: shorthand de indica la line-row de inicio y del final de cada elemento hijo.
+    grid-column: shorthand quee indica la line-column de inicio y del final de cada elemento.
+    grid-row: shorthand que indica la line-row de inicio y del final de cada elemento hijo.
+
 PARTE 3
     valor fr y auto para asignar un tamano a los hijos.
     fr: indica las divisiones que recibira cada elemento hijo
     auto: genera el tamanio minimo de acuerdo al contenido del elemento hijo
     repeat(x, y z): repite un patron de medidas, donde X es el numero de repeticiones, e Y Z son medidas del patron.
+
 PARTE 4
     Explicid grid: es el grid que declaramos (
         grid-template-columns | grid-template-rows
@@ -26,6 +30,7 @@ PARTE 4
             row: se crearan filas adicionales
             column: se crearan columnas adicionales
             dense: establece que hacer con los huecos que deden
+
 PARTE 5
     minmax(): recibe dos parametros, el minimo y maximo que pueden tener los items
     min-content: minimo necesario en funcion del contenido
@@ -33,6 +38,7 @@ PARTE 5
 
     auto-fill: crea tantos grid-items vacios quepan en el viewport respetando la medida.
     auto-fit: elimina los grid-items vacios que no se esten ocupando.
+
 PARTE 6
     Alineamiento
         place-items: align-items justify-items
@@ -48,6 +54,23 @@ PARTE 6
             align-self
 
         order: 0
+        
+PARTE 7 
+    Shorthands:
+        grid: 
+            engloba las propiedades grid(no tiene soporte total,no se suele usar)
+        grid-template: 
+            engloba grid-template-columns,grid-template-rows y grid-template-areas
+                "header header header" 100px
+                "aside section section" 500px
+                "footer footer footer" 80px /
+                repeat(3,1fr);
+        grid-gap:
+            engloba grid-column-gap y gri-row-gap;
+        grid-column: 
+            engloba grid-column-start y grid-column-end
+        grid-row: 
+            engloba grid-row-start y grid-row-end
 */
 
 *{
