@@ -1,0 +1,70 @@
+/*
+BREAKPOINTS
+    Major breakpoints: cambian la apariencia de la web de manera significativa.
+    Menor breakpoints: cambian una cosa especifica para un elemento en concreto.
+
+    Medidas mas comunes: 
+        0 320 360 ---> moviles portrait
+        480 640 768 ---> moviles landscape(tablet)
+        1024 1200 1400 1440 ---> tables grandes, portatiles no HD
+        1920 ---> HD 2K 4K
+*/
+*{
+    text-align: center;
+    border-radius: 1rem;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: cadetblue;
+}
+.container{
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: "header header header" "section section section" "aside aside aside" "footer footer footer";
+    grid-gap: 1em;
+}
+.header{
+    background-color: #439899;
+    grid-area: header;
+}
+.section{
+    background-color: #439899;
+    grid-area: section;
+}
+.aside{
+    background-color: #439899;
+    grid-area: aside;
+}
+.footer{
+    background-color: #439899;
+    grid-area: footer;
+}
+
+ol{
+    background-color: rebeccapurple;
+    margin: 1em;
+    padding: 0.5em;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+li{
+    background-color: #7cbabb;
+    width: 5em;
+    margin: 0.5vh;
+    font-size: 1.5em;
+}
+/*breakpoint*/
+@media screen and (min-width: 640px){
+    ol{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .container{
+        grid-template-areas: "header header header" "section section aside" "footer footer footer";
+    }
+}
