@@ -4,38 +4,39 @@
     border-radius: 5px;
     text-align: center;
     color: white;
+    text-decoration: none;
 }
 
 body{
-    background-color: rgb(195, 228, 195);
+    background-color: #a3d6df;
 }
 
 .container{
-    background-color: rgb(102, 158, 45);
+    background-color: #565fb1;
     width: 650px;
     margin: 10px auto auto auto;
 }
 .list-menu{
-    background-color: rgb(16, 107, 16);
+    background-color: #103f6b;
     list-style: none;
     margin-bottom: 10px;
     padding: 5px;
 }
 .list-menu li{
-    background-color: rgb(82, 121, 25);
+    background-color: #818dd1;
     display: inline-block;
     height: 20px;
     padding: 5px;
 }
 .list-menu li:hover{
-    background-color: rgb(111, 153, 49);
+    background-color: #7483da;
 }
 .list-menu a{
     text-decoration: none;
     color: inherit;
 }
 .seccion{
-    background-color: rgb(111, 221, 96);
+    background-color: #6872cf;
     float: left;
     width: 70%;
     min-height: 550px;
@@ -51,7 +52,7 @@ body{
     height: 150px;
 }
 .list-aside{
-    background-color: rgb(111, 221, 96);
+    background-color: #548cc0;
     float: left;
     list-style: none;
     width: 20%;
@@ -59,17 +60,29 @@ body{
     margin: 10px;
 }
 .list-aside li{
-    background-color: rgb(141, 241, 127);
+    background-color: #71a3d1;
     display: inline-block;
     padding: 5px;
     margin: 5px;
 }
 .list-aside li:hover{
-    background-color: rgb(156, 247, 144);
+    background-color: #6593be;
 }
 .footer{
-    background-color: rgb(39, 68, 39);
+    background-color: #1a4872;
     clear: both;
     padding: 5px;
-    margin: 10px;
+    margin: 10px 0px;
+}
+
+.temas a{
+    background-color: #3259a1;
+    border: 1px solid gray;
+    margin: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.temas a:hover{
+    background-color: #436cb8;
 }
