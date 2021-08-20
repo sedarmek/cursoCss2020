@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Forma 1 y correcta de conectar css-->
+    <link rel="stylesheet" href="/8-estilos-por-defecto/Normalize.css">
+    <link rel="stylesheet" href="/conectar-html-y-css/css/styles.css">
+
+    <!--Forma 2 de conectar css, se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.-->
+    <!--
+        <style>
+            body{
+                background-color: steelblue;
+            }
+        </style>
+    -->
+    
+    <!--Forma 3 e incorrecta de conectar con css(@import)
+    <styl>
+        @import url(css/styles.css);
+        </style>
+    -->
+    <title>Curso Css: conectar-html-y-css</title>
+</head>
+    <body>
+
+        <div class="container">
+
+            <header>
+                <nav class="menu">
+                    <ul class="list-menu">
+                        <li><a href="./index.html">Inicio</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+
+                <section class="seccion">
+                    <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
+                        <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
+                    -->
+                    <h1 class="title" id="title">Conectar html y css</h1>
+
+                    <article class="temas">
+
+                        <header>
+                            <h2>Forma 1</h2>
+                        </header>
+
+                        <p>Con la etiqueta "link"</p>
+
+                        <footer>Ejemplo ==> link rel="stylesheet" href="/archivo1/styles.css"></footer>
+                    </article>
+                    <hr>
+
+                    <article class="temas">
+
+                        <header>
+                            <h2>Forma 2</h2>
+                        </header>
+
+                        <p>Con la etiqueta "style".</p>
+                        <p>Se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.</p>
+
+                        <footer>
+                            <p>Ejemplo ==> </p>
+                            <p>style></p>
+                            <p>body{</p>
+                            <p>background-color: steelblue;</p>
+                            <p>}</p>
+                            <p>/style></p>
+                        </footer>
+                    </article>
+                    <hr>
+
+                    <article class="temas">
+
+                        <header>
+                            <h2>Forma 3</h2>
+                        </header>
+
+                        <p>Con @import dentro de la etiqueta "style".</p>
+
+                        <footer>
+                            <p>Ejemplo ==> </p>
+                            <p>style></p>
+                            <p>@import url(css/styles.css);</p>
+                            <p>/style></p>
+                        </footer>
+                    </article>
+                    <hr>
+
+                    <article class="temas">
+
+                        <header>
+                            <h2>Forma 4</h2>
+                        </header>
+
+                        <p>Forma incorrecta y anticuada, se usa como propiedad dentro de etiquetas</p>
+
+                        <footer>Ejemplo ==> h1 style="background-color: violet;"> h1>Conectar html y css /h1></footer>
+                    </article>
+
+                </section>
+
+            </main>
+
+            <footer class="footer">Seda</footer>
+        </div>
+    </body>
+</html>

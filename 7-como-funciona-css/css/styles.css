@@ -14,11 +14,11 @@ Formula:
 */
 /*Especificidad ejemplos*/
 h1{
-    background-color: cornflowerblue;
+    background-color: rgb(77, 115, 185);
 }
 
 h1.title#title{
-    background-color: crimson;
+    background-color: #3a6ba3;
 }
 
 h1.title{
@@ -28,17 +28,14 @@ h1.title{
 /*Herencia*/
 
 .title{
-    color: cadetblue;
+    color: #2b999c;
 }
 
 span{
     color: initial;
+    /*color: inherit;*/
 }
 
-.text-sin-div{
+.texto-sin-div{
     color:cornflowerblue;
-}
-
-.text-sin-div #link-inherit{
-    color: inherit;
 }

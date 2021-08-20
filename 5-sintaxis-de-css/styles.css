@@ -7,11 +7,11 @@
 */
 /*
 selector{
-    propiedad:valor;
-    propiedad2:valor;
-    propiedad3:valor
+    propiedad:valor;S
 }
 */
-*{
+.charact{
     background-color: cadetblue;
+    margin: 10px;
+    padding: 5px;
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/7-como-funciona-css/css/styles.css">
+    <title>Curso Css 2020: como funciona css</title>
+</head>
+<body>
+    <header>
+        <h1 class="title" id="title">Especificidad, cascada y herencia</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h2 class="title">Especificidad</h2>
+
+                <p class="texto-sin-div">Establece lo <span>especifico</span> de un elemento para saber que estilo aplicar.<br>
+                </p>
+                <h3>Formula:</h3>
+                <p>001 => Etiquetas y pseudoelementos</p>
+                <p>010 => clases, atributos y pseudoclases</p>
+                <p>100 => Ids</p>
+                <p>1000 => Estilos en linea</p>
+                <footer>***"!important" tiene priodad en todos, pero no se debe usar nunca.</footer>
+            </article>
+
+            <article>
+                <h2 class="title">Cascada</h2>
+
+                <p class="texto-sin-div">Lee el contenido de arriba hacia abajo para aplicar el estilo.</p>
+                <p class="texto-sin-div">Funciona siempre que la especificidad tenga el <span>mismo valor</span> en los elementos.</p>
+                
+            </article>
+
+            <article>
+                <h2 class="title">Herencia</h2>
+
+                <p class="texto-sin-div">Es la capacidad de un elemento de <span>heredar sus propiedades</span>, con "inherit" se obtiene explicitamente la herencia, y con initial se obtiene las propiedades por defecto.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

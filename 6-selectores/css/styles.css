@@ -39,7 +39,7 @@
 /*Selector de tipo*/
 body{
     background-color: silver;
-    margin: 10px;
+    margin: 10px 50px;
     border: 3px solid gray;
     border-radius: 5px;
 } 
@@ -52,27 +52,27 @@ body{
     background-color: rgb(113, 165, 216);
 }
 /*Selector de otros tipos de atributos "[]"*/
-[href]{
+[id]{
     background-color: cornflowerblue;
 }
 /*Selector con un valor definido*/
-[href="https//:www.google.com"]{
+[id="https//:www.google.com"]{
     background-color: cornsilk;
 }
 /*Selector con valor al princio*/
-[href^="al-principio"]{
+[id^="al-principio"]{
     background-color: darksalmon;
 }
 /*Selector con valor en cualquier posicion*/
-[href*="cualquier"]{
+[id*="cualquier"]{
     background-color: green;
 }
 /*Selector con valor al final*/
-[href$="final"]{
+[id$="final"]{
     background-color: greenyellow;
 }
 /*Selector con valor al inicio que tolera el "-" */
-[href|="es"]{
+[id|="es"]{
     background-color: skyblue;
 }
 
@@ -105,4 +105,8 @@ body{
 /*Selector de hijos directos*/
 .padre > div{
     background-color: cornflowerblue;
+}
+
+.elemento-lista{
+    list-style: none;
 }
