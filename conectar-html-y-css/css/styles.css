@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #a3d6df;
+    background-image: repeating-linear-gradient(10deg, #6c95e0 0px,#6c95e0 20px, #6d6ddd 20px, #6d6ddd 40px);
 }
 
 .container{
@@ -25,8 +25,7 @@ body{
 .list-menu li{
     background-color: #818dd1;
     display: inline-block;
-    height: 20px;
-    padding: 5px;
+    padding: 0.5em;
 }
 .list-menu li:hover{
     background-color: #7483da;
@@ -61,9 +60,11 @@ body{
 }
 .list-aside li{
     background-color: #71a3d1;
-    display: inline-block;
     padding: 5px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 .list-aside li:hover{
     background-color: #6593be;
