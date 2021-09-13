@@ -1,0 +1,117 @@
+*{
+    padding-left: 0px;
+    margin: 0px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --background-color: #565fb1;
+    --background-image: repeating-linear-gradient(10deg, #6c95e0 0px,#6c95e0 20px, #6d6ddd 20px, #6d6ddd 40px);
+    --border: 0.2rem solid #8aa5e0;
+}
+body{
+    background-image: var(--background-image);
+}
+.container{
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto;
+}
+/* HEADER */
+.header-principal{
+    background-color: #103f6b;
+    background-image: var(--background-image);
+    grid-area: "header";
+    padding: 1em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.header-principal a{
+    background-color: #315a80;
+    border: 0.1em solid #193c5c;
+    padding: 1em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.header-principal a:hover{
+    background-color: #4d769c;
+}
+.main{
+    grid-area: "main";
+    display: grid;
+    grid-template-areas: "section aside";
+    grid-template-columns: auto 15em;
+}
+/* SECTION */
+.seccion{
+    background-color: #464596;
+    border: var(--border);
+    grid-area: "section";
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1em;
+}
+.artic-figure{
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 30%;
+    justify-content: center;
+    align-content: center;
+}
+.artic-temas{
+    display: grid;
+    grid-gap: 0.3rem;
+}
+.artic-temas a{
+    background-color: #4b5994;
+    padding: 1rem;
+    font-size: 1.5em;
+}
+.artic-temas a:hover{
+    background-color: #3f4b7a;
+}
+.img-inicio img{
+    max-width: 100%;
+}
+/* ASIDE */
+.aside{
+    background-color: #434980;
+    border: var(--border);
+    grid-area: "aside";
+}
+.list-aside{
+    margin: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1,6em);
+    grid-template-rows: repeat(3,4em);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1rem;
+}
+.list-aside li{
+    display: grid;
+}
+.list-aside a{
+    background-color: #5353b1;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.list-aside a:hover{
+    background-color: #4f4fa0;
+}
+
+.footer{
+    border: var(--border);
+    grid-area: "footer";
+    padding: 1em;
+}

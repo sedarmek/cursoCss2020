@@ -6,54 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Forma 1 y correcta de conectar css-->
     <link rel="stylesheet" href="./8-estilos-por-defecto/Normalize.css">
-    <link rel="stylesheet" href="./conectar-html-y-css/css/styles.css">
-
-    <!--Forma 2 de conectar css, se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.-->
-    <!--
-        <style>
-            body{
-                background-color: steelblue;
-            }
-        </style>
-    -->
-    
-    <!--Forma 3 e incorrecta de conectar con css(@import)
-    <style>
-        @import url(css/styles.css);
-        </style>
-    -->
+    <link rel="stylesheet" href="./style-principal/style-principal.css">
     <title>Curso Css</title>
 </head>
     <body>
         <div class="container">
-
-            <header>
-                <nav class="menu">
-                    <ul class="list-menu">
-                        <li><a href="./index.html">Inicio</a></li>
-                    </ul>
+            <header class="header-principal">
+                    <h1 class="title" id="title">Curso Css 2020</h1>
+                <nav>
+                    <a href="./index.html">Inicio</a>
                 </nav>
             </header>
-
-            <main>
-
+            <main class="main">
                 <section class="seccion">
-                    <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
-                        <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
-                    -->
-                    <h1 class="title" id="title">Curso Css 2020</h1>
-                    <article>
-                        <figure id="img-inicio">
-                            <img src="https://www.solucionex.com/sites/default/files/posts/imagen/css_blog.png" alt="">
-                            <figcaption>En este curso veremos los temas mas relevantes de css y su funcionamiento junto con html.</figcaption>
+                    <article class="artic-figure">
+                        <figure class="img-inicio">
+                            <img src="https://www.solucionex.com/sites/default/files/posts/imagen/css_blog.png" alt="#">
+                            <figcaption>En esta pagina anote todos los temas que aprendi en el curso de css 2020.</figcaption>
                         </figure>
                     </article>
-
-                    <article class="temas">
+                    <article class="artic-temas">
                         <header>
                             <h2>Temas</h2>
                         </header>
-
                         <a href="./conectar-html-y-css/conectar-html-y-css.html">Conectar html y css</a>
                         <a href="./5-sintaxis-de-css/sintaxis.html">Sintaxis</a>
                         <a href="./6-selectores/selectores.html">Selectores</a>
@@ -69,21 +44,16 @@
                         <a href="./flexbox/flexbox.html">Flexbox</a>
                         <a href="./grid/grid.html">Grid</a>
                         <a href="./responsive/breakpoints.html">Responsive: Breakpoints</a>
-
                     </article>
-
                 </section>
-
                 <aside class="aside">
                     <ul class="list-aside">
                         <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
                         <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
-                        <li>Js</li>
+                        <li><a href="#">JS</a></li>
                     </ul>
                 </aside>
-
             </main>
-
             <footer class="footer">Seda</footer>
         </div>
     </body>

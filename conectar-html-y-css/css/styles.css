@@ -5,7 +5,9 @@
     text-align: center;
     color: white;
     text-decoration: none;
+    list-style: none;
 }
+
 
 body{
     background-image: repeating-linear-gradient(10deg, #6c95e0 0px,#6c95e0 20px, #6d6ddd 20px, #6d6ddd 40px);
@@ -18,7 +20,6 @@ body{
 }
 .list-menu{
     background-color: #103f6b;
-    list-style: none;
     margin-bottom: 10px;
     padding: 5px;
 }
@@ -29,10 +30,6 @@ body{
 }
 .list-menu li:hover{
     background-color: #7483da;
-}
-.list-menu a{
-    text-decoration: none;
-    color: inherit;
 }
 .seccion{
     background-color: #6872cf;
