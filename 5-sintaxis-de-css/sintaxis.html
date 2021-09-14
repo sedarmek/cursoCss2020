@@ -5,39 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../8-estilos-por-defecto/Normalize.css">
-    <link rel="stylesheet" href="../conectar-html-y-css/css/styles.css">
-    <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="../conectar-html-y-css/css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <title>Curso Css:sintaxis</title>
 </head>
 
     <body>
         <div class="container">
-            <header>
-                <nav class="menu">
-                    <ul class="list-menu">
-                        <li><a href="../index.html">Inicio</a>
-                        </li>
-                    </ul>
+            <header class="header-principal">
+                <h1>Sintaxis</h1>
+                <nav>
+                    <a href="../index.html">Inicio</a>
                 </nav>
             </header>
-            <main>
-
+            <main class="main">
                 <section class="seccion">
-                    <h1 class="title" id="title">Sintaxis</h1>
-                    <article>
+                    <article class="article">
                         <header>
                             <h2>Caracteristicas</h2>
                         </header>
-                        
-                        <p class="charact">*Selector: el elemento al que vamos a aplicar estilos</p>
-                        <p class="charact">*Propiedad: lo que vamos a cambiar</p>
-                        <p class="charact">*Valor: el nuevo valor que le vamos a dar a la propiedad</p>
-                        <p class="charact">*Declaracion: el conjunto de propiedad y valor</p>
-                        <p class="charact">*Regla: conjunto de selector+declaracion(es)</p>
-                        <p class="charact">Ejemplo: selector{propiedad:valor;}</p>
-                        
+                        <ul class="list-style">
+                            <li>Selector: el elemento al que vamos a aplicar estilos</li>
+                            <li>Propiedad: lo que vamos a cambiar</li>
+                            <li>Valor: el nuevo valor que le vamos a dar a la propiedad</li>
+                            <li>Declaracion: el conjunto de propiedad y valor</li>
+                            <li>Regla: conjunto de selector + declaracion(es)</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    selector{
+                                        propiedad:valor;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
                     </article>
-
+                </section>
+                <aside class="aside">
+                    <ul class="list-aside">
+                        <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                        <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </aside>
             </main>
 
             <footer class="footer">Seda</footer>

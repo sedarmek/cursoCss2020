@@ -4,67 +4,312 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../8-estilos-por-defecto/Normalize.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <title>Selectores</title>
 </head>
 <body>
-    <div class="contenedor">
-
-        <header>
-            <h1 id="titulo-principal" class="titulo">Selectores</h1>
-            <nav class="nav-menu">
-                <h2 class="menu">Menu</h2>
-                <ul class="lista-menu">
-                    <li class="elemento-lista"><a href="../index.html">Inicio</a></li>
-                </ul>
+    <div class="container">
+        <header class="header-principal">
+            <h1>Selectores</h1>
+            <nav>
+                <li class="elemento-lista"><a href="../index.html">Inicio</a></li>
             </nav>
         </header>
-        <section class="seccion-principal">
-            <article>
-                
-                <h3 class="titulo-seccion">Selector de otros  atributos</h3>
-                <p id="">Otro tipo de a tributo"[]"</p>
-                <p id="https//:www.google.com">Selector con valor exacto:Google</p>
-                <p id="al-principio-tiene-la-palabra">Al principio</p>
-                <p id="tiene-la-palabra-en-cualquier-posicion">En cualquier lado</p>
-                <p id="tiene-la-palabra-al-final">Al final</p>
-                <p id="es-mx">Funciona incluso con "-"</p>
-            </article>
-            <article>
+        <main class="main">
 
-                <h3 class="titulo-seccion">Selectores compuestos</h3>
-                <h4>Selectores agrupados</h4>
-                <p class="texto-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores enim, quaerat velit architecto hic, ducimus et fugiat natus voluptates reiciendis impedit, nesciunt ea laboriosam praesentium nostrum id sapiente optio possimus.</p>
-                <p class="texto-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur sunt tempora nesciunt nisi corporis, rerum repellendus accusamus dolore nam. Officia enim dolor quo dolorum! Fuga eum commodi numquam maxime.</p>
-            </article>
-            <article>
-
-                <h3 class="titulo-seccion">Selectores combinadores</h3>
-                <h4>Selector descendente</h4>
-                <div class="descendente">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione expedita magni fugiat tempora, natus laborum illum nulla tenetur at quisquam nemo explicabo! Ex soluta harum unde impedit facere, repudiandae animi.</p>
-                </div>
-                <h4>Selector de hermano siguiente</h4>
-                <div class="contenedor-hermano-siguiente">
-                    <p class="primer-hermano">Primer hermano</p>
-                    <p>Hermano siguiente</p>
-                    <p>Tercer hermano</p>
-                </div>
-                <h4>Selecor de hermanos siguientes</h4>
-                <div class="contenedor-hermanos-siguientes">
-                    <p class="hermano-1">Primer hermano</p>
-                    <p>Segundo hermano</p>
-                    <p>Tercer hermano</p>
-                </div>
-                <h4>Selector de hijos directos</h4>
-                <div class="padre">
-                    <div>Hijo 1</div>
-                    <div>Hijo 2</div>
-                    <div>Hijo 3</div>
-                    <div>Hijo 4</div>
-                </div>
-            </article>
-         </section> 
+            <section class="seccion">
+                <article class="article-2d">
+                    <header>
+                        <h2>Selectores simples</h2>
+                        <ul class="list-style"><li>Son los selectores que solo tienen una palabra o simbolo.</li></ul>
+                    </header>
+                    <article class="article">
+                        <header><h3>Selectores elementales</h3></header>
+                        <article class="article">
+                            <header><h4>Selector universal</h4></header>
+                            <ul class="list-style"><li>Es un selector para modificar todos los elementos con un solo caracter "*".</li></ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        *{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                        <article class="article">
+                            <header><h4>Selector de tipo o etiqueta</h4></header>
+                            <ul class="list-style"><li>Es un selector para modificar las etiquetas.</li></ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        body{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                    </article>
+                    <article class="article">
+                        <header><h3>Selectores de atributo</h3></header>
+                        <article class="article">
+                            <header><h4>Selector de id</h4></header>
+                            <ul class="list-style">
+                                <li>Es un selector para modificar los elementos con el atributo id y el valor especificado.</li>
+                                <li>Se coloca un "#" antes del valor del atributo.</li>
+                                <li>No se recomienda usar.</li>
+                            </ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        #valor-del-id{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                        <article class="article">
+                            <header><h4>Selector de clase</h4></header>
+                            <ul class="list-style">
+                                <li>Es un selector para modificar los elementos con el atributo class y el valor especificado.</li>
+                                <li>Se coloca un "." antes del valor del atributo.</li>
+                                <li>Se recomienda usarlo.</li>
+                            </ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        .valor-class{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                        <article class="article">
+                            <header><h4>Otros atributos</h4></header>
+                            <article class="article">
+                                <header><h5>Atributo simple</h5></header>
+                                <ul class="list-style">
+                                    <li>Es un selector para modificar los elementos que tengan el atributo especificado.</li>
+                                    <li>Se coloca un "[" antes y un "]" despues del selector respectivamente.</li>
+                                </ul>
+                                <footer class="footer-article">
+                                    <pre>
+                                        <code>
+                                            Codigo:
+                                            [href]{
+                                                margin: 0px;
+                                            }
+                                        </code>
+                                    </pre>
+                                </footer>
+                            </article>
+                            <article class="article">
+                                <header><h5>Atributo con valor</h5></header>
+                                <article class="article-sec">
+                                    <header><h6>Atributo con valor exacto</h6></header>
+                                    <ul class="list-style">
+                                        <li>Busca los elementos que tengan el atributo especificado.</li>
+                                        <li>Para ello se declara el valor despues del atributo con el signo "=".</li>
+                                    </ul>
+                                    <footer class="footer-article">
+                                        <pre>
+                                            <code>
+                                                Codigo:
+                                                [href=valor]{
+                                                    margin: 0px;
+                                                }
+                                            </code>
+                                        </pre>
+                                    </footer>
+                                </article>
+                                <article class="article-sec">
+                                    <header><h6>Atributo con valor inicial igual</h6></header>
+                                    <ul class="list-style">
+                                        <li>Busca los elementos que tengan el atributo especificado y cuyo valor empiece igual.</li>
+                                        <li>Se usa el signo "^="</li>
+                                    </ul>
+                                    <footer class="footer-article">
+                                        <pre>
+                                            <code>
+                                                Codigo:
+                                                [href^=va]{
+                                                    margin: 0px;
+                                                }
+                                            </code>
+                                        </pre>
+                                    </footer>
+                                </article>
+                                <article class="article-sec">
+                                    <header><h6>Atributo con parte del valor similar</h6></header>
+                                    <ul class="list-style">
+                                        <li>Busca los elementos que tengan el atributo especificado y cuyo valor tenga los mismos caracteres, pero que puede tenermos en cualquier posicion.</li>
+                                        <li>Se usa el signo "*="</li>
+                                    </ul>
+                                    <footer class="footer-article">
+                                        <pre>
+                                            <code>
+                                                Codigo:
+                                                [href*=lo]{
+                                                    margin: 0px;
+                                                }
+                                            </code>
+                                        </pre>
+                                    </footer>
+                                </article>
+                                <article class="article-sec">
+                                    <header><h6>Atributo con valor final igual</h6></header>
+                                    <ul class="list-style">
+                                        <li>Busca los elementos que tengan el atributo especificado y cuyo valor termine igual.</li>
+                                        <li>Se usa el signo "$="</li>
+                                    </ul>
+                                    <footer class="footer-article">
+                                        <pre>
+                                            <code>
+                                                Codigo:
+                                                [href$=or]{
+                                                    margin: 0px;
+                                                }
+                                            </code>
+                                        </pre>
+                                    </footer>
+                                </article>
+                                <article class="article-sec">
+                                    <header><h6>Atributo con o sin guion</h6></header>
+                                    <ul class="list-style">
+                                        <li>Busca los elementos que tengan el atributo especificado y cuyo valor inicie igual, incluso si el valor tiene un guion al inicio.</li>
+                                        <li>Se usa el signo "|="</li>
+                                    </ul>
+                                    <footer class="footer-article">
+                                        <pre>
+                                            <code>
+                                                [lang|=es-ep]{
+                                                    margin: 0px;
+                                                }
+                                            </code>
+                                        </pre>
+                                    </footer>
+                                </article>
+                            </article>
+                        </article>
+                    </article>
+                <article class="article-2d">
+                    <h2>Selectores compuestos</h2>
+                    <ul class="list-style">
+                        <li>Son los que manejan mas de un elemento.</li>
+                    </ul>
+                    <article class="article">
+                        <header><h3>Selectores agrupados</h3></header>
+                        <ul class="list-style">
+                            <li>Usan comas (",") para trabajar con mas de un elemento.</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    h1, h2{
+                                        margin: 0px;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Selectores combinadores</h3></header>
+                        <article class="article-sec">
+                            <header><h4>Selector descendente</h4></header>
+                            <ul class="list-style">
+                                <li>Se usa para seleccionar el hijo de un elemento padre, por buena practica se recomienda no mas de dos.</li>
+                                <li>El primer elemento es el padre y el segundo es el hijo.</li>
+                                <li>Se representa con el espacio " ".</li>
+                            </ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        ul li{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                        <article class="article-sec">
+                            <header><h4>Selector de hermano siguiente</h4></header>
+                            <ul class="list-style">
+                                <li>Se usa para seleccionar el hermano adyacente, por buena practica se recomienda no mas de dos.</li>
+                                <li>El primer elemento es el primer hermano y el segundo es el adyacente.</li>
+                                <li>Se representa con el signo "+".</li>
+                            </ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        section+aside{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                        <article class="article-sec">
+                            <header><h4>Selector de hermanos siguientes</h4></header>
+                            <ul class="list-style">
+                                <li>Se usa para seleccionar a todos los hermanos siguientes.</li>
+                                <li>El primer elemento es el primer hermano y el segundo son todos los demas.</li>
+                                <li>Se representa con el signo "~".</li>
+                            </ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        .primer-li~li{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                        <article class="article-sec">
+                            <header><h4>Selector de hijos directos</h4></header>
+                            <ul class="list-style">
+                                <li>Se usa para seleccionar a solo los hijos directos.</li>
+                                <li>El primer elemento es el padre y el segundo son los hijos.</li>
+                                <li>Se representa con el signo ">".</li>
+                            </ul>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        ul>li{
+                                            margin: 0px;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                    </article>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+         
+         <footer class="footer">Seda</footer>
     </div>
 </body>
 </html>

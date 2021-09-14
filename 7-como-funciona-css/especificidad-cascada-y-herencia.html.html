@@ -4,44 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./7-como-funciona-css/css/styles.css">
+    <!-- <link rel="stylesheet" href="./7-como-funciona-css/css/styles.css"> -->
+    <link rel="stylesheet" href="../8-estilos-por-defecto/Normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <title>Curso Css 2020: como funciona css</title>
 </head>
 <body>
-    <header>
-        <a href="../index.html">Inicio</a>
-        <h1 class="title" id="title">Especificidad, cascada y herencia</h1>
-    </header>
+    <div class="container">
+        <header class="header-principal">
+            <h1 class="title" id="title">Especificidad, cascada y herencia</h1>
+            <nav>
+                <a href="../index.html">Inicio</a>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="seccion">
+                <article class="article">
+                    <h2>Especificidad</h2>
+                    <ul class="list-style">
+                        <li>Establece lo especifico de un elemento para saber que estilo aplicar.</li>
+                    </ul>
+                    <div class="div-tabla">
+                            <h3>Formula:</h3>
+                            <ul>
+                                <li>0001 => Etiquetas y pseudoelementos</li>
+                                <li>0010 => clases, atributos y pseudoclases</li>
+                                <li>0100 => Ids</li>
+                                <li>1000 => Estilos en linea</li>
+                            </ul>
+                    </div>
+                    <footer class="footer-article">
+                        <footer>
+                            <pre>
+                                <code>
+                                    Codigo:
 
-    <main>
-        <section>
-            <article>
-                <h2 class="title">Especificidad</h2>
+                                    <small>(valor de especificidad = 0001)</small>
+                                    h1{
+                                        background-color: rgb(77, 115, 185);
+                                    }
 
-                <p class="texto-sin-div">Establece lo <span>especifico</span> de un elemento para saber que estilo aplicar.<br>
-                </p>
-                <h3>Formula:</h3>
-                <p>001 => Etiquetas y pseudoelementos</p>
-                <p>010 => clases, atributos y pseudoclases</p>
-                <p>100 => Ids</p>
-                <p>1000 => Estilos en linea</p>
-                <footer>***"!important" tiene priodad en todos, pero no se debe usar nunca.</footer>
-            </article>
-
-            <article>
-                <h2 class="title">Cascada</h2>
-
-                <p class="texto-sin-div">Lee el contenido de arriba hacia abajo para aplicar el estilo.</p>
-                <p class="texto-sin-div">Funciona siempre que la especificidad tenga el <span>mismo valor</span> en los elementos.</p>
-                
-            </article>
-
-            <article>
-                <h2 class="title">Herencia</h2>
-
-                <p class="texto-sin-div">Es la capacidad de un elemento de <span>heredar sus propiedades</span>, con "inherit" se obtiene explicitamente la herencia, y con initial se obtiene las propiedades por defecto.</p>
-            </article>
-        </section>
-    </main>
+                                    <small>(valor de especificidad = 0111) &#60=== este es el que tiene mayor prioridad</small>
+                                    h1.title#title{
+                                        background-color: #3a6ba3;
+                                    }
+                                    
+                                    <small>(valor de especificidad = 0011)</small>
+                                    h1.title{
+                                        background-color: cornsilk;
+                                    }
+                                </code>
+                            </pre>
+                            ***"!important" tiene priodad en todos, pero no se debe usar nunca.</footer>
+                    </footer>
+                </article>
+    
+                <article class="article">
+                    <h2>Cascada</h2>
+                    <ul class="list-style">
+                        <li>Lee el contenido de arriba hacia abajo para aplicar el estilo.</li>
+                        <li>Funciona siempre que la especificidad tenga el mismo valor en los elementos.</li>
+                    </ul>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .h1{
+                                    font-size: 0.5rem;
+                                }
+                                .h1{
+                                    font-size: 1rem;
+                                }
+                                .h1{
+                                    font-size: 1.5rem;<small>&#60=== este es el que tiene mayor prioridad</small>
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+    
+                <article class="article">
+                    <h2>Herencia</h2>
+                    <ul class="list-style">
+                        <li>Es la capacidad de un elemento de heredar sus propiedades, con "inherit" se obtiene explicitamente la herencia, y con initial se obtiene las propiedades por defecto.</li>
+                    </ul>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                p{
+                                    color: #2b999c;
+                                }
+                                p span{
+                                    color: inherit;<small>&#60== hereda el color del padre.</small>
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer class="footer">Seda</footer>
+    </div>
 </body>
 </html>

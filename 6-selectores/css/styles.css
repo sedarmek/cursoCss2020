@@ -2,111 +2,79 @@
 
 
 /* 
-    Selectores Simples---------------------
-        Selectores elementales
-            Selector Universal -> *
-            Selector de tipo o etiqueta -> nombre de la etiqueta
+    1. Selectores Simples---------------------
+            a. Selectores elementales
+                    Selector Universal -> *
+                    Selector de tipo o etiqueta -> nombre de la etiqueta
 
-        Selectoes de atributo
-        id -> #(no se recomienda usar)
-        clase -> .
+            b. Selectores de atributo
+                    id -> #(no se recomienda usar)
+                    clase -> .
 
-        otros atributos
-            [atributo]
-            [atributo=valor]
-            [atributo^=valor] ==> busca el atributo que tenga el valor en la primer posicion.
-            [atributo*=valor] ==> busca el atributo que tenga el valor en cualquier posicion.
-            [atributo$=valor] ==> busca el atributo que tenga el valor en la ultima posicion.
-            [atributo|=valor] ==> busca el atributo que tenga el valor en la primer posicion sin importar que tenga un guion(-) delante de la palagra,funciona para lang.
+                    otros atributos
+                        [atributo]        ==> busca los elementos que tengan el atributo especificado.
+                        [atributo=valor]  ==> busca los elementos que tengan el atributo especificado con el valor especifico.
+                        [atributo^=valor] ==> busca el atributo que tenga el valor en la primer posicion.
+                        [atributo*=valor] ==> busca el atributo que tenga el valor en cualquier posicion.
+                        [atributo$=valor] ==> busca el atributo que tenga el valor en la ultima posicion.
+                        [atributo|=valor] ==> busca el atributo que tenga el valor en la primer posicion sin importar que tenga un guion(-) delante de la palabra,funciona para lang.
 
-    Selectores Compuestos-----------------------
-        Selectores Agrupados: usan comas para trabajar con mas de un elemento.
-        
-        Selectores Combinadores
-            *Selector descente: se usa el espacio para seleccionar el atributo hijo, por buena practica se recomienda no mas de dos.
-            *Selector de hermano siguiente "+": selecciona al hermano adyacente.
-            *Selector de hermanos siguientes "~": selecciona a todos los hermanos siguientes.
-            *Selector de hijos directos ">": selecciona solo los hijos directos.
+    2. Selectores Compuestos-----------------------
+            a. Selectores Agrupados: usan comas para trabajar con mas de un elemento.
+            
+            b. Selectores Combinadores
+                    *Selector descente: se usa el espacio para seleccionar el hijo de un elemento, por buena practica se recomienda no mas de dos.
+                    *Selector de hermano siguiente "+": selecciona al hermano adyacente.
+                    *Selector de hermanos siguientes "~": selecciona a todos los hermanos siguientes.
+                    *Selector de hijos directos ">": selecciona solo los hijos directos.
 
-        Pseudoclases - Pseudoelementos
+    3. Pseudoclases - Pseudoelementos
 */
-/*Selector universal*/
+/*1. Selectores Simples---------------------*/
 *{
-    padding: 0px;
     margin: 0px;
-    text-align: center;
 }
-/*Selector de tipo*/
 body{
-    background-color: silver;
-    margin: 10px 50px;
-    border: 3px solid gray;
-    border-radius: 5px;
-} 
-/*Selector de atributo por id*/
-#titulo-principal{
-    background-color: rgb(148, 166, 199);
+    margin: 0px;
 }
-/*Selector de atributo por clase*/
-.menu{
-    background-color: rgb(113, 165, 216);
+#valor-del-id{
+    margin: 0px;
 }
-/*Selector de otros tipos de atributos "[]"*/
-[id]{
-    background-color: cornflowerblue;
+.valor-class{
+    margin: 0px;
 }
-/*Selector con un valor definido*/
-[id="https//:www.google.com"]{
-    background-color: cornsilk;
+[href]{
+    margin: 0px;
 }
-/*Selector con valor al princio*/
-[id^="al-principio"]{
-    background-color: darksalmon;
+[href=valor]{
+    margin: 0px;
 }
-/*Selector con valor en cualquier posicion*/
-[id*="cualquier"]{
-    background-color: green;
+[href^=va]{
+    margin: 0px;
 }
-/*Selector con valor al final*/
-[id$="final"]{
-    background-color: greenyellow;
+[href*=lo]{
+    margin: 0px;
 }
-/*Selector con valor al inicio que tolera el "-" */
-[id|="es"]{
-    background-color: skyblue;
+[href$=or]{
+    margin: 0px;
 }
-
-/*Selector agrupado*/
-.texto-1,
-.texto-2{
-    background-color: slategray;
-    margin: 5px;
-    font-size: small;
+[lang|=es-ep]{
+    margin: 0px;
 }
-
-
-/*Selector descendente*/
-.descendente p{
-    background-color: cadetblue;
+/*  2. Selectores Compuestos----------------------- */
+h1, h2{
+    margin: 0px;
 }
-.seccion-principal article{
-    border: 2px solid grey;
-    margin: 15px 5px;
+ul li{
+    margin: 0px;
 }
-
-/*Selector de hermano siguiente*/
-.primer-hermano + p{
-    background-color: chartreuse;
+section+aside{
+    margin: 0px;
 }
-/*Selector de hermanos siguientes*/
-.hermano-1 ~ p{
-    background-color: chocolate;
+.primer-li~li{
+    margin: 0px;
 }
-/*Selector de hijos directos*/
-.padre > div{
-    background-color: cornflowerblue;
+ul>li{
+    margin: 0px;
 }
-
-.elemento-lista{
-    list-style: none;
-}
+/* 3. Pseudoclases - Pseudoelementos */

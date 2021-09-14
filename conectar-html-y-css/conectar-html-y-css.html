@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Forma 1 y correcta de conectar css-->
-    <link rel="stylesheet" href="./8-estilos-por-defecto/Normalize.css">
-    <link rel="stylesheet" href="../conectar-html-y-css/css/styles.css">
+    <link rel="stylesheet" href="../8-estilos-por-defecto/Normalize.css">
+    <!-- <link rel="stylesheet" href="../conectar-html-y-css/css/styles.css"> -->
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
 
     <!--Forma 2 de conectar css, se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.-->
     <!--
@@ -18,95 +19,105 @@
     -->
     
     <!--Forma 3 e incorrecta de conectar con css(@import)
-    <styl>
+    <style>
         @import url(css/styles.css);
-        </style>
+    </style>
     -->
     <title>Curso Css: conectar-html-y-css</title>
 </head>
     <body>
-
         <div class="container">
-
-            <header>
-                <nav class="menu">
-                    <ul class="list-menu">
-                        <li><a href="../index.html">Inicio</a>
-                        </li>
-                    </ul>
-                </nav>
+            <header class="header-principal">
+                <h1>Conectar html y css</h1>
+            <nav>
+                <a href="../index.html">Inicio</a>
+            </nav>
             </header>
-
-            <main>
-
+            <main class="main">
                 <section class="seccion">
                     <!--Forma 4 e incorrecta de conectar con css, anticuada, se usa como propiedad dentro de etiquetas
                         <h1 style="background-color: violet;"></h1>Conectar html y css</h1>
                     -->
-                    <h1 class="title" id="title">Conectar html y css</h1>
-
-                    <article class="temas">
-
+                    <article class="article">
                         <header>
                             <h2>Forma 1</h2>
                         </header>
-
-                        <p>Con la etiqueta "link"</p>
-
-                        <footer>Ejemplo ==> link rel="stylesheet" href="/archivo1/styles.css"></footer>
+                        <ul class="list-style"><li>Con la etiqueta "link" dentro del "head"</li></ul>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    <strong>Codigo:</strong>
+                                    &#60link rel="stylesheet" href="/archivo1/styles.css">
+                                </code>
+                            </pre>
+                        </footer>
                     </article>
                     <hr>
-
-                    <article class="temas">
-
+                    <article class="article">
                         <header>
                             <h2>Forma 2</h2>
                         </header>
-
-                        <p>Con la etiqueta "style".</p>
-                        <p>Se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.</p>
-
-                        <footer>
-                            <p>Ejemplo ==> </p>
-                            <p>style></p>
-                            <p>body{</p>
-                            <p>background-color: steelblue;</p>
-                            <p>}</p>
-                            <p>/style></p>
+                        <ul class="list-style">
+                            <li>Con la etiqueta "style".</li>
+                            <li>Se usa cuando solo se permite cargar un archivo, como por ejemplo una web para correo eletronico.</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    &#60style>
+                                        body{
+                                        background-color: steelblue;
+                                        }
+                                    &#60/style>
+                                </code>
+                            </pre>
                         </footer>
                     </article>
                     <hr>
-
-                    <article class="temas">
-
+                    <article class="article">
                         <header>
                             <h2>Forma 3</h2>
                         </header>
-
-                        <p>Con @import dentro de la etiqueta "style".</p>
-
-                        <footer>
-                            <p>Ejemplo ==> </p>
-                            <p>style></p>
-                            <p>@import url(css/styles.css);</p>
-                            <p>/style></p>
+                        <ul class="list-style">
+                            <li>Con @import dentro de la etiqueta "style".</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo: 
+                                    &#60style>
+                                        @import url(css/styles.css);
+                                    &#60/style>
+                                </code>
+                            </pre>
                         </footer>
                     </article>
                     <hr>
-
-                    <article class="temas">
-
+                    <article class="article">
                         <header>
                             <h2>Forma 4</h2>
                         </header>
-
-                        <p>Forma incorrecta y anticuada, se usa como propiedad dentro de etiquetas</p>
-
-                        <footer>Ejemplo ==> h1 style="background-color: violet;"> h1>Conectar html y css /h1></footer>
+                        <ul class="list-style">
+                            <li>Forma incorrecta y anticuada, se usa como propiedad dentro de etiquetas</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    &#60h1 style="background-color: violet;"> h1>Conectar html y css /h1>
+                                </code>
+                            </pre>
+                        </footer>
                     </article>
-
                 </section>
-
+                <aside class="aside">
+                    <ul class="list-aside">
+                        <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                        <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </aside>
             </main>
 
             <footer class="footer">Seda</footer>
