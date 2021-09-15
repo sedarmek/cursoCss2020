@@ -5,52 +5,204 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./8-estilos-por-defecto/Normalize.css">
-    <link rel="stylesheet" href="./css/styles-dist.css">
+    <!-- <link rel="stylesheet" href="./css/styles-dist.css"> -->
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Box model</title>
 </head>
-<body>
-    <header class="header">
-        <span class="titulo-menu">Menu</span>
-        <nav class="menu">
-            <ul class="lista-menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li>Contenido</li>
-                <li>Contacto</li>
-            </ul>
-        </nav>
-    </header>
-    <section class="seccion">
+    <body>
+        <div class="container">
+            <header class="header-principal">
+                <h1>Box model</h1>
+                <nav>
+                    <a href="../index.html">Inicio</a>
+                </nav>
+            </header>
+            <main class="main">
+                <section class="seccion">
+                    <article class="article">
+                        <header><h2>Elemento de linea</h2></header>
+                        <ul class="list-style">
+                            <li>Una etiqueta de línea es aquella que ocupa el espacio mínimo necesario en horizontal, y permite que otro elemento se coloque a su lado.</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <p>Etiquetas mas usadas: &#60a>, &#60span>, &#60strong>, &#60img>, &#60input>, &#60code></p>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Elemento de bloque</h2></header>
+                        <ul class="list-style">
+                            <li>Una etiqueta de bloque, ocupa todo el ancho disponible y no permite que otro elemento se coloque a su lado.</li>
+                            <li>Con este elemento es que funciona el box model.</li>
+                        </ul>
+                        <footer class="footer-article">
+                            <p>Etiquetas mas usadas: &#60h1>, &#60p>, &#60ul>, &#60li>, &#60div>, &#60header>, &#60nav>, &#60section>, &#60article>, &#60footer>, &#60form>, &#60table></p>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Width y height</h2></header>
+                        <ul class="list-style">
+                            <li>Son pripiedades que se usan para dar una medida de ancho y alto respectivamente.</li>
+                            <li>Funcionan en los elementos de bloque, pero en los elementos de linea no.</li>
+                        </ul>
+                        <div class="element-size"><p>Elemento con medidas</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-size{
+                                        width: 7rem;
+                                        height: 7rem;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Margin</h2></header>
+                        <ul class="list-style">
+                            <li>Es una propiedad que establece el margen para los cuatro lados.</li>
+                            <li>Se puede establecer cada lado por separado con otras propiedades: margin-top, margin-right, margin-bottom y margin-left.</li>
+                            <li>Acepta uno, dos , tres  o cuatro valores de los siguientes:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>Un único valor aplicará para todos los cuatro lados.</li>
+                                        <li>Dos valores aplicarán: El primer valor para arriba y abajo, el segundo valor para izquierda y derecha.</li>
+                                        <li>Tres  valores aplicarán: El primero para arriba, el segundo para izquierda y derecha, el tercero para abajo.</li>
+                                        <li>Cuatro valores aplicarán en sentido de las manecillas del reloj empezando desde arriba.</li>
+                                    </ul>
+                                </div>
+                            </li>
 
-        <div class="parte-1">
-            <h1 class="title">Box model</h1>
-            
-            <div class="block">Elemento de Bloque</div>
-            
-            <a href="#" class="inline">Link(elemento de linea)</a>
-            <a href="#" class="inline">Link 2</a>
+                            <li>Funciona en los elementos de bloque y en los elementos de linea, pero en estos ultimos solo con left y right.</li>
+                        </ul>
+                        <div class="element-margin-1"><p>Elemento con margen</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-margin-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                    }
+                                </code>
+                            </pre>
+                            <footer>
+                                *Para que un elemento se mueva a los lados al usar margin, debes  asignarle un ancho. *El margin por defectos es de 8 pixeles.
+                            </footer>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Padding</h2></header>
+                        <ul class="list-style">
+                            <li>Establece el espacio (entre el contenido del elemento y su borde) de relleno requerido por todos los lados de un elemento.</li>
+                            <li>Se puede establecer cada lado por separado con otras propiedades: padding-top,padding-right,padding-left,padding-bottom.</li>
+                            <li>Acepta uno, dos , tres  o cuatro valores de los siguientes:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>Un único valor aplicará para todos los cuatro lados.</li>
+                                        <li>Dos valores aplicarán: El primer valor para arriba y abajo, el segundo valor para izquierda y derecha.</li>
+                                        <li>Tres  valores aplicarán: El primero para arriba, el segundo para izquierda y derecha, el tercero para abajo.</li>
+                                        <li>Cuatro valores aplicarán en sentido de las manecillas del reloj empezando desde arriba.</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>Funciona en los elementos de bloque y en los elementos de linea.</li>
+                        </ul>
+                        <div class="element-padding-1"><p>Elemento con padding</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-padding-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                        padding: 1em;
+                                    }
+                                </code>
+                            </pre>
+                            <footer>
+                                *El padding puede modificar el tamaño del elemento.
+                            </footer>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Border</h2></header>
+                        <ul class="list-style">
+                            <li>Es el borde el elemento, ye puede establecer cada lado por separado con otras propiedades: border-top,border-right,border-left,border-bottom.</li>
+                            <li>Es una propiedad abreviada para las siguientes propiedades CSS:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>border-width</li>
+                                        <li>border-style</li>
+                                        <li>border-color</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>Funciona en los elementos de bloque y en los elementos de linea.</li>
+                        </ul>
+                        <div class="element-border-1"><p>Elemento con border</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-border-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                        padding: 1em;
+                                        border: 1px solid black;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Box-sizing</h2></header>
+                        <ul class="list-style">
+                            <li>La propiedad debe calcular el ancho y alto total de un elemento.</li>
+                            <li>Tiene dos valores:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>content-box: valor por defecto, el padding puede modificar su medida.</li>
+                                        <li>border-box: calcula las dimensiones del contenido automaticamente cuando se modifica el padding o el border para que el elemento no cambie su tamaño.</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>Funciona en los elementos de bloque.</li>
+                        </ul>
+                        <div class="element-bsizing-1"><p>Elemento con box sizing</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-bsizing-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                        padding: 1em;
+                                        border: 1px solid black;
+                                        box-sizing: border-box;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                </section>
+                <aside class="aside">
+                    <ul class="list-aside">
+                        <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                        <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </aside>
+            </main>
+            <footer class="footer">Seda.Company</footer>
         </div>
-        
-        <div class="parte-2">
-            <div class="botons">
-                <button class="boton">Border</button>
-                <button class="boton-outline">Outline</button>
-            </div>
-        </div>
-        
-        <div class="parte-3">
-            <div class="border-radius-circle">
-                <span class="text-radius">Border radius circle.</span>
-            </div>
-            <div class="border-radius-elipse">Border radius elipse
-            </div>
-            <div class="overflow">Overflow:Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque in architecto veniam! Architecto impedit eligendi iste recusandae iusto fugit illo, qui sunt optio totam, placeat quas nulla, voluptates nam vero.
-            </div>
-            <div class="box-shadow">Box shadow</div>
-        </div>
-    </section>
-    <footer class="pie-de-pagina">
-        Seda.Company
-    </footer>
-        
     </body>
-    </html>
+</html>

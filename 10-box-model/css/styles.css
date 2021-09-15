@@ -1,227 +1,137 @@
 /*BOX MODEL
-Las propiedades width y height funcionan en los bloques, pero en los elementos de linea no.
+Medidas
+    Las propiedades width y height funcionan en los bloques, pero en los elementos de linea no.
 
 Margin: funciona en los elementos de bloque y en los elementos de linea, pero en estos ultimos solo con left y right.
 margin-top,margin-right,margin-bottom,margin-left.
-4 elementos -> top,right,botton,left.
-3 elementos -> top,right/left,bottom.
-2 elementos -> top/botton,right/left.
-1 elemento -> top/bottom/right/left.
-nota--Para que un elemento se mueva a los lados al usar margin, debes  asignarle un ancho.
-El margin por defectos es de 8 pixeles.
-
-
-Malas practicas
-1.- Usar el selector universal y asignar margin y padding 0
-*{
-    margin: 0;
-    paddin: 0;
-}
-2.- Asignar un pading 0 al body, ya que no tiene sentido.
+    4 elementos -> top,right,botton,left.
+    3 elementos -> top,right/left,bottom.
+    2 elementos -> top/botton,right/left.
+    1 elemento -> top/bottom/right/left.
+    *Para que un elemento se mueva a los lados al usar margin, debes  asignarle un ancho.
+    *El margin por defectos es de 8 pixeles.
 
 Padding: funciona en los elementos de bloque y de linea.
-padding-top,padding-right,padding-left,padding-bottom.
-4 elementos -> top,right,botton,left.
-3 elementos -> top,right/left,bottom.
-2 elementos -> top/botton,right/left.
-1 elemento -> top/bottom/right/left.
-nota--El padding puede modificar el tamano del elemento.
+    padding-top,padding-right,padding-left,padding-bottom.
+    4 elementos -> top,right,botton,left.
+    3 elementos -> top,right/left,bottom.
+    2 elementos -> top/botton,right/left.
+    1 elemento -> top/bottom/right/left.
+    nota--El padding puede modificar el tamaño del elemento.
+    
+Malas practicas
+    1.- Usar el selector universal y asignar margin y padding 0
+        *{
+            margin: 0;
+            paddin: 0;
+        }
+    2.- Asignar un padding 0 al body, ya que no tiene sentido.
 
 Border: es el borde.
-    "border: width style color;"
-    border-width
-        top/right/bottom/left
-        (border-top-width)
-    border-style
-        top/right/bottom/left
-    border-color
-        top/right/bottom/left
+        "border: width style color;"
+        border-width
+            top/right/bottom/left
+            (border-top-width)
+        border-style
+            top/right/bottom/left
+        border-color
+            top/right/bottom/left
 
-Box sizing>>border box: calcula las dimensiones del contenido automaticamente cuando se modifica el padding o el border para que el elemento no cambie su tamano.
+Box-sizing
+    content-box: valor por defecto, el padding puede modificar su medida.
+    border-box: calcula las dimensiones del contenido automaticamente cuando se modifica el padding o el border para que el elemento no cambie su tamano.
 
 Border radius: es un short hand
-border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius.
+    border-top-left-radius
+    border-top-right-radius
+    border-bottom-right-radius
+    border-bottom-left-radius.
 
-4 elementos -> esq.sup.izq./esq.sup.der./esq.inf.der/esq.inf.izq
-3 elementos -> esq.sup.izq. ,esq.sup.der./esq.inf.izq,esq.inf.der.
-2 elementos -> esq.sup.izq/esq.inf.der.,esq.sup.der./esq.inf.izq.
-1 elemento -> todas las esquinas.
+    4 elementos -> esq.sup.izq./esq.sup.der./esq.inf.der/esq.inf.izq
+    3 elementos -> esq.sup.izq. ,esq.sup.der./esq.inf.izq,esq.inf.der.
+    2 elementos -> esq.sup.izq/esq.inf.der.,esq.sup.der./esq.inf.izq.
+    1 elemento -> todas las esquinas.
 
-Overflow: hidden,scroll, auto.
+Overflow: 
+    hidden,scroll, auto.
 
-Outline: tiene similitudes con border, pero no esta dentro del modelo de cajas.
-Diferencias: no tiene la opcion de trabajar cada lado por separado, no modifica el flujo de trabajo, puede ser interno o externo, y ademas, tiene un separamiento.
+Outline: 
+    tiene similitudes con border, pero no esta dentro del modelo de cajas.
+    Diferencias: no tiene la opcion de trabajar cada lado por separado, no modifica el flujo de trabajo, puede ser interno o externo, y ademas, tiene un separamiento.
 
 Box shadow:
-inset/offset-x/offset-y/blur-radius/spread-radius/color
-inset...
-offset-x...desface en el eje x
-offset-y...desface en el eje y
-blur-radius...degradado de la sombra
-spread-radius...tamanio de la sombra, parecido al padding
-color....color de la sombra
+    inset/offset-x/offset-y/blur-radius/spread-radius/color
+    inset...
+    offset-x...desface en el eje x
+    offset-y...desface en el eje y
+    blur-radius...degradado de la sombra
+    spread-radius...tamanio de la sombra, parecido al padding
+    color....color de la sombra
 
 */
-*{
-    padding: 0px;
-    margin: 0px;
-}
 
-/*Elemento de bloque*/
-body{
-    background-color: #333;
-    margin: 0px;
+/*ELEMENTO DE CON WIDTH Y HEIGHT*/
+.element-size{
+    background-color: #4d9797;
+    width: 7rem;
+    height: 7rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0.5em auto;
 }
-/*Elemento de bloque*/
-.header{
-    background-color: cadetblue;
+/*MARGIN*/
+.tabla-margin{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.tabla-margin li{
+    background-color: #44638a;
+    margin: 0.2em;
+}
+.element-margin-1{
+    background-color: #4d9797;
+    width: 5em;
+    height: 5em;
+    margin: 0.3em auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+/*PADDING*/
+.element-padding-1{
+    background-color: #4d9797;
+    width: 5em;
+    height: 5em;
+    margin: 0.3em auto;
+    padding: 1em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+/*BORDER*/
+.element-border-1{
+    background-color: #4d9797;
+    width: 5em;
+    height: 5em;
+    margin: 0.3em auto;
+    padding: 1em;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+/*BOX SIZING*/
+.element-bsizing-1{
+    background-color: #4d9797;
     box-sizing: border-box;
-    text-align: center;
-    padding-top: 10px;
-}
-/*Elemento de linea y bloque*/
-.menu li{
-    background-color: rgba(9, 122, 92, 0.5);
-    list-style: none;
-    display: inline-block;
-}
-.lista-menu a{
-    color: inherit;
-    text-decoration: none;
-}
-.menu li:hover{
-    background-color: rgba(9, 122, 92, 1);
-}
-
-.parte-1,.parte-2,.parte-3{
-    border: 5px solid gray;
-    min-height: 80px;
-    margin: 10px;
-    padding: 3px;
-}
-/*Elemento de bloque*/
-.title{
-    background-color: steelblue;
-    width: 200px;
-    margin-left: 50px;
-    border-radius: 5px;
-    box-shadow: 0px 6px 1px 8px rosybrown;
-    text-shadow: 3px 2px royalblue;
-}
-/*Elemento de bloque*/
-.block{
-    background-color: skyblue;
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    /*margin: 60px 20px 20px 0px;*/
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    border: 5px solid black;
-    padding: 20px;
-    /*border box ajusta las medidas automaticamente*/
-    box-sizing: border-box;
-
-}
-/*Elemento de linea*/
-.inline{
-    background-color: darkslategrey;
-    margin-left: 150px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.botons{
-    background-color: rgb(73, 65, 121);
-    text-align: center;
-}
-
-.boton{
-    background-color: rgb(64, 125, 128);
-    /*Margin*/
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /*Padding*/
-    padding: 15px 30px;
-    /*Border*/
-    /*border: 5px solid red;*/
-    border-width: 8px;
-    border-style: ridge;
-    border-color: aquamarine;
-    border-right-width: 15px;
-    border-left-style:double;
-    border-top-color: rgb(75, 71, 71);
-    border-radius: 10px;
-}
-.boton-outline{
-    background-color: aquamarine;
-    width: 60px;
-    height: 50px;
-    margin-left: 25px;
-    outline: 5px solid rgb(73, 123, 143);
-    outline-offset: -9px;
-    border-radius: 5px;
-}
-
-.border-radius-circle{
-    background-color: yellow;
-    float: left;
-    box-sizing: border-box;
-    text-align: center;
-    font-size:small;
-    width: 60px;
-    height: 60px;
-    padding: 3px;
-    margin: 5px;
-    /*radius*/
-    border-radius: 10px 20px 30px 40px;
-
-}
-
-.border-radius-elipse{
-    float: left;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: small;
-    background-color: aquamarine;
-    width: 60px;
-    height: 60px;
-    padding: 3px;
-    margin: 5px;
-    /*radio eliptico*/
-    border-radius: 20px / 10px;
-}
-
-.overflow{
-    background-color: thistle;
-    float: left;
-    font-size: small;
-    overflow: auto;
-    width: 120px;
-    height: 60px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-.box-shadow{
-    background-color: slategray;
-    float: left;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: small;
-    width: 80px;
-    height: 60px;
-    padding: 20px 5px;
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: inset 5px 5px 2px 4px rgb(80, 79, 82),5px 5px 5px 10px rgb(27, 27, 27);
-}
-
-.pie-de-pagina{
-    background-color: rgb(33, 33, 33);
-    color: white;
-    padding: 5px;
-    margin: 50px 10px;
-    border-radius: 3px;
+    width: 5em;
+    height: 5em;
+    margin: 0.3em auto;
+    padding: 1em;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
