@@ -40,6 +40,22 @@
                         </footer>
                     </article>
                     <article class="article">
+                        <header><h2>Display</h2></header>
+                        <ul class="list-style">
+                            <li>Cambia el contexto de los elementos dentro del navegador.</li>
+                            <li>Admite varios valores:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>none: hace que el elemento no se muestre, pero sigue cargandose.</li>
+                                        <li>block: hace que el elemento sea de bloque.</li>
+                                        <li>inline: hace que el elemento sea de linea.</li>
+                                        <li>inline-block: hace que el elemento sea de linea, pero admite medidas y margenes verticales.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="article">
                         <header><h2>Width y height</h2></header>
                         <ul class="list-style">
                             <li>Son pripiedades que se usan para dar una medida de ancho y alto respectivamente.</li>
@@ -162,6 +178,28 @@
                         </footer>
                     </article>
                     <article class="article">
+                        <header><h2>Outline</h2></header>
+                        <ul class="list-style">
+                            <li>Tiene similitudes con border, pero no esta dentro del modelo de cajas.</li>
+                            <li>Diferencias: no tiene la opcion de trabajar cada lado por separado, no modifica el flujo de trabajo, puede ser interno o externo, y ademas, tiene un separamiento.</li>
+                        </ul>
+                        <div class="element-outline-1"><p>Elemento outline</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-border-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                        padding: 1em;
+                                        outline: 1px solid white;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
                         <header><h2>Box-sizing</h2></header>
                         <ul class="list-style">
                             <li>La propiedad debe calcular el ancho y alto total de un elemento.</li>
@@ -188,6 +226,137 @@
                                         padding: 1em;
                                         border: 1px solid black;
                                         box-sizing: border-box;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Border radius</h2></header>
+                        <ul class="list-style">
+                            <li>Redondea las esquinas del borde exterior de un elemento. Puede establecer un solo radio para hacer esquinas circulares o dos radios para hacer esquinas elípticas.</li>
+                            <li>Se puede establecer cada esquina por separado con otras propiedades: border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius.</li>
+                            <li>Acepta uno, dos , tres  o cuatro valores de los siguientes:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>Un único valor aplicará para todas las esquinas.</li>
+                                        <li>Dos valores aplicarán: El primer valor para esquina superior izquierda/esquina inferior derecha, el segundo valor para esquina superior derecha /esquina inferior izquierda.</li>
+                                        <li>Tres  valores aplicarán: El primero para esquina superior izquierda, el segundo para esquina superior derecha /esquina inferior izquierda, el tercero para esquina inferior derecha.</li>
+                                        <li>Cuatro valores aplicarán en sentido de las manecillas del reloj empezando desde esquina superior izquierda.</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>Funciona en los elementos de bloque.</li>
+                        </ul>
+                        <div class="element-b-radius-1"><p>Elemento border radius</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-b-radius-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                        padding: 1em;
+                                        border-radius: 0.5em 1em 1.5em 2em / 0.3em;
+                                    }
+                                </code>
+                            </pre>
+                            <footer>
+                                *El slash divide el radio en el eje x del eje y, para hacer radios elipticos.
+                            </footer>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Overflow</h2></header>
+                        <ul class="list-style">
+                            <li>Especifica si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.</li>
+                            <li>Valores:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>Visible: valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.</li>
+                                        <li>Hidden: el contenido es recortado y no se muestran barras de posición.</li>
+                                        <li>Scroll: el contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no.</li>
+                                        <li>Auto: el contenido sera recortado y usa barras de desplazamiento solo si es necesario.</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>Funciona en los elementos de bloque.</li>
+                        </ul>
+                        <div class="element-overflow-1"><p>Elemento con overflow: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore beatae dignissimos tenetur quo mollitia, quaerat nemo esse quia rem laudantium libero impedit distinctio totam officia doloremque adipisci, delectus molestiae.</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-overflow-1 p{
+                                        overflow: auto;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Text align</h2></header>
+                        <ul class="list-style">
+                            <li>Establece la alineación horizontal del contenido dentro de un elemento de bloque o cuadro de celda de tabla.</li>
+                            <li>Valores:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>start: Lo mismo que leftsi la dirección fuera de izquierda a derecha y rightsi la dirección fuera de derecha a izquierda.</li>
+                                        <li>end: Lo mismo que rightsi la dirección fuera de izquierda a derecha y leftsi la dirección fuera de derecha a izquierda.</li>
+                                        <li>left: El contenido en línea se alinea con el borde izquierdo del cuadro de línea.</li>
+                                        <li>right: El contenido en línea se alinea con el borde derecho del cuadro de línea.</li>
+                                        <li>center: Los contenidos en línea están centrados dentro del cuadro de línea.</li>
+                                        <li>justify: Los contenidos en línea están justificados. El texto debe estar espaciado para alinear sus bordes izquierdo y derecho con los bordes izquierdo y derecho del cuadro de línea, excepto por la última línea.</li>
+                                        <li>justify-all: Igual que justify, pero también obliga a justificar la última línea.</li>
+                                        <li>match-parent: similar a inherit, pero los valores start y end se calculan de acuerdo con los del elemento padre y se reemplazan por el valor apropiado left o right.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Funciona en los elementos de linea.</li>
+                        </ul>
+                        <div class="element-t-align-1"><p>Elemento con text align: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore beatae dignissimos tenetur quo mollitia, quaerat nemo esse quia rem laudantium libero impedit distinctio totam officia doloremque adipisci, delectus molestiae.</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-t-align-1 p{
+                                        text-align: left;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h2>Box shadow</h2></header>
+                        <ul class="list-style">
+                            <li>Añade efectos de sombra alrededor del marco de un elemento.</li>
+                            <li>Acepta de 2 a 6 valores de los siguientes:
+                                <div class="tabla-margin">
+                                    <ul>
+                                        <li>Si solo dos valores son definidos, son interpretados como valores "offset-x" y "offset-y"(valores para definir el desplazamiento de la sombra).</li>
+                                        <li>Si un tercer valor es dado, es interpretado como un "blur-radius"(difuminacion).</li>
+                                        <li>Si un cuarto valor es dado, es interpretado como un "spread-radius"(escalado positivo o negativo).</li>
+                                        <li>Opcionalmente, la palabra clave inset(se dibuja dentro del borde del elemento).</li>
+                                        <li>Opcionalmente, el valor "color".</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="element-b-shadow-1"><p>Elemento box shadow</p></div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .element-b-radius-1{
+                                        width: 5em;
+                                        height: 5em;
+                                        margin: 0.3em auto;
+                                        padding: 1em;
+                                        border-radius: 0.5em 1em 1.5em 2em / 0.3em;
+                                        box-shadow: 0.3em 0.2em 1em 0.5em inset grey;
                                     }
                                 </code>
                             </pre>

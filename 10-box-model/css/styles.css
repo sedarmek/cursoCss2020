@@ -41,23 +41,32 @@ Box-sizing
     content-box: valor por defecto, el padding puede modificar su medida.
     border-box: calcula las dimensiones del contenido automaticamente cuando se modifica el padding o el border para que el elemento no cambie su tamano.
 
-Border radius: es un short hand
-    border-top-left-radius
-    border-top-right-radius
-    border-bottom-right-radius
-    border-bottom-left-radius.
+Border radius: redondea las esquinas del borde exterior de un elemento. Puede establecer un solo radio para hacer esquinas circulares o dos radios para hacer esquinas elípticas, es un short hand
+    border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius.
 
-    4 elementos -> esq.sup.izq./esq.sup.der./esq.inf.der/esq.inf.izq
-    3 elementos -> esq.sup.izq. ,esq.sup.der./esq.inf.izq,esq.inf.der.
-    2 elementos -> esq.sup.izq/esq.inf.der.,esq.sup.der./esq.inf.izq.
+    4 elementos -> esquina superior izquierda /esquina superior derecha /esquina inferior der/esquina inferior izquierda
+    3 elementos -> esquina superior izquierda  ,esquina superior derecha /esquina inferior izquierda,esquina inferior derecha 
+    2 elementos -> esquina superior izquierda/esquina inferior derecha ,esquina superior derecha /esquina inferior izquierda 
     1 elemento -> todas las esquinas.
 
 Overflow: 
-    hidden,scroll, auto.
+    visible,hidden,scroll, auto.
+
+Colapsado de margenes: 
+        a
+
+Display: nos sirve para cambiar el contexto de los elementos dentro del navegador.
+        Admite varios valores:
+            none: hace que el elemento no se muestre, pero sigue cargandose.
+            block: hace que el elemento sea de bloque.
+            inline: hace que el elemento sea de linea.
+            inline-block: hace que el elemento sea de linea, pero admite medidas y margenes verticales.
 
 Outline: 
     tiene similitudes con border, pero no esta dentro del modelo de cajas.
     Diferencias: no tiene la opcion de trabajar cada lado por separado, no modifica el flujo de trabajo, puede ser interno o externo, y ademas, tiene un separamiento.
+
+Text-align: 
 
 Box shadow:
     inset/offset-x/offset-y/blur-radius/spread-radius/color
@@ -122,6 +131,18 @@ Box shadow:
     justify-content: center;
     align-content: center;
 }
+/*OUTLINE*/
+.element-outline-1{
+    background-color: #4d9797;
+    width: 5em;
+    height: 5em;
+    margin: 0.3em auto;
+    padding: 1em;
+    outline: 1px solid white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
 /*BOX SIZING*/
 .element-bsizing-1{
     background-color: #4d9797;
@@ -134,4 +155,68 @@ Box shadow:
     display: grid;
     justify-content: center;
     align-content: center;
+}
+/*BORDER RADIUS*/
+.element-b-radius-1{
+    background-color: #4d9797;
+    box-sizing: border-box;
+    width: 5em;
+    height: 5em;
+    margin: 0.3em auto;
+    padding: 1em;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5em 1em 1.5em 2em / 0.3em;
+}
+/*OVERFLOW*/
+.element-overflow-1{
+    background-color: #4d9797;
+    box-sizing: border-box;
+    width: 10em;
+    height: 8em;
+    margin: 0.3em auto;
+    padding: 1em;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5em 1em 1.5em 2em / 0.3em;
+}
+.element-overflow-1 p{
+    overflow: auto;
+}
+/*TEXT ALIGN*/
+.element-t-align-1{
+    background-color: #4d9797;
+    box-sizing: border-box;
+    width: 10em;
+    height: 8em;
+    margin: 0.3em auto;
+    padding: 1em;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5em 1em 1.5em 2em / 0.3em;
+}
+.element-t-align-1 p{
+    overflow: auto;
+    text-align: left;
+}
+/*BOX SHADOW*/
+.element-b-shadow-1{
+    background-color: #4d9797;
+    box-sizing: border-box;
+    width: 10em;
+    height: 8em;
+    margin: 0.3em auto;
+    padding: 1em;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5em 1em 1.5em 2em / 0.3em;
+    box-shadow: 0.3em 0.2em 1em 0.5em inset grey;
 }
