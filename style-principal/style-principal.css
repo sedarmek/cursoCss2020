@@ -31,7 +31,7 @@ h4{
 h5{
     font-size: 1.5rem;
 }
-p, ul, pre, a, h6{
+p,ul,pre,a,dt,dd,h6{
     font-size: 1.3rem;
 }
 pre{
@@ -118,6 +118,20 @@ code{
 .list-style li{
     margin: 1em;
     list-style: disc;
+    text-align: left;
+}
+.dictionary-style{
+    width: 80%;
+    margin: 1em auto;
+    display: grid;
+}
+.dictionary-style dt{
+    background-color: #405c77;
+    text-align: left;
+}
+.dictionary-style dd{
+    background-color: #466786;
+    margin-bottom: 0.2em;
     text-align: left;
 }
 /* ASIDE */
