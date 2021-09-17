@@ -17,14 +17,6 @@ Stacking context:
     2.Elemento posicionado sin z-index
     3.Elemento no posicionado
     4.Elemento con z-index negativo
-
-ORDEN
-    1.Orden de las propiedades:
-    2.Posicionamiento
-    3.Box model
-    4.Texto
-    5.Visuales
-    6.Varios
 */
 .container-element{
     background-color: #6d74d3;
@@ -103,5 +95,31 @@ ORDEN
     top: 0px;
 }
 /* Z-INDEX */
-
+.element-index-1{
+    background-color: #5da1a1;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.element-index-2{
+    background-color: #60cfcf;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 2;
+}
+.element-index-3{
+    background-color: #548080;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+}
 /* STACKING CONTEXT */

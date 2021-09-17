@@ -53,6 +53,41 @@
                         <footer>Nota: si un elemento ya tiene declarada la propiedad top la propiedad bottom  no funcionaran.Y lo mismo sucede con left y right respectivamente.</footer>
                 </article>
                 <article class="article">
+                    <header><h2>Z-index</h2></header>
+                    <ul class="list-style">
+                        <li>Indice que sirve para posicionar un elemento sobre otro o visceversa.</li>
+                        <li>Puede tener numeros enteros negativos y positivos</li>
+                    </ul>
+                    <h3>Stacking context</h3>
+                    <ul class="list-style">
+                        <li>1. Elemento posicionado con z-index</li>
+                        <li>2. Elemento posicionado sin z-index</li>
+                        <li>3. Elemento no posicionado</li>
+                        <li>4. Elemento con z-index negativo</li>
+                    </ul>
+                    <div class="container-element">
+                        <div class="element-index-1">Elemento indice 1</div>
+                        <div class="element-index-2">Elemento indice 2</div>
+                        <div class="element-index-3">Elemento indice 3</div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .element-index-1{
+                                    z-index: 1;
+                                }
+                                .element-index-2{
+                                    z-index: 2;
+                                }
+                                .element-index-3{
+                                    z-index: 3;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
                     <header><h2>Valores de position</h2></header>
                     <article>
                         <h3>Static</h3>

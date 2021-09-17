@@ -4,91 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <link rel="stylesheet" href="./styles.css">
     <title>Pseudoelementos y pseudoclases</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Inicio</a>
-        </nav>
-    </header>
+    <div class="container">
+
+        <header class="header-principal">
+            <nav>
+                <h1>Pseudoelementos y pseudoclases</h1>
+                <a href="../index.html">Inicio</a>
+            </nav>
+        </header>
+        <main class="main">
     
-    <section>
-        <h1>Pseudoelementos y pseudoclases</h1>
-
-        <article class="pseudoelementos">
-            <h2>Pseudoelementos</h2>
-            <p class="first-line">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam architecto, ab, optio facilis dolor deserunt provident quidem dolores neque, inventore velit corporis alias cumque dolorum. Ducimus facere mollitia soluta dolor!</p>
-            <p class="dolar">5</p>
-        </article>
-        <article class="pseudoclases">
-            <h2>Pseudoclases</h2>
-                <h3>Dinamic</h3>
-                    <a href="#" class="link-visitado">Link visitado</a>
-                    <button class="boton">Hover</button>
-                    <input type="text" class="focus" value="Focus">
-                <h3>Target</h3>
-                    <a href="#texto" class="target">Target</a>
-                    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sed magnam, culpa porro nihil dolorem maxime sit numquam sapiente rerum eum eligendi ullam, nemo in amet reiciendis, nisi ex? Sit.</p>
-                <h3>Language</h3>
-                    <span class="span" lang="en">Hello</span>
-                    <span class="span" lang="es">Hola</span>
-            <h2>Pseudoclases 2</h2>
-                <h3>Formularios</h3>
-                    <div class="formulario">
-                        <label>:Enabled</label>
-                            <input type="text" class="form">
-                        <label>:Disabled</label>
-                            <input type="text" class="form" disabled>
-                        <label for="check">:Checked</label>
-                            <input type="checkbox" class="form" id="check">
-                        <label for="">:In-range/Out-of-range</label>
-                            <input type="number" class="form" min="0" max="10">
-                        <label for="">:Optional</label>
-                            <input type="text" class="form2">
-                        <label for="">:Required</label>
-                            <input type="text" class="form2" required>
-                        <label for="">:Valid/Invalid</label>
-                            <input type="number" class="form3">
-                    </div>
-            <h2>Pseudoclases 3</h2>
-            <h3>Structural</h3>
-                <h4>Parte 1: root y empty</h4>
-                <div class="parte1">
-                    <h5>Hijo</h5>
-                    <h5></h5>
-                </div>
-                <h4>Parte 2 y 3: childs</h4>
-                <div class="parte2">
-                    <h5 class="hijo">Hijo 1</h5>
-                    <h5 class="hijo">Hijo 2</h5>
-                    <h5 class="hijo">Hijo 3</h5>
-                    <h5 class="hijo">Hijo 4</h5>
-                    <h5 class="hijo">Hijo 5</h5>
-                </div>
-                <div class="parte3">
-                    <h5 class="hijo-unico">Hijo unico</h5>
-                </div>
-                <h4>Parte 4: type</h4>
-                <div class="parte4">
-                    <h5 class="type">type1</h5>
-                    <h5 class="type">type2</h5>
-                    <h5 class="type">type3</h5>
-                    <h5 class="type">type4</h5>
-                    <h5 class="type">type5</h5>
-                    <h6>type unico</h6>
-                </div>
-                <h4>Parte 5: not</h4>
-                <div class="parte5">
-                    <h5 class="hijos">Hijo A</h5>
-                    <h5 class="hijos">Hijo B</h5>
-                    <h5 class="hijos">Hijo c</h5>
-                    <h6 class="hijos">Hijo d</h6>
-                </div>
-        </article>
-    </section>
-
-    <footer>Footer</footer>
+            <section class="seccion">
+                <article class="article">
+                    <header>
+                        <h2>Pseudoelementos</h2>
+                    </header>
+                    <ul><li></li></ul>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer>Footer</footer>
+    </div>
 </body>
 </html>
