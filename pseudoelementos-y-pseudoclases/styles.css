@@ -1,11 +1,11 @@
 /*
 PSEUDOELEMENTOS
     elemento::first-letter(elemento de bloque)
-            selecciona la primer litra del elemento
+            selecciona la primer letra del elemento
     elemento::first-line(elemento de bloque)
             selecciona la primer linea de parrafo del elemento
     elemento::selection
-             selecciona caracteristicas del seleccionamiento
+             selecciona caracteristicas de la porcion del documento seleccionamiento
     elemento::before
             selecciona la parte anterior del elemento
             la propiedad content es obligatoria
@@ -45,69 +45,72 @@ PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
     Structural
         :root ---> representa la raiz del documento(html), pero con mas especificidad.
         :empty ---> aplica para los elementos vacios.
-        -child
-            :first-child ---> selecciona al primer hijo
-            :last-child ---> selecciona al ultimo hijo
-            :nth-child(n) ---> selecciona al hijo n
-            :nth-last-child(n) ---> selecciona al hijo n empezando del final
-            :only-child ---> selecciona al hijo unico
-        -type
-            :first-of-type
-            :last-of-type
-            :nth-of-type(n)
-            :nth-last-of-type(n)
-            :only-of-type
-                Valores posibles
-                    odd-impares
-                    even-pares
-                    enteros
-                    equaciones ...n es un multiplicador
-        Negation
-            :not() ---> selecciona el elemento que no cumpla la condicion
-    
+            -child
+                :first-child ---> selecciona al primer hijo
+                :last-child ---> selecciona al ultimo hijo
+                :nth-child(n) ---> selecciona al hijo n
+                :nth-last-child(n) ---> selecciona al hijo n empezando del final
+                :only-child ---> selecciona al hijo unico
+            -type
+                :first-of-type
+                :last-of-type
+                :nth-of-type(n)
+                :nth-last-of-type(n)
+                :only-of-type
+                    Valores posibles
+                        odd-impares
+                        even-pares
+                        enteros
+                        equaciones ...n es un multiplicador
+            Negation
+                :not() ---> selecciona el elemento que no cumpla la condicion
+        
 */
-
+.container-ej{
+    background-color: #4c7777;
+}
+.dictionary-subt{
+    text-align: left;
+}
 /*Pseudoelementos*/
-.pseudoelementos h2::first-letter{
-    color: red;
-    font-size: 1.5em;
+.ej-pseudoelement-1::first-letter{
+    color: #ca2d2d;
 }
-.first-line::first-line{
-    color: silver;
+.ej-pseudoelement-2::first-line{
+    color: #9e2727;
 }
-.first-line::selection{
-    background-color: rgb(145, 134, 216);
-    color: white;
+.ej-pseudoelement-3::selection{
+    background-color: hotpink;
+    color: #9e2727;
 }
-.dolar::before{
-    content:"$";
+.ej-pseudoelement-4::before{
+    content:"*Contenido del pseudo-elemento*";
+    color: #9e2727;
 }
-.dolar::after{
-    content:".00";
+.ej-pseudoelement-5::after{
+    content:"*Contenido del pseudo-elemento*";
+    color: #9e2727;
 }
 
 /*Pseudoclases*/
-/*dinamic*/
-.link-visitado,.boton,.focus{
-    display: block;
+/*dinamic*/ 
+.ej-pseudoclas-link-1:link{
+    color: blue;
 }
-:link{
-    color: rgb(45, 197, 146);
-}
-.link-visitado:visited{
+.ej-pseudoclas-link-2:visited{
     color: gray;
 }
-.link-visitado:active{
+.ej-pseudoclas-link-3:active{
     color: red;
 }
-.boton:hover{
-    background-color: rgb(122, 119, 119);
+.ej-pseudoclas-hover:hover{
+    background-color: blueviolet;
 }
-.focus:focus{
-    background-color: rgb(133, 129, 129);
-    color: white;
+.ej-pseudoclas-focus:focus{
+    background-color: pink;
 }
 /*Target*/
+/*
 .target{
     background-color: teal;
     display: block;
@@ -121,13 +124,15 @@ PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
     text-align: center;
 }
 #texto{
-    /*
     margin-top: 500px;
-    margin-bottom: 500px;*/
+    margin-bottom: 500px;
     background-color: rgb(121, 199, 199);
 }
 #texto:target{
     padding-top: 70px;
+}*/
+#objetivo-ancla:target{
+    background-color: rebeccapurple;
 }
 /*Language*/
 .span{

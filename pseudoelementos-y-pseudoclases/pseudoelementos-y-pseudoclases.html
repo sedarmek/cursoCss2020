@@ -24,15 +24,202 @@
                     <header>
                         <h2>Pseudoelementos</h2>
                     </header>
-                    <ul><li></li></ul>
-                    <footer class="footer-article">
-                        <pre>
-                            <code>
-                                Codigo:
-                                
-                            </code>
-                        </pre>
-                    </footer>
+                    <ul class="list-style">
+                        <li>Permiten añadir estilos a una parte concreta del documento.</li>
+                        <li>Solo se puede usar uno por selector.</li>
+                        <li>Debe aparecer después del selector simple.</li>
+                        <li>Empieza con "::" o ":".</li>
+
+                    </ul>
+                    <article class="article">
+                        <header><h3>Primer letra</h3></header>
+                        <ul class="list-style">
+                            <li>Selecciona la primer letra del elemento</li>
+                            <li>Es un elemento de bloque.</li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="ej-pseudoelement-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor harum dolores rem incidunt iste id porro debitis assumenda, sapiente labore sit consequatur earum non voluptatibus fugit deleniti odio, deserunt velit.</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .ej-pseudoelement-1::first-letter{
+                                        color: red;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Primer linea</h3></header>
+                        <ul class="list-style">
+                            <li>Selecciona la primer linea de parrafo del elemento</li>
+                            <li>Es un elemento de bloque.</li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="ej-pseudoelement-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor harum dolores rem incidunt iste id porro debitis assumenda, sapiente labore sit consequatur earum non voluptatibus fugit deleniti odio, deserunt velit.</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .ej-pseudoelement-2::first-line{
+                                        color: grey;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Seleccion</h3></header>
+                        <ul class="list-style">
+                            <li>Selecciona caracteristicas de la porcion del documento seleccionado.</li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="ej-pseudoelement-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor harum dolores rem incidunt iste id porro debitis assumenda, sapiente labore sit consequatur earum non voluptatibus fugit deleniti odio, deserunt velit.</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .ej-pseudoelement-3::selection{
+                                        background-color: hotpink;
+                                        color: #9e2727;
+                                    }
+                                </code>
+                            </pre>
+                            <footer>*Para visualizar selecciona cualquier parte del parrafo.</footer>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Before</h3></header>
+                        <ul class="list-style">
+                            <li>Selecciona la parte anterior del elemento.</li>
+                            <li>La propiedad "content" es obligatoria.</li>
+                            <li>Es hijo del elemento al que pertenece.</li>
+                            <li>Es un elemento de linea por defecto.</li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="ej-pseudoelement-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor harum dolores rem incidunt iste id porro debitis assumenda, sapiente labore sit consequatur earum non voluptatibus fugit deleniti odio, deserunt velit.</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .ej-pseudoelement-4::before{
+                                        content:"*Contenido del pseudo-elemento*";
+                                        color: red;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>After</h3></header>
+                        <ul class="list-style">
+                            <li>Selecciona la parte posterior del elemento.</li>
+                            <li>La propiedad "content" es obligatoria.</li>
+                            <li>Es hijo del elemento al que pertenece.</li>
+                            <li>Es un elemento de linea por defecto.</li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="ej-pseudoelement-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor harum dolores rem incidunt iste id porro debitis assumenda, sapiente labore sit consequatur earum non voluptatibus fugit deleniti odio, deserunt velit.</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .ej-pseudoelement-5::after{
+                                        content:"*Contenido del pseudo-elemento*";
+                                        color: #9e2727;
+                                    }                                    
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                </article>
+                <article class="article">
+                    <header><h2>Pseudoclases</h2></header>
+                    <ul class="list-style">
+                        <li>Es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado.</li>
+                        <li>Solo se puede usar uno por selector.</li>
+                        <li>Debe aparecer después del selector simple.</li>
+                        <li>Empieza con ":".</li>
+                    </ul>
+                    <article class="article">
+                        <header><h3>De tipo dinamic</h3></header>
+                        <article class="article">
+                            <header>
+                                <dl class="dictionary-style">
+                                    <dt><h4 class="dictionary-subt">Link no visitado(:link)</h4></dt>
+                                    <dd>Selecciona los enlaces que no hayan sido usados por el usuario.</dd>
+                                    <dt><h4 class="dictionary-subt">Link visitado(:visited)</h4></dt>
+                                    <dd>Selecciona los enlaces que ya hayan sido usados por el usuario.</dd>
+                                    <dt><h4 class="dictionary-subt">Link activo(:active)</h4></dt>
+                                    <dd>Selecciona los enlaces que esten siendo oprimidos por el usuario.</dd>
+                                    <dt><h4 class="dictionary-subt">Sobre(:hover)</h4></dt>
+                                    <dd>Selecciona el elemento que este bajo el puntero del mouse.</dd>
+                                    <dt><h4 class="dictionary-subt">Centrado(:focus)</h4></dt>
+                                    <dd>Selecciona el elemento sobre el que se este enfocando.</dd>
+                                </dl>
+                            </header>
+                            <div class="container-ej">
+                                <a href="##" target="_blank" class="ej-pseudoclas-link-1" aria-disabled="true">Link-para-no-visitar</a>
+                                <a href="#" target="_blank" class="ej-pseudoclas-link-2">Link-para-visitar</a>
+                                <a href="#" target="_blank" class="ej-pseudoclas-link-3">Link-para-activar</a>
+                                <div class="ej-pseudoclas-hover">Elemento con hover</div>
+                                <input class="ej-pseudoclas-focus" type="text" placeholder="Elemento con focus" ></input>
+                            </div>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        .ej-pseudoclas-link-1:link{
+                                            color: blue;
+                                        }
+                                        .ej-pseudoclas-link-2:visited{
+                                            color: gray;
+                                        }
+                                        .ej-pseudoclas-link-3:active{
+                                            color: red;
+                                        }
+                                        .ej-pseudoclas-hover:hover{
+                                            background-color: blueviolet;
+                                        }
+                                        .ej-pseudoclas-focus:focus{
+                                            background-color: pink;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                    </article>
+                    <article class="article">
+                        <header><h3>De tipo target</h3></header>
+                        <article class="article">
+                            <header>
+                                <dl class="dictionary-style">
+                                    <dt><h4>Elemento objetivo de ancla(:target)</h4></dt>
+                                        <dd>Selecciona el elemento que es objetivo de marcador o ancla.</dd>
+                                </dl>
+                            </header>
+                            <div class="container-ej">
+                                <a href="#objetivo-ancla">Ir al elemento objetivo</a>
+                                <p id="objetivo-ancla" class="objetivo-ancla">Objetivo de ancla: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo amet quaerat quis, pariatur soluta exercitationem enim iste quam magni laudantium sequi repudiandae ut ipsam blanditiis optio omnis natus beatae repellendus.</p>
+                            </div>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        #objetivo-ancla:target{
+                                            background-color: rebeccapurple;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                    </article>
                 </article>
             </section>
             <aside class="aside">
