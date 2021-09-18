@@ -165,11 +165,11 @@
                                 </dl>
                             </header>
                             <div class="container-ej">
-                                <a href="##" target="_blank" class="ej-pseudoclas-link-1" aria-disabled="true">Link-para-no-visitar</a>
+                                <a href="##" target="_blank" class="ej-pseudoclas-link-1">Link-para-no-visitar</a>
                                 <a href="#" target="_blank" class="ej-pseudoclas-link-2">Link-para-visitar</a>
                                 <a href="#" target="_blank" class="ej-pseudoclas-link-3">Link-para-activar</a>
                                 <div class="ej-pseudoclas-hover">Elemento con hover</div>
-                                <input class="ej-pseudoclas-focus" type="text" placeholder="Elemento con focus" ></input>
+                                <input class="ej-pseudoclas-focus" type="text" placeholder="Elemento para focus" ></input>
                             </div>
                             <footer class="footer-article">
                                 <pre>
@@ -201,12 +201,12 @@
                             <header>
                                 <dl class="dictionary-style">
                                     <dt><h4>Elemento objetivo de ancla(:target)</h4></dt>
-                                        <dd>Selecciona el elemento que es objetivo de marcador o ancla.</dd>
+                                        <dd>Selecciona el elemento que es objetivo de marcador o ancla.Y que ya ha sido buscado por el usuario.</dd>
                                 </dl>
                             </header>
                             <div class="container-ej">
                                 <a href="#objetivo-ancla">Ir al elemento objetivo</a>
-                                <p id="objetivo-ancla" class="objetivo-ancla">Objetivo de ancla: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo amet quaerat quis, pariatur soluta exercitationem enim iste quam magni laudantium sequi repudiandae ut ipsam blanditiis optio omnis natus beatae repellendus.</p>
+                                <p id="objetivo-ancla" class="objetivo-ancla">Objetivo de ancla: Una vez se haga click en el link que referencia este elemento se cambiara de color a morado.</p>
                             </div>
                             <footer class="footer-article">
                                 <pre>
@@ -220,6 +220,180 @@
                             </footer>
                         </article>
                     </article>
+                    <article class="article">
+                        <header><h3>De tipo Language</h3></header>
+                        <article class="article">
+                            <header>
+                                <dl class="dictionary-style">
+                                    <dt><h4>Idioma o lenguaje(:lang())</h4></dt>
+                                        <dd>Selecciona el elemento que contenga el mismo valor para el atributo lang que especifiquemos.</dd>
+                                </dl>
+                            </header>
+                            <div class="container-ej">
+                                <p class="text-in-lang" lang="en">Text in english.</p>
+                                <p class="text-in-lang" lang="es">Texto escrito en español.</p>
+                            </div>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        .text-in-lang:lang(en){
+                                            color: greenyellow;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                    </article>
+                    <article class="article">
+                        <header><h3>UI States para formularios</h3></header>
+                        <article class="article">
+                            <header>
+                                <dl class="dictionary-style">
+                                    <dt><h4>Disponible(:enabled)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "enabled".</dd>
+                                    <dt><h4>No disponible(:disabled)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "disabled".</dd>
+                                    <dt><h4>Seleccionado(:checked)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "checked" o que haya sido seleccionado manualmente por el usuario.</dd>
+                                    <dt><h4>En rango(:in-range)</h4></dt>
+                                        <dd>Selecciona el elemento que este dentro del rango numerico.</dd>
+                                    <dt><h4>Fuera de rango(:out-of-range)</h4></dt>
+                                        <dd>Selecciona el elemento que este fuera del rango numerico.</dd>
+                                    <dt><h4>Opcional(:optional)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "optional".</dd>
+                                    <dt><h4>Requerido(:required)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "required".</dd>
+                                    <dt><h4>Valido(:valid)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga un valor valido.</dd>
+                                    <dt><h4>Invalido(:invalid)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga un valor que no sea valido.</dd>
+                                    <dt><h4>Solo lectura(:readonly)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "readonly".</dd>
+                                    <dt><h4>Lectura y escritura(:read-write)</h4></dt>
+                                        <dd>Selecciona el elemento que tenga el atributo booleano "read-write".</dd>
+                                </dl>
+                            </header>
+                            <div class="container-ej">
+                                <form>
+                                    <label>Campo disponible:
+                                        <input type="text" class="ui-ej" placeholder="Enabled" enabled>
+                                    </label>
+                                    <label>Campo no disponible:
+                                        <input type="text" class="ui-ej" placeholder="Disabled" disabled>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" class="ui-ej" checked>
+                                        <label>Checked</label>
+                                    </label>
+                                    <label>Rango de 0 a 10:
+                                        <input type="number" class="ui-ej" min="0" max="10">
+                                    </label>
+                                    <label>Rellenar el campo es opcional:
+                                        <input type="text" class="ui-ej2" optional>
+                                    </label>
+                                    <label>Rellenar el campo es requerido:
+                                        <input type="text" class="ui-ej" required>
+                                    </label>
+                                    <label>Valido numeros del 0 al 10:
+                                        <input type="number" class="ui-ej3" min="0" max="10">
+                                    </label>
+                                    <label>Solo lectura:
+                                        <input type="text" class="ui-ej4" value="No se puede modificar" readonly>
+                                    </label>
+                                    <label>Se puede escribir en el campo:
+                                        <input type="text" class="ui-ej4" value="Se puede modificar" read-write>
+                                    </label>
+                                </form>
+                            </div>
+                            <footer class="footer-article">
+                                <pre>
+                                    <code>
+                                        Codigo:
+                                        .ui-ej:enabled{
+                                            background-color: #c8e9b8;
+                                        }
+                                        .ui-ej:disabled{
+                                            background-color: #eb8484;
+                                        }
+                                        .ui-ej:checked + label{
+                                            color: #5eccc3;
+                                        }
+                                        .ui-ej:in-range{
+                                            background-color: green;
+                                        }
+                                        .ui-ej:out-of-range{
+                                            background-color: red;
+                                        }
+                                        .ui-ej2:optional{
+                                            background-color: yellow;
+                                        }
+                                        .ui-ej:required{
+                                            background-color: pink;
+                                        
+                                        }
+                                        .ui-ej3:valid{
+                                            background-color: blue;
+                                        }
+                                        .ui-ej3:invalid{
+                                            background-color: orangered;
+                                        }
+                                        .ui-ej4:read-only{
+                                            background-color: peru;
+                                        }
+                                        .ui-ej4:read-write{
+                                            background-color: powderblue;
+                                        }
+                                    </code>
+                                </pre>
+                            </footer>
+                        </article>
+                    </article>
+                    <article class="article">
+                        <header><h3>De tipo Structural</h3></header>
+                        <article class="article">
+                            <header>
+                                <dl class="dictionary-style">
+                                    <dt><h4>Raiz(:root)</h4></dt>
+                                        <dd>Selecciona el elemento raíz del documento(como html, pero con mayor especificidad).Puede ser útil para declarar variables CSS globales.</dd>
+                                    <dt><h4>Vacio(:empty)</h4></dt>
+                                        <dd>Selecciona el elemento que no tenga hijos.</dd>
+                                    <dt><h4>Negacion(:not(selector))</h4></dt>
+                                        <dd>Selecciona el elemento que no coincida con el selector.</dd>
+                                    <dt><h4>Primer hermano(:first-child)</h4></dt>
+                                        <dd>Selecciona el primer elemento entre un grupo de hermanos.</dd>
+                                    <dt><h4>Ultimo hermano(:last-child)</h4></dt>
+                                        <dd>Selecciona el ultimo elemento entre un grupo de hermanos.</dd>
+                                    <dt><h4>Hermano con posicion n(:nth-child(n))</h4></dt>
+                                        <dd>Selecciona el elemento que coincida con la posicion o patron declarado en "n" entre un grupo de hermanos, contando desde el principio.</dd>
+                                    <dt><h4>Hermano con posicion n invertida(:nth-last-child(n))</h4></dt>
+                                        <dd>Selecciona el elemento que coincida con la posicion o patron declarado en "n" entre un grupo de hermanos, contando desde el final.</dd>
+                                    <dt><h4>Hijo unico(:only-child)</h4></dt>
+                                        <dd>Selecciona el elemento que no tenga hermanos.</dd>
+                                    <dt><h4>Primer hermano en su tipo(:first-of-type)</h4></dt>
+                                        <dd>Selecciona el primer elemento de su tipo entre un grupo de elementos hermanos.</dd>
+                                    <dt><h4>Ultimo hermano en su tipo(:last-of-type)</h4></dt>
+                                        <dd>Selecciona el ultimo elemento de su tipo entre un grupo de elementos hermanos.</dd>
+                                    <dt><h4>Hermano con posicion n del mismo tipo(:nth-of-type(n))</h4></dt>
+                                        <dd>Selecciona el elemento que coincida con la posicion o patron declarado en "n" entre un grupo de hermanos del mismo tipo, contando desde el principio.</dd>
+                                    <dt><h4>Hermano con posicion n invertida del mismo tipo(:nth-last-child(n))</h4></dt>
+                                        <dd>Selecciona el elemento que coincida con la posicion o patron declarado en "n" entre un grupo de hermanos del mismo tipo, contando desde el final.</dd>
+                                    <dt><h4>Hijo unico en su tipo(:only-of-type)</h4></dt>
+                                        <dd>Selecciona el elemento que no tenga hermanos de su tipo.</dd>
+                                    
+                                </dl>
+                            </header>
+                            <footer class="footer-article">
+                                Valores posibles de n:
+                                <ul class="list-style">
+                                    <li>odd(numeros impares)</li>
+                                    <li>even(numeros pares)</li>
+                                    <li>numeros enteros</li>
+                                    <li>ecuaciones(donde la letra n es un multiplicador)</li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </article>
                 </article>
             </section>
             <aside class="aside">
@@ -230,7 +404,7 @@
                 </ul>
             </aside>
         </main>
-        <footer>Footer</footer>
+        <footer class="footer">Seda</footer>
     </div>
 </body>
 </html>

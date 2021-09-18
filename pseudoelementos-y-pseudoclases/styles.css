@@ -135,68 +135,61 @@ PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
     background-color: rebeccapurple;
 }
 /*Language*/
-.span{
-    display: block;
-}
-.span:lang(en){
-    color: violet;
-}
-.span:lang(es){
-    color: turquoise;
+.text-in-lang:lang(en){
+    color: greenyellow;
 }
 /*UI states*/
-.form,.form2,.form3{
-    display: block;
-    border: none;
-    border-radius: 10px;
-    background-color: lightblue;
+.ui-ej:enabled{
+    background-color: #c8e9b8;
 }
-.form:enabled{
-    background-color: gray;
+.ui-ej:disabled{
+    background-color: #eb8484;
 }
-.form:disabled{
-    background-color: rgb(235, 132, 132);
+.ui-ej:checked + label{
+    color: #5eccc3;
 }
-.form:checked + label{
-    color: rgb(121, 199, 199);
+.ui-ej:in-range{
+    background-color: green;
 }
-.form:in-range{
-    background-color: rgb(145, 134, 216);
+.ui-ej:out-of-range{
+    background-color: red;
 }
-.form:out-of-range{
-    background-color: rgb(228, 152, 152);
+.ui-ej2:optional{
+    background-color: yellow;
 }
-.form2:optional{
-    background-color: rgb(121, 204, 121);
+.ui-ej:required{
+    background-color: pink;
+
 }
-.form2:required{
-    background-color: rgb(231, 142, 187);
+.ui-ej3:valid{
+    background-color: blue;
 }
-.form3:valid{
-    background-color: rgb(161, 212, 110);
+.ui-ej3:invalid{
+    background-color: orangered;
 }
-.form3:invalid{
-    background-color: rgb(235, 132, 132);
+.ui-ej4:read-only{
+    background-color: peru;
+}
+.ui-ej4:read-write{
+    background-color: powderblue;
 }
 /*Structural*/
 :root{
-    background-color: rgb(163, 163, 231);
+ --main-color:white;
 }
-h5:empty{
-    background-color: rgb(187, 120, 120);
-    width: 100px;
-    height: 30px;
-}
-.hijo:first-child{
+.ej-structure:empty{
     background-color: red;
 }
-.hijo:last-child{
+.ej-structure:first-child{
+    background-color: blue;
+}
+.ej-structure:last-child{
     background-color: blueviolet;
 }
-.hijo:nth-child(3){
+.ej-structure:nth-child(3){
     background-color: brown;
 }
-.hijo:nth-last-child(4){
+.ej-structure:nth-last-child(4){
     background-color: burlywood;
 }
 .hijo-unico:only-child{
