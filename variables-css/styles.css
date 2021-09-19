@@ -9,26 +9,32 @@ Sintaxis:
         }
         propiedad: var(--variable);
 */
-
 :root{
-    --background-color: gray;
-    --long: 200px;
-    --border-radius: 10px;
-    --border: 3px solid rgb(43, 41, 41);
+    --backg-color-childrens: rebeccapurple ;
+    --color-text: white;
 }
-.cubo1{
-    --long:400px;/*<--- se modifica la variable pero solo de forma local*/
-    width: var(--long);
-    height: var(--long);
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    border: var(--border);
-    margin-bottom: 10px;
+.container-ej{
+    background-color: #4c7777;
+    width:100%;
+    height: 10rem;
+    padding: 1em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
 }
-.cubo2{
-    width: var(--long);
-    height: var(--long);
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    border: var(--border);
+.element-local{
+    --backg-color-childrens: pink;
+    --color-text: black;
+    background-color: var(--backg-color-childrens);
+    color: var(--color-text);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.element-global{
+    background-color: var(--backg-color-childrens);
+    color: var(--color-text);
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }

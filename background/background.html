@@ -5,30 +5,243 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Background</title>
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
+    <title>Curso Css 2020: Background</title>
 </head>
 <body>
-    <header>
-        <menu>
-            <nav>
-                <a href="../index.html">Inicio</a>
-                <h1>Background</h1>
-            </nav>
-        </menu>
-    </header>
-    <section>
-        <article>
-            <div class="bg-color"></div>
-            <div class="bg-img"></div>
-            <div class="bg-size"></div>
-            <div class="bg-repeat"></div>
-            <div class="bg-position"></div>
-            <div class="bg-clip"></div>
-            <div class="bg-origin"></div>
-            <div class="bg-attachment"></div>
-            <div class="bg-multiple"></div>
-        </article>
-    </section>
-    <footer>" "</footer>
+    <div class="container">
+        <header class="header-principal">
+                <nav>
+                    <h1>Background</h1>
+                    <a href="../index.html">Inicio</a>
+                </nav>
+        </header>
+        <main class="main">
+            <section class="seccion">
+                <ul class="list-style">
+                    <li>La propiedad background es un atajo para definir los valores individuales del fondo en una única regla CSS.</li>
+                    <li>Se puede usar background para definir los valores de una o de todas las propiedades siguientes: background-attachment, color, image, position, repeat.</li>
+                </ul>
+                <article class="article">
+                    <header><h2>Background color</h2></header>
+                    <ul class="list-style">
+                        <li>Define el color de fondo de un elemento.</li>
+                        <li>Puede ser el valor de un color o la palabra "transparente".</li>
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-color: color | transparent | inherit</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-element-color"></div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-element-color{
+                                    background-color: aquamarine;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background image</h2></header>
+                    <ul class="list-style">
+                        <li>Establece una o más imágenes de fondo para un elemento.</li>
+                        <li>Necesita un valor url con el origen de la imagen.</li>
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-image: url | none | inherit</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-element-image"></div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-element-image{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background size</h2></header>
+                    <ul class="list-style">
+                        <li>Especifica el tamaño de las imágenes de fondo.</li>
+                        <li>Tiene dos palabras clave:
+                            <ul>
+                                <li>contain: Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.</li>
+                                <li>cover: Escala la imagen al mayor tamaño posible sin estirarla, pero si la recorta en caso de que su medida sea mayor que el contenedor.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-size:  contain o cover o n%</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-element-size-con">
+                            <div><p>Contain</p></div>
+                        </div>
+                        <div class="bg-element-size-cov">
+                            <div><p>Cover</p></div>
+                        </div>
+                        <div class="bg-element-size-percent">
+                            <div><p>Porcentaje</p></div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-element-size-con{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: contain;
+                                }
+                                .bg-element-size-cov{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: cover;
+                                }
+                                .bg-element-size-percent{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 50% 50%;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background repeat</h2></header>
+                    <ul class="list-style">
+                        <li>Define como se repiten los fondos del documento.</li>
+                        <li>Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido:
+                            <ul>
+                                <li>repeat-x: La imagen se repite solo en el eje x hasta cubrir todo el eje existente.</li>
+                                <li>repeat-y: La imagen se repite solo en el eje x hasta cubrir todo el eje existente..</li>
+                                <li>repeat: La imagen se repite hasta cubrir todo el fondo existente. La última imagen debe ser recortada si no encaja.</li>
+                                <li>space: La imagen se repite lo máximo posible sin recortarse. La primera y última imagen son fijadas a cada lado del elemento, y el espacio blanco es distribuido igualmente entre las imágenes. </li>
+                                <li>round: Las imágenes repetidas se estrechan sin dejar huecos hasta que haya espacio suficiente para que otra sea añadida. Cuando la próxima imagen es añadida, todas las demás son comprimidas al espacio disponible. </li>
+                                <li>no-repeat: La imagen no se repite</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-repeat: (valor | valor) o (valor abreviado)</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-repeat-x"><div><p>Repetir en x</p></div></div>
+                        <div class="bg-repeat-y"><div><p>Repetir en y</p></div></div>
+                        <div class="bg-repeat"><div><p>Repetir</p></div></div>
+                        <div class="bg-repeat-space"><div><p>Space</p></div></div>
+                        <div class="bg-repeat-round"><div><p>Round</p></div></div>
+                        <div class="bg-repeat-no"><div><p>No repetir</p></div></div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-repeat-x{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 40%;
+                                    background-repeat:repeat-x;
+                                }
+                                .bg-repeat-y{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 40%;
+                                    background-repeat:repeat-y;
+                                }
+                                .bg-repeat{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 40%;
+                                    background-repeat:repeat;
+                                }
+                                .bg-repeat-space{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 40%;
+                                    background-repeat:space;
+                                }
+                                .bg-repeat-round{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 40%;
+                                    background-repeat:round;
+                                }
+                                .bg-repeat-no{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-size: 40%;
+                                    background-repeat:no-repeat;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background position</h2></header>
+                    <ul class="list-style">
+                        <li>Define la posición inicial de la imagen de fondo especificada.</li>
+                        <li>Valores:
+                            <ul>
+                                <li>porcentaje(%): con el par de valores '0% 0%', la esquina izquierda de la imagen es alineada con la esquina izquierda del borde del espaciado de la caja. Un valor '100% 100%' pone la esquina inferior de la imagen en la esquina inferior del área de espaciado.</li>
+                                <li>longitud(cm,px): con un valor '2cm 1cm', la esquina superior izquierda de la imagen es colocada a 2 cm a la derecha y a 1cm debajo de la esquina superior izquierda del área de espaciado.</li>
+                                <li>direccion(top bottom left right): Si solo se especifica un valor, se entenderá que es la posición horizontal con la vertical al 50%. De otra manera el primer valor especifica la posición horizontal. Se admiten valores negativos y combinaciones de palabras claves, largos (lenght) o porcentajes, pero en el caso de mezclar las palabras claves con otros valores, 'left' y 'right' solo se utilizarán como primer valor y 'top' y 'bottom' como segundo.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-position: [ &#60percentage> | &#60length> | left | center | right  ]
+                                [ &#60percentage> | &#60length> | top  | center | bottom ] ? ;</dd>
+                            <dd>background-position: [ top | center | bottom ];</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-position-percent">
+                            <div><p>Porcentaje</p></div>
+                        </div>
+                        <div class="bg-position-long">
+                            <div><p>Longitud</p></div>
+                        </div>
+                        <div class="bg-position-direction">
+                            <div><p>Direccion</p></div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-position-percent{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-position: 100% 50%;
+                                }
+                                .bg-position-long{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-position: 5px 10px;
+                                }
+                                .bg-position-direction{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    background-position: right top;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer class="footer">"Seda"</footer>
+    </div>
 </body>
 </html>

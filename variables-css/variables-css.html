@@ -4,24 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <link rel="stylesheet" href="./styles.css">
-    <title>Variables Css</title>
+    <title>Css 2020: Variables Css</title>
 </head>
 <body>
-    <header>
-        <menu>
-            <nav>
-                <a href="../index.html">Inicio</a>
-                <h1>Variables Css(Custom properties)</h1>
-            </nav>
-        </menu>
-    </header>
-    <section>
-        <div class="cubo1"></div>
-        <div class="cubo2"></div>
-
-    </section>
-    <footer></footer>
-    
+    <div class="container">
+        <header class="header-principal">
+            <h1>Variables Css(Custom properties)</h1>
+                <nav>
+                    <a href="../index.html">Inicio</a>
+                </nav>
+        </header>
+        <main class="main">
+            <section class="seccion">
+                <article class="article">
+                    <ul class="list-style">
+                        <li>Necesitan estar dentro de un selector.</li>
+                        <li>Tienen herencia y cascada.</li>
+                        <li>Pueden ser globales y locales.</li>
+                    </ul>
+                    <pre>
+                        <code>
+                            Sintaxis:
+                            selector{
+                                --variable:valor;
+                            }
+                            propiedad: var(--variable);
+                        </code>
+                    </pre>
+                    <div class="container-ej">
+                        <div class="element-local">Elemento con variables locales</div>
+                        <div class="element-global">Elemento con variables globales</div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                :root{
+                                    --backg-color-childrens: rebeccapurple ;
+                                    --color-text: white;
+                                }
+                                .element-local{
+                                    --backg-color-childrens: pink;
+                                    --color-text: black;
+                                    background-color: var(--backg-color-childrens);
+                                    color: var(--color-text);
+                                }
+                                .element-global{
+                                    background-color: var(--backg-color-childrens);
+                                    color: var(--color-text);
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer class="footer">SEDA</footer>
+    </div>
 </body>
 </html>

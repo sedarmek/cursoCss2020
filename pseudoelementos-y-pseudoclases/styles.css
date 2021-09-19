@@ -66,9 +66,6 @@ PSEUDOCLASES selectores que reaccionan en tiempo real como una escucha
                 :not() ---> selecciona el elemento que no cumpla la condicion
         
 */
-.container-ej{
-    background-color: #4c7777;
-}
 .dictionary-subt{
     text-align: left;
 }
