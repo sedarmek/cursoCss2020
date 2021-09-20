@@ -50,25 +50,63 @@
                     <header><h2>Background image</h2></header>
                     <ul class="list-style">
                         <li>Establece una o más imágenes de fondo para un elemento.</li>
-                        <li>Necesita un valor url con el origen de la imagen.</li>
+                        <li>Necesita minimo un url con el origen de la imagen.</li>
+                        <li>Puede tener mas de una imagen.</li>
                     </ul>
-                    <dl class="dictionary-style">
-                        <dt>Sintaxis</dt>
+                    <article class="article">
+                        <header><h3>Backgroun-image simple</h3></header>
+                        <ul class="list-style">
+                            <li>Establece una imágen de fondo para un elemento.</li>
+                        </ul>
+                        <dl class="dictionary-style">
+                            <dt>Sintaxis</dt>
                             <dd>background-image: url | none | inherit</dd>
-                    </dl>
-                    <div class="container-ej">
-                        <div class="bg-element-image"></div>
-                    </div>
-                    <footer class="footer-article">
-                        <pre>
-                            <code>
-                                Codigo:
-                                .bg-element-image{
-                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
-                                }
-                            </code>
-                        </pre>
-                    </footer>
+                        </dl>
+                        <div class="container-ej">
+                            <div class="bg-element-image"></div>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .bg-element-image{
+                                        background-image: <strong>url(https://www.mividaporunperro.com/cheems-1.jpg);</strong>
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Background-image multiple</h3></header>
+                        <ul class="list-style">
+                            <li>Establece varias imágenes de fondo para un elemento.</li>
+                            <li>Los valores individuales para las diferentes propiedades se declaran separandolas con una coma, y en el orden respectivo.</li>
+                        </ul>
+                        <dl class="dictionary-style">
+                            <dt>Sintaxis</dt>
+                                <dd>background-image: url, url</dd>
+                        </dl>
+                        <div class="container-ej">
+                            <div class="bg-image-multiple">
+                                <div><p>Scroll</p></div>
+                            </div>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .bg-image-multiple{
+                                        background-image: 
+                                            <strong>url(https://e7.pngegg.com/companion-dog.png),
+                                            url(https://www.mividaporunperro.com/cheems-1.jpg);</strong>
+                                        background-size: 40%, cover;
+                                        background-repeat: no-repeat, no-repeat;
+                                        background-position: center center, center center;
+                                    }                                
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
                 </article>
                 <article class="article">
                     <header><h2>Background size</h2></header>
@@ -227,6 +265,146 @@
                                 .bg-position-direction{
                                     background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
                                     background-position: right top;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background clip</h2></header>
+                    <ul class="list-style">
+                        <li>Especifica si el fondo de un elemento se extiende por debajo su borde.</li>
+                        <li>Valores:
+                            <ul>
+                                <li>border-box: El fondo se extiende hasta el borde exterior de el contenedor (pero por debajo de la frontera, en orden z).</li>
+                                <li>padding-box: El fondo se extiende hasta el borde exterior del padding.</li>
+                                <li>content-box: El fondo se dibuja desde donde inicia el contenido.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-clip: border-box | padding-box | content-box</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-clip-border">
+                            <div><p>Border</p></div>
+                        </div>
+                        <div class="bg-clip-padding">
+                            <div><p>Padding</p></div>
+                        </div>
+                        <div class="bg-clip-content">
+                            <div><p>Content</p></div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-clip-border{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-clip:border-box;</strong>
+                                }
+                                .bg-clip-padding{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-clip:padding-box;</strong>
+                                }
+                                .bg-clip-content{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-clip:content-box;</strong>
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background origin</h2></header>
+                    <ul class="list-style">
+                        <li>Especifica el área de origen de un fondo o imagen en determinada caja.</li>
+                        <li>Valores:
+                            <ul>
+                                <li>border-box: El fondo se extiende hasta el borde exterior del contenedor (por debajo del borde en orden z).</li>
+                                <li>padding-box: El fondo se extiende al borde exterior del padding, la posición es relativa al padding de la caja.</li>
+                                <li>content-box: El fondo se extiende dentro del contenido de la caja, la posición es relativa al contenido de la caja.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-origin: border-box | padding-box | content-box</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-origin-border">
+                            <div><p>Border</p></div>
+                        </div>
+                        <div class="bg-origin-padding">
+                            <div><p>Padding</p></div>
+                        </div>
+                        <div class="bg-origin-content">
+                            <div><p>Content</p></div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-origin-border{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-origin:border-box;</strong>
+                                }
+                                .bg-origin-padding{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-origin:padding-box;</strong>
+                                }
+                                .bg-origin-content{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-origin:content-box;</strong>
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header><h2>Background attachment</h2></header>
+                    <ul class="list-style">
+                        <li>Determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor.</li>
+                        <li>Valores:
+                            <ul>
+                                <li>scroll: La imagen de fondo se moverá dentro de la pantalla junto al bloque que la contiene.</li>
+                                <li>fixed: La imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis</dt>
+                            <dd>background-attachment: scroll | fixed | inherit</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="bg-attachment-scroll">
+                            <div><p>Scroll</p></div>
+                        </div>
+                        <div class="bg-attachment-fixed">
+                            <div><p>Fixed</p></div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .bg-origin-border{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-origin:border-box;</strong>
+                                }
+                                .bg-origin-padding{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-origin:padding-box;</strong>
+                                }
+                                .bg-origin-content{
+                                    background-image: url(https://www.mividaporunperro.com/cheems-1.jpg);
+                                    <strong>background-origin:content-box;</strong>
                                 }
                             </code>
                         </pre>
