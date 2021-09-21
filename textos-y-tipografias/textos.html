@@ -4,38 +4,236 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <title>Textos y tipografias</title>
 </head>
 <body>
-    <header>
-        <menu>
-            <nav>
-                <a href="../index.html">Inicio</a>
-                <h1>Textos y tipografias</h1>
-            </nav>
-        </menu>
-    </header>
-    <section>
-        <article class="parte-1">
-            <h2 class="title">Tipografias <span class="span">1</span></h2>
-            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus unde facere <span class="bold">mollitia</span>! Hic veritatis praesentium fugiat quos? <span class="style">Voluptatum</span> error inventore, commodi totam officiis illo officia impedit quos aut, minima vero!</p>
-            <input type="button" value="Boton">
-            <div>
-                <p class="item-1">ITEM 1</p>
-                <p class="item-2">item 2</p>
-            </div>
-            <div class="line-h">
-                <a href="#" class="enlace">Enlace</a>
-            </div>
-        </article>
-        <article class="parte-2">
-            <h3 class="title-2">Google Fonts y font-face</h3>
-            <p class="lorem-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam temporibus dolor, tempore laudantium eos officia ipsam illum? Excepturi, facilis quos quam ullam earum illum porro officiis fuga ipsum quis voluptatum!</p>
-        </article>
-    </section>
-    
+    <div class="container">
+        <header class="header-principal">
+                <nav>
+                    <h1>Textos y tipografias</h1>
+                    <a href="../index.html">Inicio</a>
+                </nav>
+        </header>
+        <main class="main">
+            <section class="section">
+                <article class="article">
+                    <h2>Tipografias</h2>
+                    <ul class="list-style">
+                        <li>Son una función de CSS que permite especificar los archivos de tipo de letra que se van a descargar junto con el sitio web a medida que el usuario acceda a ellos.</li>
+                        <li>Se necesita más de un formato de tipos de letra para conseguir una compatibilidad decente entre navegadores. </li>
+                        <li>El formato más eficiente disponible admitido por la mayoria de los navegadores modernos es WOFF/WOFF2(Web Open Font Format, versiones 1 y 2).</li>
+                    </ul>
+                    <article class="article">
+                        <header><h3>Familias tipograficas</h3></header>
+                        <ul class="list-style">
+                            <li>Tienen nombre propio.</li>
+                            <li>Con la propiedad font-family podemos seleccionar cualquier tipografía simplemente escribiendo su nombre.</li>
+                            <li>Se recomienda especificar al menos 2 o tres familias tipograficas alternativas para conseguir compatibilidad entre navegadores.</li>
+                        </ul>
+                        <dl class="dictionary-style">
+                            <dt>Sintaxis</dt>
+                                <dd>font-family: 'valor'</dd>
+                        </dl>
+                        <article class="article">
+                            <header><h4>Fuentes seguras</h4></header>
+                            <ul class="list-style">
+                                <li>No es una tipografía específica, sino una palabra clave con la que se denomina una categoría.</li>
+                                <li>Indica al navegador que debe buscar una tipografía instalada en el sistema que entre dentro de la misma categoría.</li>
+                                <li>Su nombre se basa en sus caracteristicas:</li>
+                                <dl class="dictionary-style">
+                                    <dt>Serif</dt>
+                                        <dd>tipografía con serifa, tiene un adorno en los renates(Times New Roman, Georgia).</dd>
+                                    <dt>Sans-serif</dt>
+                                        <dd>tipografía sin serifa, tiene un corte seco en los renates(Arial, Verdana, Tahoma).</dd>
+                                    <dt>Cursive</dt>
+                                        <dd>tipografía en cursiva, emula tipografia manuscrita(Sanvito, Corsiva).</dd>
+                                    <dt>Fantasy</dt>
+                                        <dd>tipografía decorativa, tiene decoraciones(Critter, Cottonwood).</dd>
+                                    <dt>Nonospace</dt>
+                                        <dd>tipografía monoespaciada, los caracteres tienen el mismo ancho(Courier, Courier New).</dd>
+                                </dl>
+                            </ul>
+                        </article>
+                        <div class="container-ej">
+                            <p class="text-family">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, voluptatibus voluptates. Nisi aperiam optio eaque ad adipisci error possimus similique eveniet numquam at dolores minima perspiciatis fuga, iure et maxime!</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .text-family{
+                                        font-family: Georgia, 'Times New Roman', Times, serif;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                </article>
+                <article class="article">
+                    <header><h2>Propiedades basicas</h2></header>
+                    <article class="article">
+                        <header><h3>Propiedades font</h3></header>
+                        <ul class="list-style">
+                            <li><h4>font-family: establece la familia tipografica, se usa el nombre propio de la fuente, la familia generica y se recomienda usar fuentes de reserva</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>font-family: 'valor'</dd>
+                                </dl>
+                            </li>
+                            <li><h4>font-size: establece el tamaño de la fuente, se define en unidades px, em, rem, %, vh, vw, vmin y vmax.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>font-size: valor</dd>
+                                </dl>
+                            </li>
+                            <li><h4>font-weight: especifica el peso o grueso de la letra, tiene tres valores:</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>font-weight: normal | bold | lighter | bolder | 100-900</dd>
+                                </dl>
+                                <dl class="dictionary-style">
+                                    <dt>Normal:</dt>
+                                        <dd>Peso/grueso normal de la fuente. Igual que 400.</dd>
+                                    <dt>Bold:</dt>
+                                        <dd>Grueso ancho (negrita). Igual que 700.</dd>
+                                    <dt>Ligther:</dt>
+                                        <dd>Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre.</dd>
+                                    <dt>Bolder:</dt>
+                                        <dd>Corresponde a un tipo de fuente más grueso que el tipo del elemento padre.</dd>
+                                    <dt>100-900:</dt>
+                                        <dd>Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad.</dd>
+                                </dl>
+                            </li>
+                            <li><h4>font-style: establece el estilo de una familia tipográfica.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>font-style: normal | italic | oblique</dd>
+                                </dl>
+                                <dl class="dictionary-style">
+                                    <dt>Normal:</dt>
+                                        <dd>Escoge un tipo de letra clasificado como normal dentro de una familia de fuente.</dd>
+                                    <dt>Italic:</dt>
+                                        <dd>Escoge un tipo de letra etiquetado como italic, o, si una versión cursiva del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como oblique en lugar de eso.</dd>
+                                    <dt>Oblique:</dt>
+                                        <dd>Escoge un tipo de letra etiquetado como oblique, o, si una versión oblique del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como italic en lugar de eso.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="prop-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt veniam eum nobis, aliquid ullam temporibus deserunt quibusdam facere tenetur ut voluptas iure, harum quaerat fugiat asperiores officiis rem mollitia!</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .prop-font{
+                                        font-family: 'Courier New', Courier, monospace;
+                                        font-size: 1.5rem;
+                                        font-weight: bold;
+                                        font-style: normal;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Propiedades text</h3></header>
+                        <ul class="list-style">
+                            <li><h4>text-transform: especifica el cambio entre mayúsculas y minúsculas del texto de un elemento.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>text-transform: lowercase | uppercase | capitalize | none</dd>
+                                </dl>
+                                <dl class="dictionary-style">
+                                    <dt>Lowercase:</dt>
+                                        <dd>Es una palabra clave que fuerza a todos los caracteres a ser convertidos a minúsculas</dd>
+                                    <dt>Uppercase:</dt>
+                                        <dd>Es una palabra clave que fuerza a todos los caracteres a ser convertidos a mayúsculas.</dd>
+                                    <dt>Capitalize:</dt>
+                                        <dd>Es una palabra clave que fuerza a que la primera letra de cada palabra sea convertida a mayúscula.</dd>
+                                    <dt>None:</dt>
+                                        <dd>Es una palabra clave que previene que sea cambiado el tamaño de los caracteres.</dd>
+                                </dl>
+                            </li>
+                            <li><h4>text-align: establece la alineación horizontal del contenido dentro de un elemento de bloque o cuadro de celda de tabla.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>text-align: center | left | right | justify | start | end</dd>
+                                </dl>
+                                <dl class="dictionary-style">
+                                    <dt>Center:</dt>
+                                        <dd>Los contenidos en línea están centrados dentro del cuadro de línea.</dd>
+                                    <dt>Left:</dt>
+                                        <dd>El contenido en línea se alinea con el borde izquierdo del cuadro de línea.</dd>
+                                    <dt>Right:</dt>
+                                        <dd>El contenido en línea se alinea con el borde derecho del cuadro de línea.</dd>
+                                    <dt>Justify:</dt>
+                                        <dd>Los contenidos en línea están espaciados para alinear sus bordes.</dd>
+                                    <dt>Start:</dt>
+                                        <dd>Lo mismo que left si la dirección fuera de izquierda a derecha y right si la dirección fuera de derecha a izquierda.</dd>
+                                    <dt>End:</dt>
+                                        <dd>Lo mismo que right si la dirección fuera de izquierda a derecha y left si la dirección fuera de derecha a izquierda.</dd>
+                                </dl>
+                            </li>
+                            <li><h4>text-decoration: establece la decoracion del texto.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd></dd>
+                                </dl>
+                                <dl class="dictionary-style">
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                </dl>
+                            </li>
+                            <li><h4>text-indent: mueve la primera linea de un texto. Solo en elementos de bloque.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd></dd>
+                                </dl>
+                                <dl class="dictionary-style">
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                    <dt>:</dt>
+                                        <dd></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="prop-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt veniam eum nobis, aliquid ullam temporibus deserunt quibusdam facere tenetur ut voluptas iure, harum quaerat fugiat asperiores officiis rem mollitia!</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+    </div>
 </body>
 </html>

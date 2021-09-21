@@ -1,14 +1,16 @@
-/* Tipografias 
-Familias tipograficas
-    Tienen nombre propio
-        Arial, Times New Roman, open sans, ubuntu
-Familias genericas o seguras
-    Su nombre se basa en sus caracteristicas
-        serif: tiene un adorno en los renates
-        sans-serif: tiene un corte seco en los renates
-        cursive: emula tipografia manuscrita
-        fantasy: letra decoorativa
-        nonospace: los caracteres tienen el mismo ancho
+/* 
+Tipografias 
+    Familias tipograficas
+        Tienen nombre propio
+            Arial, Times New Roman, open sans, ubuntu
+            
+        Familias genericas o seguras(fuentes seguras)
+            Su nombre se basa en sus caracteristicas
+                serif: tiene un adorno en los renates
+                sans-serif: tiene un corte seco en los renates
+                cursive: emula tipografia manuscrita
+                fantasy: letra decoorativa
+                nonospace: los caracteres tienen el mismo ancho
 FONT
     font-family: establece la familia tipografica
         se usa el nombre propio de la fuente, la familia generica y se recomienda usar fuentes de reserva
@@ -49,47 +51,27 @@ GOOGLE FONTS Y @FONT-FACE
         whatfont
 */
 
-/* font */
-.title{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 5vmin;
+/* FAMILIAS TIPOGRAFICAS */
+/*Fuentes seguras*/
+.text-family{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
 }
-.span{
-    font-size: 2em;
-}
-.bold{
+/* FONT */
+.prop-font{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
     font-weight: bold;
+    font-style: normal;
 }
-.style{
-    font-style: italic;
-}
-/*text & other*/
-.item-1{
-    text-transform: lowercase;
-}
-.item-2{
-    text-transform: uppercase;
-}
-.texto{
+/*TEXT*/
+.prop-text{
+    text-transform: capitalize;
     text-align: left;
-    text-indent: 30px;
-    letter-spacing: 2px;
+    text-decoration: dotted;
+    text-indent: 0px;
 }
-.enlace{
-    display: block;
-    text-decoration: none;
-}
-.line-h{
-    width: 100px;
-    height: 100px;
-    background-color: aquamarine;
-    line-height: 100px;
-    text-align: center;
-}
-/*Google font*/
-.title-2{
-    font-family: 'Major Mono Display', monospace;
-}
+
 /*font-face*/
 @font-face {
     font-family: 'mifuente';
