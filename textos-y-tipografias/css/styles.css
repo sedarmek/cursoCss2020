@@ -68,15 +68,23 @@ GOOGLE FONTS Y @FONT-FACE
 .prop-text{
     text-transform: capitalize;
     text-align: left;
-    text-decoration: dotted;
-    text-indent: 0px;
+    text-decoration: line-through;
+    text-indent: 6em;
 }
-
+/* OTHERS */
+.prop-other{
+    line-height: 0.8em;
+    letter-spacing: 0.3em;
+}
+/* google fonts*/
+/* .text-gfonts{
+    
+} */
 /*font-face*/
 @font-face {
     font-family: 'mifuente';
     src: url('assets/fonts/LazySunday-Regular.ttf');
 }
-.lorem-2{
+.text-fface{
     font-family: mifuente,sans-serif;
 }

@@ -182,44 +182,123 @@
                             <li><h4>text-decoration: establece la decoracion del texto.</h4>
                                 <dl class="dictionary-style">
                                     <dt>Sintaxis</dt>
-                                        <dd></dd>
+                                        <dd>text-decoration: overline | line-through | underline | none</dd>
                                 </dl>
                                 <dl class="dictionary-style">
-                                    <dt>:</dt>
-                                        <dd></dd>
-                                    <dt>:</dt>
-                                        <dd></dd>
-                                    <dt>:</dt>
-                                        <dd></dd>
-                                    <dt>:</dt>
-                                        <dd></dd>
-                                    <dt>:</dt>
-                                        <dd></dd>
+                                    <dt>Overline:</dt>
+                                        <dd>dibuja una linea sobre la parte superior del texto.</dd>
+                                    <dt>Line-through:</dt>
+                                        <dd>dibuja una linea de forma horizontal sobre el texto.</dd>
+                                    <dt>Underline:</dt>
+                                        <dd>dibuja una linea sobre la parte inferior del texto.</dd>
+                                    <dt>None:</dt>
+                                        <dd>previene que sea decorado el texto.</dd>
                                 </dl>
                             </li>
                             <li><h4>text-indent: mueve la primera linea de un texto. Solo en elementos de bloque.</h4>
                                 <dl class="dictionary-style">
                                     <dt>Sintaxis</dt>
-                                        <dd></dd>
-                                </dl>
-                                <dl class="dictionary-style">
-                                    <dt>:</dt>
-                                        <dd></dd>
-                                    <dt>:</dt>
-                                        <dd></dd>
-                                    <dt>:</dt>
-                                        <dd></dd>
+                                        <dd>text-indent: valor</dd>
                                 </dl>
                             </li>
                         </ul>
                         <div class="container-ej">
-                            <p class="prop-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt veniam eum nobis, aliquid ullam temporibus deserunt quibusdam facere tenetur ut voluptas iure, harum quaerat fugiat asperiores officiis rem mollitia!</p>
+                            <p class="prop-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt veniam eum nobis, aliquid ullam temporibus deserunt quibusdam facere tenetur ut voluptas iure, harum quaerat fugiat asperiores officiis rem mollitia!</p>
                         </div>
                         <footer class="footer-article">
                             <pre>
                                 <code>
                                     Codigo:
-                                    
+                                    .prop-text{
+                                        text-transform: capitalize;
+                                        text-align: left;
+                                        text-decoration: dotted;
+                                        text-indent: 6em;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>Propiedades varias</h3></header>
+                        <ul class="list-style">
+                            <li><h4>line-height: establece la altura de la linea, se usa para centrar un texto en la altura.Solo en elementos de bloque.</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>line-height: valor(px, em, rem, %, vh, vw, vmin y vmax)</dd>
+                                </dl>
+                            </li>
+                            <li><h4>letter-spacing: establece la separacion de las letras con una media en cualquier unidad.(px, em, rem, %, vh, vw, vmin y vmax)</h4>
+                                <dl class="dictionary-style">
+                                    <dt>Sintaxis</dt>
+                                        <dd>font-size: valor(px, em, rem, %, vh, vw, vmin y vmax)</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="container-ej">
+                            <p class="prop-other">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt veniam eum nobis, aliquid ullam temporibus deserunt quibusdam</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    .prop-other{
+                                        line-height: 0.8em;
+                                        letter-spacing: 0.3em;
+                                    }
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                </article>
+                <article class="article">
+                    <header><h2>Google fonts y @font-face</h2></header>
+                    <article class="article">
+                        <header><h3>Google fonts</h3></header>
+                        <ul class="list-style">
+                            <li>Son fuentes optenidas directamente de google a traves de su pagina oficial: https://fonts.google.com/</li>
+                        </ul>
+                        <dl class="dictionary-style">
+                            <dt>Sintaxis:</dt>
+                                <dd>sintaxis pendiente</dd>
+                        </dl>
+                        <div class="container-ej">
+                            <p class="text-gfonts">ejemplo pendiente</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+
+                                </code>
+                            </pre>
+                        </footer>
+                    </article>
+                    <article class="article">
+                        <header><h3>@font-face</h3></header>
+                        <ul class="list-style">
+                            <li>Es una funcion que nos permite agregar nuevas fuentes externas./</li>
+                            <li>Con la propiedad font-family declaras el nombre de la fuente. El nombre es libre.</li>
+                            <li>Y con la propiedad src declaras el archivo que contiene las caracteristicas de la fuente.</li>
+                        </ul>
+                        <dl class="dictionary-style">
+                            <dt>Sintaxis:</dt>
+                                <dd>@font-face{font-family: 'nombre'; src: url(ruta);}</dd>
+                        </dl>
+                        <div class="container-ej">
+                            <p class="text-fface">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque dolorum odio esse fugia</p>
+                        </div>
+                        <footer class="footer-article">
+                            <pre>
+                                <code>
+                                    Codigo:
+                                    @font-face {
+                                        font-family: 'mifuente';
+                                        src: url('assets/fonts/LazySunday-Regular.ttf');
+                                    }
+                                    .text-fface{
+                                        font-family: mifuente,sans-serif;
+                                    }                                    
                                 </code>
                             </pre>
                         </footer>
