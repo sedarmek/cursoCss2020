@@ -1,56 +1,56 @@
 /*
 LISTAS
-Resetar estilos por defecto de una lista
-    margin-top:0
-    margin-bottom:0
-    margin-left:0
+    Resetar estilos por defecto de una lista
+        margin-top:0
+        margin-bottom:0
+        margin-left:0
 
-Hay 3 propiedades para las listas, se puede aplicar al padre o a los elementos de lista:
-    ul | ol | otro
+    Hay 3 propiedades para las listas, se puede aplicar al padre o a los elementos de lista:
+        ul | ol | dl
 
-list-style-type: establece el estilo de viñeta
-    disc
-    circle
-    square
-    decimal
-    decimal-leading-zero
-    lower-roman
-    upper-roman
-    lower-greek
-    lowwer-latin
-    upprt-latin
-    armenian
-    georgian
-    lower-alpha
-    upper-alpha
+    list-style-type: establece el estilo de viñeta
+        disc
+        circle
+        square
+        decimal
+        decimal-leading-zero
+        lower-roman
+        upper-roman
+        lower-greek
+        lowwer-latin
+        upprt-latin
+        armenian
+        georgian
+        lower-alpha
+        upper-alpha
 
-list-style-position: hace que las viñetas se coloquen por dentro o por fuera del elemento
-    inside | outside
+    list-style-position: hace que las viñetas se coloquen por dentro o por fuera del elemento
+        inside | outside
 
-list-style-image: pone una imagen en lugar de la viñeta, no se suele usar
-    url(image)
+    list-style-image: pone una imagen en lugar de la viñeta, no se suele usar
+        url(image)
 
-*Normalmente se suele usar el shorthand list-style.
+    *Normalmente se suele usar el shorthand list-style.
 
 TABLAS
-table-layout: define como se comportan las dimensiones de una tabla y los anchos por defecto.
-tabla y los anchos de las columnas
-    automatic: valor por defecto
-    fixed: necesita un width declarado, si no se le da un ancho a cada columna se distribuye equitativamente
+    table-layout: define como se comportan las dimensiones de una tabla y los anchos por defecto.
+    tabla y los anchos de las columnas
+        automatic: valor por defecto
+        fixed: necesita un width declarado, si no se le da un ancho a cada columna se distribuye equitativamente
 
-caption-side: define donde se coloca el caption de una tabla
-    top: valor por defecto
-    bottom: se coloca al pie de la tabla
+    caption-side: define donde se coloca el caption de una tabla
+        top: valor por defecto
+        bottom: se coloca al pie de la tabla
 
-border-spacing: controla el espacion entre las celdas
+    border-spacing: controla el espacio entre las celdas
 
-border-collaspse: controla si las celdas se mantienen juntas o separadas
-    separate: valor por defecto
-    collapse: junta las celdas
+    border-collapse: controla si las celdas se mantienen juntas o separadas
+        separate: valor por defecto
+        collapse: junta las celdas
 
-empty-cells: controla que hacer con las celdas vacias
-    show: valor por defecto
-    hide: oculta las celdas vacias
+    empty-cells: controla que hacer con las celdas vacias
+        show: valor por defecto
+        hide: oculta las celdas vacias
 
 IMAGENES
     No existen propiedades para imagenes en CSS
@@ -99,20 +99,26 @@ IMAGENES
         polygon(): especifica una serie de puntos para definir la zona visible siendo el punto 0 0 la esquina superior izquierda.
         Generador de clip-path: https://bennettfeely.com/clippy/
 */
-
-.lista{
-    background-color: rgb(190, 220, 238);
-    width: 70px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+/*LISTA*/
+.container-ej{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.list-item-image{
+    border: 1px solid grey;
+    width: 6em;
+    list-style-position: inside;
+    list-style-image:url(../source/image/arrows.png);
+}
+.list-item-geek{
+    border: 1px solid grey;
+    width: 6em;
     list-style-type: lower-greek;
     list-style-position: outside;
-    list-style-type: none;
 }
-.item{
-    border: 2px solid rgb(161, 161, 236);
-}
+
+/*OTRA MANERA DE CAMBIAR LA VIÑETA SIN LIST-STYLE-IMAGE
 .item::before{
     content: '';
     display: inline-block;
@@ -122,25 +128,27 @@ IMAGENES
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
+
 /*TABLE*/
+.container-ej{
+    overflow-x: auto;
+}
 .table{
-    border: 5px solid rgb(187, 134, 236);
-    table-layout: fixed;
+    background-color: plum;
     width: 100%;
+    table-layout: fixed;
     text-align: center;
-    border-spacing: 30px 10px;
+    border-spacing: 2em 1em;
     border-collapse: separate;
     empty-cells: hide;
 }
 .caption{
+    background-color: pink;
     caption-side: bottom;
 }
 .tData{
-    background-color: rgb(207, 189, 236);
-}
-.table-container{
-    overflow-x: auto;
+    background-color: rebeccapurple;
 }
 /*IMAGENES*/
 .img-container{

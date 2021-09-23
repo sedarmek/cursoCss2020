@@ -4,83 +4,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Listas</title>
+    <title>Curso Css 2020:Listas,tablas,imagenes,clippath</title>
 </head>
 <body>
-    <header>
-        <menu>
+    <div class="container">
+        <header class="header-principal">
+            <h1>Listas,tablas,imagenes,clippath</h1>
             <nav>
                 <a href="../index.html">Inicio</a>
             </nav>
-        </menu>
-    </header>
-    <section>
-        <article>
-            <h2>Listas</h2>
-            <ul class="lista">
-                <li class="item">Item 1</li>
-                <li class="item">Item 2</li>
-                <li class="item">Item 3</li>
-                <li class="item">Item 4</li>
-                <li class="item">Item 5</li>
-            </ul>
-        </article>
-        <article>
-            <h2>Table</h2>
-            <div class="table-container">
-                    <table class="table">
-                        <caption class="caption">Avengers</caption>
-                    <colgroup>
-                        <col class="col1">
-                        <col class="col2">
-                        <col class="col3">
-                    </colgroup>
-                    <thead>
-                        <th class="thead">Username</th>
-                        <th class="thead">Email</th>
-                        <th class="thead">Company</th>
-                    </thead>
-                    <tbody>
-                        <tr class="tRow">
-                            <td class="tData">TonyStark</td>
-                            <td class="tData">tony@gmail.com</td>
-                            <td class="tData">Marvel</td>
-                        </tr>
-                        <tr class="tRow">
-                            <td class="tData">Bruce Baner</td>
-                            <td class="tData">bruce@gmail.com</td>
-                            <td class="tData">Marvel</td>
-                        </tr>
-                        <tr class="tRow">
-                            <td class="tData">Peter Parker</td>
-                            <td class="tData">spider@gmail.com</td>
-                            <td class="tData">Marvel</td>
-                        </tr>
-                        <tr class="tRow">
-                            <td class="tData">Steve Rogers</td>
-                            <td class="tData"></td>
-                            <td class="tData">Marvel</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
-        <article>
-            <h2>Imagenes</h2>
-            <div class="img-container">
-                <img src="https://www.hola.com/imagenes/estar-bien/20200602169264/razas-de-perro-pequenos-chihuahua/0-831-143/raza-de-perro-chihuahua-m.jpg" alt="#" class="img">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, repellat ad au</p>
-            </div>
-                <img src="https://pbs.twimg.com/profile_images/632568635970576384/uTvv9oXs_400x400.jpg" alt="#" class="img-2">
-        </article>
-        <article>
-            <h2>Clip-path</h2>
-            <div class="cont-path">
-                <div class="path">
-                </div>
-            </div>
-        </article>
-    </section>
+        </header>
+        <main class="main">
+            <section class="seccion">
+                <article class="article">
+                    <header>
+                        <h2>Propiedades para listas</h2>
+                    </header>
+                    <ul class="list-style">
+                        <li><strong>List-style:</strong> es un short-hand que permite definir todos los parámetros: list-style-type, list-style-image, y list-style-position.
+                        <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>list-style: [ list-style-type || list-style-position || list-style-image ] | inherit</dd>
+                            </dl>
+                        </li>
+                        <li><strong>List-style-type:</strong> especifica la apariencia del listado(disc[disco], circle[circulo], square[cuadrado], decimal[decimales], decimal-leading-zero[doble decimales], lower-roman[numeros romanos minuscula], upper-roman[numeros romanes mayuscula], lower-greek[numeros griegos minuscula], lower-latin[letras ASCII minúscula], upper-latin[letras ASCII mayuscula], armenian[numeración armenia], georgian[numeración georgiana], lower-alpha[es igual que lower-latin], upper-alpha[es igual que upper-latin.]).
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>list-style-stype: [ type ] | inherit</dd>
+                            </dl>
+                        </li>
+                        <li><strong>List-style-position:</strong> especifica la posicion de las viñetas(inside[dentro] y outside[fuera]).
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>list-style-position: [ inside || outside ] | inherit</dd>
+                            </dl>
+                        </li>
+                        <li><strong>List-style-image:</strong> especifica la imagen que será utilizada como marcador del listado, no se suele usar.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>list-style-image: [ url(ruta) ] | inherit</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="container-ej">
+                        <ul class="lista">
+                            <li class="list-item-geek">Item 1</li>
+                            <li class="list-item-image">Item 2</li>
+                            <li class="list-item-image">Item 3</li>
+                            <li class="list-item-image">Item 4</li>
+                            <li class="list-item-image">Item 5</li>
+                        </ul>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .list-item-image{
+                                    border: 1px solid grey;
+                                    width: 6em;
+                                    margin-top: 0px;
+                                    margin-bottom: 0px;
+                                    margin-left: 0px;
+                                    list-style-position: inside;
+                                    list-style-image:url(../source/image/arrows.png);
+                                }
+                                .list-item-geek{
+                                    border: 1px solid grey;
+                                    width: 6em;
+                                    margin-top: 0px;
+                                    margin-bottom: 0px;
+                                    margin-left: 0px;
+                                    list-style-type: lower-greek;
+                                    list-style-position: outside;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <header>
+                        <h2>Propiedades para tablas</h2>
+                    </header>
+                    <ul class="list-style">
+                        <li><strong>table-layout:</strong> establece el algoritmo utilizado para diseñar celdas, filas y columnas.Tiene dos valores posibles:
+                            <ul>
+                                <li>auto: valor por defecto, los anchos de la tabla y sus celdas se ajustan para adaptarse al contenido.</li>
+                                <li>fixed: los anchos de tabla y columna se establecen por el ancho de los elementos tabley colo por el ancho de la primera fila de celdas.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>table-layout: [auto | fixed]</dd>
+                            </dl>
+                        </li>
+                        <li><strong>caption-side:</strong> especifica el posicionamiento del elemento caption.Los valores son:
+                            <ul>
+                                <li>top: valor por defecto, se posiciona encima de la tabla.</li>
+                                <li>bottom: se posiciona debajo de la tabla.</li>
+                                <li>block-start: se posiciona en el borde de inicio del bloque de la tabla.</li>
+                                <li>block-end: se posiciona en el borde del extremo del bloque de la tabla.</li>
+                                <li>inline-start: se posiciona en el borde de inicio en línea de la tabla.</li>
+                                <li>inline-end: se posiciona en el borde del extremo en línea de la tabla.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>caption-side: [top | bottom | block-start | block-end | inline-start | inline-end]</dd>
+                            </dl>
+                        </li>
+                        <li><strong>border-spacing:</strong> especifica la distancia entre los bordes de celdas adyacentes.Los valores son las longitudes generales como px,em,rem,etc.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>caption-side: [longitud | longitud-horizontal longitud-vertical | inherit]</dd>
+                            </dl>
+                        </li>
+                        <li><strong>border-collapse:</strong> especifica que modo de presentación de borde hay que usar.Los valores son:
+                            <ul>
+                                <li>separate: valor por defecto, separa los bordes.</li>
+                                <li>collapse: fusiona los bordes.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>caption-collapse: [separate | collapse]</dd>
+                            </dl>
+                        </li>
+                        <li><strong>empty-cells:</strong> establece si aparecen bordes y fondos alrededor de las celdas que no tienen contenido visible(esta propiedad tiene efecto solo cuando el borde de las celdas no esta colapsado).Los valores son:
+                            <ul>
+                                <li>show: valor por defecto, los bordes y los fondos se dibujan.</li>
+                                <li>hide: no se dibujan bordes ni fondos.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>empty-cells: [show | hide | inherit]</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="container-ej">
+                        <table class="table">
+                            <caption class="caption">Avengers(caption)</caption>
+                            <colgroup>
+                                <col class="col1">
+                                <col class="col2">
+                                <col class="col3">
+                            </colgroup>
+                            <thead>
+                                <th class="thead">Username</th>
+                                <th class="thead">Email</th>
+                                <th class="thead">Company</th>
+                            </thead>
+                            <tbody>
+                                <tr class="tRow">
+                                    <td class="tData">TonyStark</td>
+                                    <td class="tData">tony@gmail.com</td>
+                                    <td class="tData">Marvel</td>
+                                </tr>
+                                <tr class="tRow">
+                                    <td class="tData">Bruce Baner</td>
+                                    <td class="tData">bruce@gmail.com</td>
+                                    <td class="tData">Marvel</td>
+                                </tr>
+                                <tr class="tRow">
+                                    <td class="tData">Peter Parker</td>
+                                    <td class="tData">spider@gmail.com</td>
+                                    <td class="tData">Marvel</td>
+                                </tr>
+                                <tr class="tRow">
+                                    <td class="tData">Steve Rogers</td>
+                                    <td class="tData"></td>
+                                    <td class="tData">Marvel</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .table{
+                                    table-layout: fixed;
+                                    border-spacing: 2em 1em;
+                                    border-collapse: separate;
+                                    empty-cells: hide;
+                                }
+                                .caption{
+                                    caption-side: bottom;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <h2>Imagenes</h2>
+                    <div class="img-container">
+                        <img src="https://www.hola.com/imagenes/estar-bien/20200602169264/razas-de-perro-pequenos-chihuahua/0-831-143/raza-de-perro-chihuahua-m.jpg" alt="#" class="img">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, repellat ad au</p>
+                    </div>
+                    <img src="https://pbs.twimg.com/profile_images/632568635970576384/uTvv9oXs_400x400.jpg" alt="#" class="img-2">
+                </article>
+                <article class="article">
+                    <h2>Clip-path</h2>
+                    <div class="cont-path">
+                        <div class="path">
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+    </div>
 </body>
 </html>
