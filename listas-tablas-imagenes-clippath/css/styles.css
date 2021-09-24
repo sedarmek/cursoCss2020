@@ -53,19 +53,19 @@ TABLAS
         hide: oculta las celdas vacias
 
 IMAGENES
-    No existen propiedades para imagenes en CSS
-    1.Imagenes responsive ---> img{max-width: 100%}
+        No existen propiedades para imagenes en CSS
+        1.Imagenes responsive ---> img{max-width: 100%}
 
-    2.Las imagenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos maneras:
-        line-height:0 | display: block.
+        2.Las imagenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos maneras:
+            line-height:0 | display: block.
 
-    3.Centrado horizontal
-        en elementos inline ---> text-align: center
-        en elementos bloque ---> margenes laterales automaticos
-    
-    4. Centrado vertical
-        Flexbox
-        vertical-align: middle. A la imagen y al texto
+        3.Centrado horizontal
+            en elementos inline ---> text-align: center
+            en elementos bloque ---> margenes laterales automaticos
+        
+        4. Centrado vertical
+            Flexbox
+            vertical-align: middle. A la imagen y al texto
 
     object-fit: se usa para especificar como se debe cambiar el tamaño de la imagen o video para que se ajuste a su contenedor.
         fill: valor por defecto.Deforma la imagen para que ocupe todo el contenedor.
@@ -100,8 +100,9 @@ IMAGENES
         Generador de clip-path: https://bennettfeely.com/clippy/
 */
 /*LISTA*/
+
 .container-ej{
-    display: flex;
+    padding: 0.5em;
     justify-content: center;
     align-content: center;
 }
@@ -131,9 +132,6 @@ IMAGENES
 } */
 
 /*TABLE*/
-.container-ej{
-    overflow-x: auto;
-}
 .table{
     background-color: plum;
     width: 100%;
@@ -150,31 +148,85 @@ IMAGENES
 .tData{
     background-color: rebeccapurple;
 }
-/*IMAGENES*/
-.img-container{
-    background-color: red;
+/* IMAGENES */
+.container-imgs{
+    display: grid;
+    grid-gap: 1em;
+    justify-content: left;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-auto-columns: 8em;
+    grid-auto-rows: 8em;
+    overflow-x: auto;
+}
+.cont-img{
+    background-color: cadetblue;
+    position: relative;
+}
+.cont-img footer{
+    background-color: #00000080;
+    width: 100%;
+    display: block;
+    position:absolute;
+    bottom: 0px;
+    word-break:keep-all;
+}
+[class^= img]{
+    width: 100%;
+    height: 100%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
-    width: 200px;
-    /* line-height: 0px;
-    text-align: center; */
-    display: flex;
-    align-items: center;
-    
 }
-.img{
-    max-width: 100%;
-    display: block;
+.img-fill{
+    object-fit: fill;
 }
-
-.img-2{
-    background-color: red;
-    width: 80px;
-    height: 150px;
+.img-con{
+    object-fit: contain;
+}
+.img-cov{
     object-fit: cover;
-    object-position: center;
-    filter: sepia(0);
+}
+.img-sd{
+    object-fit: scale-down;
+}
+.img-pos-1{
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+.img-pos-2{
+    object-fit: cover;
+    object-position: bottom right;
+}
+.img-blur{
+    filter: blur(0.1em);
+}
+.img-brig{
+    filter: brightness(0.5);
+}
+.img-cont{
+    filter: contrast(50%);
+}
+.img-dshad{
+    filter: drop-shadow(0.5em 1em 1em red);
+}
+.img-gray{
+    filter: grayscale(0.7);
+}
+.img-hrot{
+    filter: hue-rotate(45deg);
+}
+.img-inv{
+    filter: invert(40%);
+}
+.img-opac{
+    filter: opacity(0.3);
+}
+.img-sat{
+    filter: saturate(30%);
+}
+.img-sep{
+    filter: sepia(0.5);
 }
 /*Clip-path*/
 .cont-path{

@@ -194,12 +194,124 @@
                     </footer>
                 </article>
                 <article class="article">
-                    <h2>Imagenes</h2>
-                    <div class="img-container">
-                        <img src="https://www.hola.com/imagenes/estar-bien/20200602169264/razas-de-perro-pequenos-chihuahua/0-831-143/raza-de-perro-chihuahua-m.jpg" alt="#" class="img">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, repellat ad au</p>
-                    </div>
-                    <img src="https://pbs.twimg.com/profile_images/632568635970576384/uTvv9oXs_400x400.jpg" alt="#" class="img-2">
+                    <header>
+                        <h2>Propiedades de Imagenes</h2>
+                    </header>
+                    <ul class="list-style">
+                        <li><strong>object-fit:</strong> indica cómo el contenido de un elemento reemplazado debería redimensionarse para ajustarse a su contenedor.Tiene cinco valores posibles:
+                            <ul>
+                                <li>fill: valor por defecto.El contenido modifica su escala y relación de aspecto.No deja espacio vacio.</li>
+                                <li>contain: el contenido modifica su escala y mantiene su relación de aspecto.Puede dejar espacio vacio si su relacion de aspecto es diferente al contenedor.</li>
+                                <li>cover: el contenido modifica su escala y mantiene su relación de aspecto.No deja espacio vacio, pero recorta las partes que salen fuera del contenedor.</li>
+                                <li>none: el contenido no se escala y mantiene su relacion de aspecto.</li>
+                                <li>scale-down: selecciona el menor de la comparacion entre none y contain.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>object-fit: [fill | contain | cover | none | scale-down]</dd>
+                            </dl>
+                            <div class="container-ej">
+                                <div class="container-imgs">
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-fill">
+                                        <footer>Object-fit: Fill</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-con">
+                                        <footer>Object-fit: Contain</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-cov">
+                                        <footer>Object-fit: Cover</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-sd">
+                                        <footer>Object-fit: Scale-down</footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><strong>object-position:</strong> determina el alineamiento del elemento dentro de la caja,puede usar un valor o dos.Sus valores son longitudes o posiciones(px,em,rem,vh,vw,%,left,top,right,bottom):
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>object-position: [longitud | posicion] || [longitud | posicion]</dd>
+                            </dl>
+                            <div class="container-ej">
+                                <div class="container-imgs">
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-pos-1">
+                                        <footer>Object-position: 0px 0px</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-pos-2">
+                                        <footer>Object-position: bottom right</footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><strong>filter:</strong> indica cómo el contenido de un elemento reemplazado debería redimensionarse para ajustarse a su contenedor.Tiene cinco valores posibles:
+                            <ul>
+                                <li>blur(px): desenfoque</li>
+                                <li>brightness(%): brillo. De 0 a 1 oscuridad y mayor a 1 sobreexposicion.</li>
+                                <li>contrast(%): contraste. De 0 es negro y de 1 da mas contraste.</li>
+                                <li>drop-shadow(h-shadow v-shadow blur spread color): sombra.</li>
+                                <li>grayscale(%): 0 es el original y 1 es blanco y negro.</li>
+                                <li>hue-rotate(deg): añade matriz de color segun la rueda cromatica.</li>
+                                <li>invert(%): invierte el color. 0 es el original y 1 es invertido completamente.</li>
+                                <li>opacity(%): opacidad. 1 es el original y 0 es transparente.</li>
+                                <li>saturate(%): saturacion. 1 es el original, 0 es desaturada y mayor a 1 es sobresaturada.</li>
+                                <li>sepia(%): 0 es el original y 1 es totalmente sepia.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>filter: [blur | brightness | contrast | drop-shadow | grayscale | hue-rotate | invert | opacity | saturate | sepia]</dd>
+                            </dl>
+                            <div class="container-ej">
+                                <div class="container-imgs">
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-blur">
+                                        <footer>filter: Blur</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-brig">
+                                        <footer>filter: Brightness</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-cont">
+                                        <footer>filter: Contrast</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-dshad">
+                                        <footer>filter: drop-shadow</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-gray">
+                                        <footer>filter: Grayscale</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-hrot">
+                                        <footer>filter: Hue-rotate</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-inv">
+                                        <footer>filter: Invert</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-opac">
+                                        <footer>filter: Opacity</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-sat">
+                                        <footer>filter: Saturate</footer>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="#" class="img-sep">
+                                        <footer>filter: Sepia</footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </article>
                 <article class="article">
                     <h2>Clip-path</h2>

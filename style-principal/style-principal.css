@@ -14,7 +14,7 @@
     --border: 0.2rem solid #8aa5e0;
 }
 body{
-    background-image: var(--background-image);
+    /* background-image: var(--background-image); */
 }
 h1{
     font-size: 2.5rem;
@@ -45,6 +45,7 @@ code{
     background-color: var(--background-color);
     display: grid;
     grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 100%;
 }
 /* HEADER */
 .header-principal{
@@ -71,7 +72,7 @@ code{
     grid-area: "main";
     display: grid;
     grid-template-areas: "section aside";
-    grid-template-columns: auto 15em;
+    grid-template-columns: 90% 10%;
 }
 /* SECTION */
 .seccion{
@@ -79,10 +80,19 @@ code{
     border: var(--border);
     grid-area: "section";
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     justify-content: center;
     align-content: center;
     grid-gap: 1em;
+}
+.article{
+    border: 0.3rem solid #103f6b;
+    margin: 1em;
+    padding: 0.5em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 100%;
 }
 .artic-figure{
     margin-top: 1em;
@@ -94,15 +104,6 @@ code{
 .artic-temas-index{
     display: grid;
     grid-gap: 0.3rem;
-}
-.article{
-    border: 0.3rem solid #103f6b;
-    margin: 1em;
-    padding: 0.5em;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: 1fr;
 }
 .artic-temas-index a{
     background-color: #4b5994;
@@ -141,6 +142,7 @@ code{
 }
 .container-ej{
     background-color: #4c7777;
+    display: grid;
 }
 /* ASIDE */
 .aside{
