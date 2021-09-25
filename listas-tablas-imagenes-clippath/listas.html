@@ -314,9 +314,88 @@
                     </ul>
                 </article>
                 <article class="article">
-                    <h2>Clip-path</h2>
-                    <div class="cont-path">
-                        <div class="path">
+                    <header>
+                        <h2>Propiedad de recorte de contenedor</h2>
+                    </header>
+                    <ul class="list-style">
+                        <li><strong>Clip-path:</strong> crea una región de recorte que establece qué parte de un elemento debe mostrarse. Se muestran las partes que están dentro de la región, mientras que las que están fuera están ocultas.Valores:
+                            <ul>
+                                <li>
+                                    <dl class="dictionary-style">
+                                        <dt>Sintaxis:</dt>
+                                            <dd>clip-path: url(rutaSVG) | [geometry-box || [basic-shape] | none</dd>
+                                    </dl>
+                                </li>
+                                <li>Geometry box define el cuadro de referencia para la forma básica. Valores de geometry box:
+                                    <ul>
+                                        <dl class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>[valor]</dd>
+                                        </dl>
+                                        <li>margin-box: Utiliza el cuadro de margen como cuadro de referencia.</li>
+                                        <li>border-box: Utiliza el cuadro de borde como cuadro de referencia.</li>
+                                        <li>padding-box: Utiliza el cuadro de relleno como cuadro de referencia.</li>
+                                        <li>content-box: Utiliza el cuadro de contenido como cuadro de referencia.</li>
+                                        <li>fill-box: Utiliza el cuadro delimitador del objeto como cuadro de referencia.</li>
+                                        <li>stroke-box: Utiliza el cuadro delimitador de trazo como cuadro de referencia.</li>
+                                        <li>view-box: Utiliza la ventana gráfica SVG más cercana como cuadro de referencia.</li>
+                                        <li>none: No se crea ningún trazado de recorte.</li>
+                                    </ul>
+                                </li>
+                                <li>Basic shape define la forma básica. Valores de basic shape:
+                                    <ul>
+                                        <li>circle(): Define un círculo usando un radio y una posición.
+                                            <dl class="dictionary-style">
+                                                <dt>Sintaxis:</dt>
+                                                    <dd>radio at pos-X pos-Y</dd>
+                                            </dl>
+                                        </li>
+                                        <li>ellipse(): Define una elipse usando dos radios y una posición.
+                                            <dl class="dictionary-style">
+                                                <dt>Sintaxis:</dt>
+                                                    <dd>radio-x radio-y at pos-x pos-y</dd>
+                                            </dl>
+                                        </li>
+                                        <li>inset(): Define un rectángulo insertado, existe la opcion de redondear las esquinas con la palabra clave round.
+                                            <dl class="dictionary-style">
+                                                <dt>Sintaxis:</dt>
+                                                    <dd>all round 1px</dd>
+                                            </dl>
+                                        </li>
+                                        <li>polygon(): Define un polígono usando una regla de relleno SVG y un conjunto de vértices.
+                                            <dl class="dictionary-style">
+                                                <dt>Sintaxis:</dt>
+                                                    <dd></dd>
+                                            </dl>
+                                        </li>
+                                        <li>path(): Define una forma usando una regla de relleno SVG y una definición de ruta SVG.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="container-ej">
+                        <div class="container-paths">
+                            <div class="cont-path">
+                                <div class="path-circle"></div>
+                                <footer>Circle</footer>
+                            </div>
+                            <div class="cont-path">
+                                <div class="path-ellipse"></div>
+                                <footer>Ellipse</footer>
+                            </div>
+                            <div class="cont-path">
+                                <div class="path-inset"></div>
+                                <footer>Inset</footer>
+                            </div>
+                            <div class="cont-path">
+                                <div class="path-polygon"></div>
+                                <footer>Polygon</footer>
+                            </div>
+                            <div class="cont-path">
+                                <div class="path-path"></div>
+                                <footer>Path</footer>
+                            </div>
                         </div>
                     </div>
                 </article>

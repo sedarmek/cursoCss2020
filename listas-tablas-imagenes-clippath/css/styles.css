@@ -90,14 +90,15 @@ IMAGENES
         sepia(%): 0 es el original y 1 es totalmente sepia.
 
     clip-path: es una mascara que oculta partes de una caja.
-        circle(diametro at posX posY|palabras clave): dibuja un circulo.
+        circle(radio at posX posY|palabras clave): dibuja un circulo.
 
         ellipse(): dibuja una elipse, podemos especificar dos centros.
 
         inset(all round 1px): dibuja un border transparente por dentro de la caja, existe la opcion de redondear las esquinas con la palabra clave round.
 
         polygon(): especifica una serie de puntos para definir la zona visible siendo el punto 0 0 la esquina superior izquierda.
-        Generador de clip-path: https://bennettfeely.com/clippy/
+
+    Generador de clip-path: https://bennettfeely.com/clippy/
 */
 /*LISTA*/
 
@@ -149,7 +150,7 @@ IMAGENES
     background-color: rebeccapurple;
 }
 /* IMAGENES */
-.container-imgs{
+.container-imgs,.container-paths{
     display: grid;
     grid-gap: 1em;
     justify-content: left;
@@ -159,17 +160,17 @@ IMAGENES
     grid-auto-rows: 8em;
     overflow-x: auto;
 }
-.cont-img{
+.cont-img,.cont-path{
     background-color: cadetblue;
     position: relative;
 }
-.cont-img footer{
+.cont-img footer,.cont-path footer{
     background-color: #00000080;
     width: 100%;
     display: block;
     position:absolute;
     bottom: 0px;
-    word-break:keep-all;
+    word-break:break-all;
 }
 [class^= img]{
     width: 100%;
@@ -229,7 +230,28 @@ IMAGENES
     filter: sepia(0.5);
 }
 /*Clip-path*/
-.cont-path{
+[class ^= path]{
+    background-color: #80808079;
+    border: 1px solid black;
+    width: 8em;
+    height: 8em;
+}
+.path-circle{
+    clip-path: circle(4em at center center);
+}
+.path-ellipse{
+    clip-path: ellipse(4em 3em at center center);
+}
+.path-inset{
+    clip-path: inset(15px 30px 45px 60px round 10px 20px 30px 50px);
+}
+.path-polygon{
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.path-path{
+    clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+}
+/* .container-path{
     background-color: rgb(81, 100, 94);
     width: 150px;
     height: 150px;
@@ -239,12 +261,12 @@ IMAGENES
     background-color: grey;
     width: 150px;
     height: 150px;
-    /* clip-path: circle(50px at left top); */
-    /* clip-path: ellipse(50px 25px at 65% 30%); */
-    /* clip-path: inset(15px 30px 45px 60px round 10px 20px 30px 50px); */
+    clip-path: circle(50px at left top);
+    clip-path: ellipse(50px 25px at 65% 30%);
+    clip-path: inset(15px 30px 45px 60px round 10px 20px 30px 50px);
     clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
 }
-.cont-path > .path:hover{
+.container-path > .path:hover{
     clip-path: polygon(41% 54%, 10% 74%, 14% 10%, 81% 12%, 60% 37%, 92% 70%, 72% 84%);
     transition: clip-path 1s;
-}
+} */
