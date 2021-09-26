@@ -1,4 +1,7 @@
-/*COLORES
+/*
+COLORES
+
+BORDER-RADIUS
 
 BOX SHADOW Y TEXT SHADOW
     box-shadow ---> h-offset v-offset blur spread color inset/outset
@@ -9,11 +12,27 @@ BOX SHADOW Y TEXT SHADOW
 body{
     background-color: rgb(151, 167, 214);
 }
-[class^=cl]{
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    display: inline-block;
+.container-ej{
+    padding: 0.5em;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1em;
+    grid-auto-flow: column;
+    grid-auto-columns: 7em;
+    grid-auto-rows: 7em;
+}
+.container-ej>div{
+    border: 0.1em solid black;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: flex-end;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
+}
+.container-ej footer{
+    background-color: #00000065;
 }
 .cl-color{
     background-color: aquamarine;
@@ -36,37 +55,18 @@ body{
 
 .box-shadow{
     background-color: rebeccapurple;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
     box-shadow: -10px -6px 15px 1px black inset;
 }
 .text-shadow{
-    font-size: 25px;
-    display: inline-block;
-    margin-left: 10px;
-    text-shadow: 5px 5px 5px rebeccapurple, 10px 10px 15px black;
+    text-shadow: 5px 5px 5px #a18bb8, 10px 10px 15px #a14747;
 }
 .l-gradient{
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
-    display: inline-block;
     background-image: linear-gradient(50deg,rebeccapurple 50%,skyblue 60% 75%,grey 85%);
 }
 .r-gradient{
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    display: inline-block;
-    margin-left: 20px;
     background-image: radial-gradient(100px 50px at center bottom,transparent 50%,violet 53%);
 }
 .s-gradient{
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    display: inline-block;
     background-image: repeating-linear-gradient(90deg,
     #da6969 0px,
     #da6969 10px,
@@ -74,9 +74,5 @@ body{
     #6060e2 20px);
 }
 .p-gradient{
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    display: inline-block;
     background-image: repeating-radial-gradient(circle 20px at left top,#da6969 0,#da6969 10px,#6060e2 10px,#6060e2 20px);
 }

@@ -4,43 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Colores</title>
 </head>
 <body>
-    <header>
-        <menu>
+    <div class="container">
+        <header class="header-principal">
+            <h1>Colores,Border-radius,Box-shadow,Text-shadow,Linear-gradient</h1>
             <nav>
                 <a href="../index.html">Inicio</a>
-                <h1>Colores...</h1>
             </nav>
-        </menu>
-    </header>
-
-    <section>
-        <article>
-            <h2>Colores</h2>
-            <div class="cl-color"></div>
-            <div class="cl-rgb"></div>
-            <div class="cl-rgba"></div>
-            <div class="cl-hexa"></div>
-            <div class="cl-hsl"></div>
-            <div class="cl-hsla"></div>
-        </article>
-        <article>
-            <h2>Box-shadow y Text-shadow</h2>
-            <div class="box-shadow"></div>
-            <div class="text-shadow"><p>Texto</p></div>
-        </article>
-        <article>
-            <h2>Linear gradient y radial gradient y repeating</h2>
-            <div class="l-gradient"></div>
-            <div class="r-gradient"></div>
-            <div class="s-gradient"></div>
-            <div class="p-gradient"></div>
-        </article>
-    </section>
-
-    
+        </header>
+        <main class="main">
+            <section>
+                <article class="article">
+                    <h2>Colores</h2>
+                    <div class="container-ej">
+                        <div class="cl-color">
+                            <footer>Color</footer>
+                        </div>
+                        <div class="cl-rgb">
+                            <footer>Rgb</footer>
+                        </div>
+                        <div class="cl-rgba">
+                            <footer>Rgba</footer>
+                        </div>
+                        <div class="cl-hexa">
+                            <footer>Hexadecimal</footer>
+                        </div>
+                        <div class="cl-hsl">
+                            <footer>Hsl</footer>
+                        </div>
+                        <div class="cl-hsla">
+                            <footer>Hsla</footer>
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+                    <h2>Box-shadow y Text-shadow</h2>
+                    <div class="container-ej">
+                        <div class="box-shadow">
+                            <footer>Box-shadow</footer>
+                        </div>
+                        <div class="text-shadow">
+                            Text-shadow
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+                    <h2>Linear gradient y radial gradient y repeating</h2>
+                    <div class="container-ej">
+                        <div class="l-gradient">
+                            <footer>Linear-gradient</footer>
+                        </div>
+                        <div class="r-gradient">
+                            <footer>Radial-gradient</footer>
+                        </div>
+                        <div class="s-gradient">
+                            <footer>Repeat-linear-gradient</footer>
+                        </div>
+                        <div class="p-gradient">
+                            <footer>Repeat-radial-gradient</footer>
+                        </div>
+                    </div>
+                </article>
+                <footer class="footer-article">
+                    <pre>
+                        <code>
+                            Codigo:
+                            .cl-color{
+                                background-color: aquamarine;
+                            }
+                            .cl-rgb{
+                                background-color: rgb(75, 0, 0);
+                            }
+                            .cl-rgba{
+                                background-color: rgba(12, 30, 50, 0.75);
+                            }
+                            .cl-hexa{
+                                background-color: #fe6;/*#ffee66*/
+                            }
+                            .cl-hsl{
+                                background-color: hsl(10deg, 50%, 80%);
+                            }
+                            .cl-hsla{
+                                background-color: hsla(180deg, 50%, 75%, 0.5);
+                            }
+                            
+                            .box-shadow{
+                                background-color: rebeccapurple;
+                                box-shadow: -10px -6px 15px 1px black inset;
+                            }
+                            .text-shadow{
+                                text-shadow: 5px 5px 5px #a18bb8, 10px 10px 15px #a14747;
+                            }
+                            .l-gradient{
+                                background-image: linear-gradient(50deg,rebeccapurple 50%,skyblue 60% 75%,grey 85%);
+                            }
+                            .r-gradient{
+                                background-image: radial-gradient(100px 50px at center bottom,transparent 50%,violet 53%);
+                            }
+                            .s-gradient{
+                                background-image: repeating-linear-gradient(90deg,
+                                #da6969 0px,
+                                #da6969 10px,
+                                #6060e2 10px,
+                                #6060e2 20px);
+                            }
+                            .p-gradient{
+                                background-image: repeating-radial-gradient(circle 20px at left top,#da6969 0,#da6969 10px,#6060e2 10px,#6060e2 20px);
+                            }
+                        </code>
+                    </pre>
+                </footer>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+    </div>
 </body>
 </html>
