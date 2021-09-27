@@ -20,6 +20,69 @@
             <section>
                 <article class="article">
                     <h2>Colores</h2>
+                    <ul class="list-style">
+                        <li>Es un tipo de datos que denota un color.Puede ser descrito de cualquiera de las siguiente maneras:
+                            <ul>
+                                <li>Usando una palabra clave.
+                                    <ul>
+                                        <li>Son identificadores que sirven para representar un color concreto, donde el nombre describe el color.</li>
+                                        <div class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>Palabraclave</dd>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>Usando la notacion hexadecimal.
+                                    <ul>
+                                        <li>Los colores son definidos usando el modelo RGB, red-green-blue.</li>
+                                        <li>La notacion es: "#", seguido de seis o tres caracteres que pueden ser del 0 al 9 y de la A a la F.</li>
+                                        <div class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>#valor</dd>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>Usando la notacion rgb.
+                                    <ul>
+                                        <li>Los colores son definidos usando el modelo RGB(Red,Green,Blue).</li>
+                                        <li>Los valores pueden ser enteros del 0 al 255 o en porcentaje del 0 al 100%.</li>
+                                        <div class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>rgb(valor,valor,valor)</dd>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>Usando la notacion rgba.
+                                    <ul>
+                                        <li>Es similar que la notacion rgb, pero añade un canal nuevo para la opacidad, siendo el valor 0 totalmente transparente.</li>
+                                        <div class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>rgb(valor,valor,valor,valor)</dd>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>Usando el sistema hsl.
+                                    <ul>
+                                        <li>Los colores son definidos usando el modelo HSL(Hue,Saturation,Lightness)</li>
+                                        <li>El primer valor es un numero entero que representan la posicion en angulo de una paleta de colores ya definida, el segundo valor es un porcentaje que representa la saturacion, y el tercer valor es un porcentaje que representa el brillo.</li>
+                                        <div class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>hsl(valor,valor,valor)</dd>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>Usando el sistema hsla.
+                                    <ul>
+                                        <li>Es similar que la notacion hsl, pero añade un canal nuevo para la opacidad, siendo el valor 0 totalmente transparente.</li>
+                                        <div class="dictionary-style">
+                                            <dt>Sintaxis:</dt>
+                                                <dd>hsla(valor,valor,valor,valor)</dd>
+                                        </div>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                     <div class="container-ej">
                         <div class="cl-color">
                             <footer>Color</footer>
@@ -43,6 +106,20 @@
                 </article>
                 <article class="article">
                     <h2>Box-shadow y Text-shadow</h2>
+                    <ul>
+                        <li>El box-shadow añade efectos de sombra alrededor del marco de un elemento. 
+                            <div class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>[offset-x | offset-y | blur-radius | spread-radius | color]</dd>
+                            </div>
+                        </li>
+                        <li>El text-shadow añade efectos de sombra alrededor del texto. 
+                            <div class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>[offset-x | offset-y | blur-radius | color]</dd>
+                            </div>
+                        </li>
+                    </ul>
                     <div class="container-ej">
                         <div class="box-shadow">
                             <footer>Box-shadow</footer>
@@ -54,6 +131,20 @@
                 </article>
                 <article class="article">
                     <h2>Linear gradient y radial gradient y repeating</h2>
+                    <ul class="list-style">
+                        <li>Linear-gradient crea una imagen que consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta.
+                            <div class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>angulo | colorInicial[positionInicial || positionFinal] | colorFinal[positionInicial || positionFinal]</dd>
+                            </div>
+                        </li>
+                        <li>Radial-gradient crea una imagen que consiste en una transición progresiva entre dos o más colores que irradian desde un origen. Su forma puede ser un círculo o una elipse. 
+                            <div class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>circle at center || colorInicial[positionInicial | positionFinal] || colorFinal[positionInicial | positionFinal]</dd>
+                        </li>
+                        <li>Reapeting </li>
+                    </ul>
                     <div class="container-ej">
                         <div class="l-gradient">
                             <footer>Linear-gradient</footer>
