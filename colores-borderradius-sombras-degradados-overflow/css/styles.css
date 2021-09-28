@@ -34,6 +34,22 @@ body{
 .container-ej footer{
     background-color: #00000065;
 }
+.item-overf-auto{
+    background-color: #6060e2;
+    overflow: auto;
+}
+.item-overf-scroll{
+    background-color: #6060e2;
+    overflow: scroll;
+}
+.item-border-circl{
+    background-color: #54386d;
+    border-radius: 1em 2em 3em 4em;
+}
+.item-border-ellip{
+    background-color: #54386d;
+    border-radius: 1em 2em 3em 4em / 3em;
+}
 .cl-color{
     background-color: aquamarine;
 }

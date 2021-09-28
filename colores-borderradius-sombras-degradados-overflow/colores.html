@@ -11,13 +11,93 @@
 <body>
     <div class="container">
         <header class="header-principal">
-            <h1>Colores,Border-radius,Box-shadow,Text-shadow,Linear-gradient</h1>
+            <h1>Colores,Border-radius,Box-shadow,Text-shadow,degradados,overflow</h1>
             <nav>
                 <a href="../index.html">Inicio</a>
             </nav>
         </header>
         <main class="main">
             <section>
+                <article class="article">
+                    <h2>Overflow</h2>
+                    <ul class="list-style">
+                        
+                        <li>Especifica como se comporta el elemento respecto a la visibilidad de su contenido:
+                            <ul>
+                                <li>visible: Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.</li>
+                                <li>hidden: El contenido es recortado y no se muestran barras de posición.</li>
+                                <li>scroll: El contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no.</li>
+                                <li>auto: Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de desplazamiento si hay contenido excedente.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis:</dt>
+                            <dd>overflow: valor</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="item-overf-auto">
+                            <footer>Overflow: auto</footer>
+                        </div>
+                        <div class="item-overf-scroll">
+                            <footer>Overflow: scroll</footer>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .item-overf-auto{
+                                    background-color: #6060e2;
+                                    overflow: auto;
+                                }
+                                .item-overf-scroll{
+                                    background-color: #6060e2;
+                                    overflow: scroll;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
+                <article class="article">
+                    <h2>Border-radius</h2>
+                    <ul class="list-style">
+                        <li>Redondea las esquinas del borde del borde exterior de un elemento. Puede establecer un solo radio para hacer esquinas circulares o dos radios para hacer esquinas elípticas.</li>
+                        <li>Se especifica como:
+                            <ul>
+                                <li>Circular: uno, dos, tres o cuatro valores. Se utiliza para establecer un solo radio para las esquinas.</li>
+                                <li>Eliptico: seguido opcionalmente por "/" y uno, dos, tres, o cuatro valores. Esto se usa para establecer un radio adicional, por lo que puede tener esquinas elípticas.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <dl class="dictionary-style">
+                        <dt>Sintaxis:</dt>
+                            <dd>border-radius: longitud(1-4) / longitud(1-4)</dd>
+                    </dl>
+                    <div class="container-ej">
+                        <div class="item-border-circl">
+                            <footer>Border-radius-circle</footer>
+                        </div>
+                        <div class="item-border-ellip">
+                            <footer>Border-radius-ellipse</footer>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .item-border-circl{
+                                    background-color: #54386d;
+                                    border-radius: 1em 2em 3em 4em;
+                                }
+                                .item-border-ellip{
+                                    background-color: #54386d;
+                                    border-radius: 1em 2em 3em 4em / 3em;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
+                </article>
                 <article class="article">
                     <h2>Colores</h2>
                     <ul class="list-style">
@@ -103,6 +183,31 @@
                             <footer>Hsla</footer>
                         </div>
                     </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .cl-color{
+                                    background-color: aquamarine;
+                                }
+                                .cl-rgb{
+                                    background-color: rgb(75, 0, 0);
+                                }
+                                .cl-rgba{
+                                    background-color: rgba(12, 30, 50, 0.75);
+                                }
+                                .cl-hexa{
+                                    background-color: #fe6;/*#ffee66*/
+                                }
+                                .cl-hsl{
+                                    background-color: hsl(10deg, 50%, 80%);
+                                }
+                                .cl-hsla{
+                                    background-color: hsla(180deg, 50%, 75%, 0.5);
+                                }
+                            </code>
+                        </pre>
+                    </footer>
                 </article>
                 <article class="article">
                     <h2>Box-shadow y Text-shadow</h2>
@@ -128,6 +233,20 @@
                             Text-shadow
                         </div>
                     </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .box-shadow{
+                                    background-color: rebeccapurple;
+                                    box-shadow: -10px -6px 15px 1px black inset;
+                                }
+                                .text-shadow{
+                                    text-shadow: 5px 5px 5px #a18bb8, 10px 10px 15px #a14747;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
                 </article>
                 <article class="article">
                     <h2>Linear gradient y radial gradient y repeating</h2>
@@ -142,8 +261,20 @@
                             <div class="dictionary-style">
                                 <dt>Sintaxis:</dt>
                                     <dd>circle at center || colorInicial[positionInicial | positionFinal] || colorFinal[positionInicial | positionFinal]</dd>
+                            </div>
                         </li>
-                        <li>Reapeting </li>
+                        <li>Reapeting-linear-gradient crea una imagen que consta de gradientes lineales repetidos. Es similar a linear gradient y toma los mismos argumentos, pero repite las paradas de color infinitamente en todas las direcciones para cubrir todo su contenedor.
+                            <div class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>angulo | colorInicial[positionInicial || positionFinal] | colorFinal[positionInicial || positionFinal]</dd>
+                            </div>
+                        </li>
+                        <li>Reapeting-radial-gradient crea una imagen que consiste en degradados repetidos que irradian desde un origen. Es similar a radial-gradient y toma los mismos argumentos, pero repite las paradas de color infinitamente en todas las direcciones para cubrir todo su contenedor.
+                            <div class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>circle at center || colorInicial[positionInicial | positionFinal] || colorFinal[positionInicial | positionFinal]</dd>
+                            </div>
+                        </li>
                     </ul>
                     <div class="container-ej">
                         <div class="l-gradient">
@@ -159,56 +290,30 @@
                             <footer>Repeat-radial-gradient</footer>
                         </div>
                     </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .l-gradient{
+                                    background-image: linear-gradient(50deg,rebeccapurple 50%,skyblue 60% 75%,grey 85%);
+                                }
+                                .r-gradient{
+                                    background-image: radial-gradient(100px 50px at center bottom,transparent 50%,violet 53%);
+                                }
+                                .s-gradient{
+                                    background-image: repeating-linear-gradient(90deg,
+                                    #da6969 0px,
+                                    #da6969 10px,
+                                    #6060e2 10px,
+                                    #6060e2 20px);
+                                }
+                                .p-gradient{
+                                    background-image: repeating-radial-gradient(circle 20px at left top,#da6969 0,#da6969 10px,#6060e2 10px,#6060e2 20px);
+                                }
+                            </code>
+                        </pre>
+                    </footer>
                 </article>
-                <footer class="footer-article">
-                    <pre>
-                        <code>
-                            Codigo:
-                            .cl-color{
-                                background-color: aquamarine;
-                            }
-                            .cl-rgb{
-                                background-color: rgb(75, 0, 0);
-                            }
-                            .cl-rgba{
-                                background-color: rgba(12, 30, 50, 0.75);
-                            }
-                            .cl-hexa{
-                                background-color: #fe6;/*#ffee66*/
-                            }
-                            .cl-hsl{
-                                background-color: hsl(10deg, 50%, 80%);
-                            }
-                            .cl-hsla{
-                                background-color: hsla(180deg, 50%, 75%, 0.5);
-                            }
-                            
-                            .box-shadow{
-                                background-color: rebeccapurple;
-                                box-shadow: -10px -6px 15px 1px black inset;
-                            }
-                            .text-shadow{
-                                text-shadow: 5px 5px 5px #a18bb8, 10px 10px 15px #a14747;
-                            }
-                            .l-gradient{
-                                background-image: linear-gradient(50deg,rebeccapurple 50%,skyblue 60% 75%,grey 85%);
-                            }
-                            .r-gradient{
-                                background-image: radial-gradient(100px 50px at center bottom,transparent 50%,violet 53%);
-                            }
-                            .s-gradient{
-                                background-image: repeating-linear-gradient(90deg,
-                                #da6969 0px,
-                                #da6969 10px,
-                                #6060e2 10px,
-                                #6060e2 20px);
-                            }
-                            .p-gradient{
-                                background-image: repeating-radial-gradient(circle 20px at left top,#da6969 0,#da6969 10px,#6060e2 10px,#6060e2 20px);
-                            }
-                        </code>
-                    </pre>
-                </footer>
             </section>
             <aside class="aside">
                 <ul class="list-aside">
