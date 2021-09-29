@@ -4,69 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../style-principal/style-principal.css">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
     <title>Flexbox</title>
 </head>
 <body>
-    <header>
-        <menu>
+    <div class="container">
+        <header class="header-principal">
+            <h1>Fexbox</h1>
             <nav>
                 <a href="../index.html">Inicio</a>
-                <h1>Fexbox</h1>
             </nav>
-        </menu>
-    </header>
-    <section>
-        <article>
-            <h2>Flex direction y flex wrap</h2>
-            <h3>En una linea</h3>
-            <div class="container">
-                <div class="children">1</div>
-                <div class="children">2</div>
-                <div class="children">3</div>
-                <div class="children">4</div>
-                <div class="children">5</div>
-            </div>
-            <h3>En varias lineas</h3>
-            <div class="container-2">
-                <div class="children">1</div>
-                <div class="children">2</div>
-                <div class="children">3</div>
-                <div class="children">4</div>
-                <div class="children" id="solo">5</div>
-                <div class="children">6</div>
-                <div class="children">7</div>
-                <div class="children">8</div>
-                <div class="children">9</div>
-                <div class="children">10</div>
-            </div>
-            <h3>Baseline</h3>
-            <div class="container-3">
-                <div class="childrens" id="children-1"><h4>prueba</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At atque, eum ratione, </p></div>
-                <div class="childrens" id="children-2"><h4>prueba</h4><p>esse libero ducimus raesentium maxime veritatis delectus suscipit, natus molestias a dolor non nihil. Quasi, vel praesentium!</p></div>
-                <div class="childrens" id="children-3"><h4>prueba</h4><p> ione, esse libero ducimus impedit praesentium maxime veritatis delectus suscipit, natus molestias a dolor non nihil. Quasi, vel praesentium!</p></div>
-                <div class="childrens" id="children-4"><h4>prueba</h4><p>Lorem ipsum dolor sit amet consectetur aAt atque, eum ratione, esse libero ducimus impedit praesentium maxime veritatis delectus suscipit, nentium!</p></div>
-                <div class="childrens" id="children-5"><h4>prueba</h4><p>ductis delectatus molestias a dolor non nihil. Quasi, vel praesentium!</p></div>
-            </div>
-            <h3>Flexbox</h3>
-            <h4>Contenedor con espacio sobrante: flex-grow</h4>
-            <div class="container-4">
-                <div class="hijos">1</div>
-                <div class="hijos">2</div>
-                <div class="hijos">3</div>
-                <div class="hijos">4</div>
-                <div class="hijos">5</div>
-            </div>
-            <h4>Contenedor con espacion faltante: flex-shrink</h4>
-            <div class="container-5">
-                <div class="hijos2">1</div>
-                <div class="hijos2">2</div>
-                <div class="hijos2">3</div>
-                <div class="hijos2">4</div>
-                <div class="hijos2">5</div>
-            </div>
-        </article>
-    </section>
-    <footer>Seda.CV</footer>
+        </header>
+        <main class="main">
+            <section class="seccion">
+                <article class="article">
+                    <header>
+                        <h2>Parte 1: Direccion y flujo</h2>
+                    </header>
+                    <ul class="list-style">
+                        <li><strong>flex-flow:</strong> es una propiedad atajo para las propiedades individuales flex-direction y flex-wrap.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>flex-flow: flex-direction | flex-wrap</dd>
+                            </dl>
+                        </li>
+                        <li><strong>flex-direction:</strong> establece cómo se colocan los elementos flexibles en el contenedor flexible que define el eje principal y la dirección.Valores:
+                            <ul>
+                                <li>row: El eje principal del contenedor flexible es el mismo que el eje del texto, y en la misma direccion.</li>
+                                <li>row-reverse: El eje principal del contenedor flexible es el mismo que el eje del texto, pero con opuesta direccion.</li>
+                                <li>column: El eje principal del contenedor flexible es el mismo que el eje del bloque, y en la misma direccion.</li>
+                                <li>column-reverse: El eje principal del contenedor flexible es el mismo que el eje del bloque, pero con opuesta direccion.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>flex-direction: row | row-reverse | column | column-reverse</dd>
+                            </dl>
+                        </li>
+                        <li><strong>flex-wrap:</strong> establece si los elementos flexibles se fuerzan en una línea o se pueden ajustar en varias líneas.Valores:
+                            <ul>
+                                <li>nowrap: Los artículos flexibles se colocan en una sola línea, lo que puede hacer que el contenedor flexible se desborde.</li>
+                                <li>wrap: Los elementos flexibles se dividen en varias líneas.</li>
+                                <li>wrap-reverse: Se comporta igual que wrap pero el inicio y el final están permutados.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>flex-direction: nowrap | wrap | wrap-reverse</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </article>
+                <article class="article">
+                    <header>
+                        <h2>Parte 2: Alineamiento</h2>
+                    </header>
+                    <ul class="list-style">
+                        <li><strong>justify-content:</strong> define la distribucion del espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.Valores: 
+                            <ul>
+                                <li>flex-start: Los items flex se colocan comenzando desde el inicio del eje principal.</li>
+                                <li>flex-end: Los items flex se colocan comenzando desde el final del eje principal.</li>
+                                <li>space-between: Los items flex se distribuyen uniformemente sobre la línea, pero no hay espacio vacío anterior al primer item y posterior al último item.</li>
+                                <li>space-around: Los items flex se distribuyen uniformemente sobre la línea, el espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>justify-content: flex-start | flex-end | space-between | space-around</dd>
+                            </dl>
+                        </li>
+                        <li><strong>align-content:</strong> ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.Valores: 
+                            <ul>
+                                <li>flex-start: Las líneas son ajustadas a partir del inicio del eje transversal.</li>
+                                <li>flex-end: Las líneas son ajustadas a partir del final del eje transversal.</li>
+                                <li>center: Las líneas son ajustadas hacia el centro del contenedor flexible.</li>
+                                <li>space-between: Los items flex se distribuyen uniformemente sobre el contenedor, pero los bordes transversales de inicio y de fin del contenedor se unen a los bordes del primero y ultimo item.</li>
+                                <li>space-around: Los items flex se distribuyen uniformemente sobre la línea, el espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.</li>
+                                <li>stretch: Los items son estirados para usar el espacio sobrante.</li>
+                            </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>justify-content: flex-start | flex-end | space-between | space-around</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <aside class="aside">
+                <ul class="list-aside">
+                    <li><a href="https://sedarmek.github.io/cursoCss2020/" target="_blank">Css</a></li>
+                    <li><a href="https://sedarmek.github.io/curso-html-2020/" target="_blank">Curso Html 2020</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer class="footer">Seda CV</footer>
+    </div>
 </body>
 </html>
