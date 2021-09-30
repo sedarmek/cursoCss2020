@@ -34,115 +34,14 @@ PARTE 3 REPARTIMIENTO(TAMANIO)
         order: establece que orden ocupara el elemento respecto al peso de los otros elementos.
 */
 /*align-items*/
-.container, .container-2{
-    background-color: salmon;
-    width: 250px;
-    height: 150px;
-    margin: 10px;
-    padding: 5px;
-    display:flex;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
+.container-flex{
+    background-color: red;
+    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-.children{
-    background-color: #e25858;
-    width: 30px;
-    margin: 5px;
-    text-align: center;
-    line-height: 25px;
-}
-/*align-content*/
-.container-2{
+    justify-content: center;
     align-content: center;
+    flex: 1 1 1em;
 }
-/*Baseline y align-self*/
-.container-3{
-    display: flex;
-    align-items: baseline;
-    border: 3px solid blueviolet;
-    height: 300px;
-}
-.childrens{
-    width: 200px;
-    height: 200px;
-}
-.childrens:first-child{
-    background-color: #ce6464;
-    line-height: 20px;
-}
-.childrens:nth-child(2){
-    background-color: #a56ed8;
-    line-height: 10px;
-    align-self: center;
-}
-.childrens:nth-child(3){
-    background-color: burlywood;
-    line-height: 25px;
-}
-.childrens:nth-child(4){
-    background-color: cadetblue;
-    line-height: 15px;
-}
-.childrens:last-child{
-    background-color: #416d48;
-    line-height: 40px;
-}
-/*Parte 3 flex-grow*/
-.container-4{
-    background-color: #8e8ee6;
-    display: flex;
-    width: 300px;
-    height: 50px;
-}
-.hijos{
-    background-color: #6464c7;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #262664;
-    text-align: center;
-    line-height: 25px;
-}
-.hijos:first-child{
-    flex-grow: 1;
-}
-.hijos:nth-child(2){
-    flex-grow: 2;
-}
-.hijos:last-child{
-    flex-grow: 3;
-}
-/*flex-shrink*/
-.container-5{
-    background-color: #8e8ee6;
-    display: flex;
-    width: 300px;
-    height: 50px;
-}
-.hijos2{
-    background-color: #6464c7;
-    width: 100px;
-    height: 25px;
-    border: 1px solid #262664;
-    text-align: center;
-    line-height: 25px;
-}
-.hijos2:first-child{
-    /* flex-shrink: 1;
-    flex-basis: auto;*/
-    order: 3; 
-    flex: 0 2 auto;
-}
-.hijos2:nth-child(2){
-    order: 1;
-    /* flex-shrink: 2; */
-    flex: 0 2 auto;
-}
-.hijos2:last-child{
-    /* flex-basis: 100px;
-    flex-shrink: 1; */
-    order: 2;
-    flex: 0 1 100px;
+.items-flex{
+    background-color: #2bd89e;
 }
