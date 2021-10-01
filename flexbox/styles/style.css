@@ -34,14 +34,50 @@ PARTE 3 REPARTIMIENTO(TAMANIO)
         order: establece que orden ocupara el elemento respecto al peso de los otros elementos.
 */
 /*align-items*/
-.container-flex{
-    background-color: red;
-    display: flex;
-    flex-flow: row wrap;
+.container-ej{
+    height: 10em;
+    padding: 0.2em;
+    grid-gap: 1em;
+    grid-auto-flow: column;
     justify-content: center;
     align-content: center;
-    flex: 1 1 1em;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 100%;
 }
-.items-flex{
+.container-flex-1{
+    background-color: #478d64;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-content: stretch;
+}
+.container-flex-2{
+    background-color: #478d64;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-content: stretch;
+}
+.container-flex-1 > .items-flex{
     background-color: #2bd89e;
+    display: grid;
+    align-content: center;
+    margin: 0.2em;
+    flex: 0 1 3em;
+}
+.container-flex-2 > .items-flex{
+    background-color: #2bd89e;
+    display: grid;
+    align-content: center;
+    margin: 0.2em;
+    flex: 0 1 2em;
+}
+.container-flex-1 footer, .container-flex-2 footer{
+    background-color: #00000063;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }

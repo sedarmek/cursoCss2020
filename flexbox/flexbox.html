@@ -120,7 +120,7 @@
                         <h2>Parte 3: Repartimiento y tamaño</h2>
                     </header>
                     <ul class="list-style">
-                        <li><strong>flex:</strong> es una propiedad short-hand que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible.</li>
+                        <li><strong>flex:</strong> es una propiedad short-hand que indica la capacidad de un item flexible para alterar sus dimensiones y llenar el espacio disponible.</li>
                         <li><strong>flex-grow:</strong> establece el factor de crecimiento flexible de un elemento flexible.El valor es un numero entero.
                             <dl class="dictionary-style">
                                 <dt>Sintaxis:</dt>
@@ -148,14 +148,58 @@
                     </ul>
                 </article>
                 <div class="container-ej">
-                    <div class="container-flex">
+                    <div class="container-flex-1">
                         <div class="items-flex">1</div>
                         <div class="items-flex">2</div>
                         <div class="items-flex">3</div>
                         <div class="items-flex">4</div>
                         <div class="items-flex">5</div>
+                        <div class="items-flex">6</div>
+                        <div class="items-flex">7</div>
+                        <div class="items-flex">8</div>
+                        <div class="items-flex">9</div>
+                        <div class="items-flex">10</div>
+                        <footer>Contenedor flex 1</footer>
+                    </div>
+                    <div class="container-flex-2">
+                        <div class="items-flex">1</div>
+                        <div class="items-flex">2</div>
+                        <div class="items-flex">3</div>
+                        <div class="items-flex">4</div>
+                        <div class="items-flex">5</div>
+                        <div class="items-flex">6</div>
+                        <div class="items-flex">7</div>
+                        <div class="items-flex">8</div>
+                        <div class="items-flex">9</div>
+                        <div class="items-flex">10</div>
+                        <footer>Contenedor flex 2</footer>
                     </div>
                 </div>
+                <footer class="footer-article">
+                    <pre>
+                        <code>
+                            Codigo:
+                            .container-flex-1{
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: start;
+                                align-content: stretch;
+                            }
+                            .container-flex-1 > .items-flex{
+                                flex: 0 1 3em;
+                            }
+                            .container-flex-2{
+                                display: flex;
+                                flex-flow: column wrap;
+                                justify-content: start;
+                                align-content: stretch;
+                            }
+                            .container-flex-2 > .items-flex{
+                                flex: 0 1 2em;
+                            }
+                        </code>
+                    </pre>
+                </footer>
             </section>
             <aside class="aside">
                 <ul class="list-aside">
