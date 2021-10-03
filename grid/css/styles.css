@@ -1,42 +1,43 @@
 /*
 GRID
+
 PARTE 1: Medidas de items
-    grid: shorthand que engloba las propiedades grid(no tiene soporte total,no se suele usar)
-    grid-template:  shorthand que engloba grid-template-columns,grid-template-rows y grid-template-areas
-            "header header header" 100px
-            "aside section section" 500px
-            "footer footer footer" 80px /
-            repeat(3,1fr);
+grid: shorthand que engloba las propiedades grid(no tiene soporte total,no se suele usar)
+grid-template:  shorthand que engloba grid-template-columns,grid-template-rows y grid-template-areas
+"header header header" 100px
+"aside section section" 500px
+"footer footer footer" 80px /
+repeat(3,1fr);
     grid-template-columns: sirve para declara el tamanio y el numero de columnas explicitamente, ademas de las lineas de columna.
     grid-template-rows: sirve para declara el tamanio y el numero de filas explicitamente, ademas de las lineas de fila.
     grid-auto-columns: establece que hacer con las columnas no definidas implicitamente.
     grid-auto-rows: estable que hacer con las filas no definidas implicitamente.
-
-        Valores para tamaños
-            fr: indica las divisiones que recibira cada elemento hijo
-            auto: genera el tamanio minimo de acuerdo al contenido del elemento hijo
-            repeat(x, y z): repite un patron de medidas, donde X es el numero de repeticiones, e Y Z son medidas del patron.
-            minmax(): recibe dos parametros, el minimo y maximo que pueden tener los items
-            min-content: minimo necesario en funcion del contenido
-            max-content: maximo necesario en funcion del contenido
-            auto-fill: crea tantos grid-items vacios quepan en el viewport respetando la medida.
-            auto-fit: elimina los grid-items vacios que no se esten ocupando.
     
-PARTE 2: Nombre de lineas y medidas de separaciones
+    Valores para tamaños
+    fr: indica las divisiones que recibira cada elemento hijo
+    auto: genera el tamanio minimo de acuerdo al contenido del elemento hijo
+    min-content: minimo necesario en funcion del contenido
+    max-content: maximo necesario en funcion del contenido
+    auto-fill: crea tantos grid-items vacios quepan en el viewport respetando la medida.
+    auto-fit: elimina los grid-items vacios que no se esten ocupando.
+    repeat(x, y z): repite un patron de medidas, donde X es el numero de repeticiones, e Y Z son medidas del patron.
+    minmax(): recibe dos parametros, el minimo y maximo que pueden tener los items
+    fit-content(): 
+    
+    PARTE 2: Nombre de lineas y medidas de separaciones
     gri-gap: shorthand.
     grid-column-gap: sirve para declarar la separacion entre las columnas
     grid-row-gap: sirve para declarar la separacion entre las filas
-
+    
     grid-column: shorthand que indica la line-column de inicio y del final de cada elemento.
-        line-column-start
-        line-column-end
+    line-column-start
+    line-column-end
     grid-row: shorthand que indica la line-row de inicio y del final de cada elemento hijo.
-        line-row-start
-        line-row-end
-
-
-PARTE 3: Direccion
-        gris-auto-flow: establece la direccion en la cual se pinta el implicid grid
+    line-row-start
+    line-row-end
+    
+PARTE 3: Direccion de flujo
+        grid-auto-flow: establece la direccion en la cual se pinta el implicid grid
             row: se crearan filas adicionales
             column: se crearan columnas adicionales
             dense: establece que hacer con los huecos que deden
@@ -55,6 +56,7 @@ PARTE 4: Alineamiento
             align-self
 
         order: 0
+    
 */
 
 /*Parte 1*/
@@ -63,7 +65,7 @@ PARTE 4: Alineamiento
     align-content: center;
 }
 .container-grid-1{
-    background-color: #0000ff86;
+    background-color: #0000ff1f;
     margin: 1em;
     padding: 0.5em;
     display: grid;
@@ -75,20 +77,9 @@ PARTE 4: Alineamiento
     grid-row-gap: .1em;
 }
 .item-grid{
-    background-color: #ff000077;
+    background-color: #ff00004b;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 0.2em solid #857474b6;
 }
-/*Parte 2 grid lines (numbers)*/
-
-/*Parte 3*/
-
-/*implicid grid*/
-
-/*min max*/
-
-/*alineamiento*/
-
-/*grid lines*/

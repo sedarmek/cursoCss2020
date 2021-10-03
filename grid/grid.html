@@ -24,10 +24,57 @@
                     </header>
                     <ul class="list-style">
                         <li><strong>grid: </strong>engloba las propiedades grid,pero no se suele usar ya que no tiene soporte total.</li>
-                        <li><strong>grid-template: </strong>shorthand que engloba grid-template-columns,grid-template-rows y grid-template-areas</li>
-                        <li><strong>grid-template-columns: </strong>define el tamaño y numero de columnas.</li>
-                        <li><strong>grid-template-rows: </strong>define el tamaño y numero de filas.</li>
+                        <li><strong>grid-template: </strong>shorthand que engloba grid-template-columns,grid-template-rows y grid-template-areas
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-template: [grid-areas | grid-template-rows] / grid-template-columns</dd>
+                            </dl>
                         </li>
+                        <li><strong>grid-template-areas: </strong>define el nombre de los items,el numero de columnas(contando los items dentro de las comillas) y el numero de filas(contando las cadenas de texto con comillas) usando una cadena de texto dentro de comillas dobles.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-template-areas: "nombre"</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-template-columns: </strong>forma explicita que define el nombre de las lineas, el tamaño y numero de columnas.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-template-columns: [line-name-column] valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-template-rows: </strong>forma explicita que define el nombre de las lineas, el tamaño y numero de filas.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-template-rows: [line-name-row] valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-auto-columns: </strong>forma implicita que define el tamaño de las columnas.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-auto-columns: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-auto-rows: </strong>forma implicita que define el tamaño de las filas.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-auto-rows: valor</dd>
+                            </dl>
+                        </li>
+                        <ul>
+                            <li><strong>Valores: </strong>
+                                <ul>
+                                    <li>fr: indica las divisiones que recibira cada elemento hijo</li>
+                                    <li>auto: genera el tamanio minimo de acuerdo al contenido del elemento hijo</li>
+                                    <li>min-content: minimo necesario en funcion del contenido</li>
+                                    <li>max-content: maximo necesario en funcion del contenido</li>
+                                    <li>auto-fill: crea tantos grid-items vacios quepan en el viewport respetando la medida.</li>
+                                    <li>auto-fit: elimina los grid-items vacios que no se esten ocupando</li>
+                                    <li>repeat(x, y z): repite un patron de medidas, donde X es el numero de repeticiones, e Y Z son medidas del patron.</li>
+                                    <li>minmax(min,max): recibe dos parametros, el minimo y maximo que pueden tener los items</li>
+                                    <li>fit-content()</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </ul>
                     <div class="container-ej">
                         <div class="container-grid-1">
