@@ -24,17 +24,17 @@ repeat(3,1fr);
     minmax(): recibe dos parametros, el minimo y maximo que pueden tener los items
     fit-content(): 
     
-    PARTE 2: Nombre de lineas y medidas de separaciones
+    PARTE 2: Medidas de separaciones y Nombre de lineas
     gri-gap: shorthand.
     grid-column-gap: sirve para declarar la separacion entre las columnas
     grid-row-gap: sirve para declarar la separacion entre las filas
     
     grid-column: shorthand que indica la line-column de inicio y del final de cada elemento.
-    line-column-start
-    line-column-end
+    grid-column-start: especifica la posición inicial de un elemento tomando como referencia la line-column.
+    grid-column-end: especifica la posición final de un elemento tomando como referencia la line-column.
     grid-row: shorthand que indica la line-row de inicio y del final de cada elemento hijo.
-    line-row-start
-    line-row-end
+    grid-row-start: especifica la posición inicial de un elemento tomando como referencia la line-row.
+    grid-row-end: especifica la posición final de un elemento tomando como referencia la line-row.
     
 PARTE 3: Direccion de flujo
         grid-auto-flow: establece la direccion en la cual se pinta el implicid grid
