@@ -78,21 +78,42 @@
                     </ul>
                     <div class="container-ej">
                         <div class="container-grid-1">
-                            <div class="item-grid">Primero</div>
-                            <div class="item-grid">Segundo</div>
-                            <div class="item-grid">Tercero</div>
-                            <div class="item-grid">Cuarto</div>
-                            <div class="item-grid">Quinto</div>
-                            <div class="item-grid">Sexto</div>
-                            <div class="item-grid">Septimo</div>
-                            <div class="item-grid">Octavo</div>
+                            <div class="item-grid-1">Primero</div>
+                            <div class="item-grid-2">Segundo</div>
+                            <div class="item-grid-3">Tercero</div>
+                            <div class="item-grid-4">Cuarto</div>
+                            <div class="item-grid-5">Quinto</div>   
                         </div>
                     </div>
                     <footer class="footer-article">
                         <pre>
                             <code>
                                 Codigo:
-
+                                .container-grid-1{
+                                    display: grid;
+                                    grid-template: 
+                                    "a1 a2 a3" 1fr
+                                    "a4 a5 ." 2fr
+                                    /1fr 2fr 3fr;
+                                    grid-auto-flow: row wrap;
+                                    grid-auto-columns: 1fr;
+                                    grid-auto-rows: 1fr;
+                                }
+                                .item-grid-1{
+                                    grid-area: "a1";
+                                }
+                                .item-grid-2{
+                                    grid-area: "a2";
+                                }
+                                .item-grid-3{
+                                    grid-area: "a3";
+                                }
+                                .item-grid-4{
+                                    grid-area: "a4";
+                                }
+                                .item-grid-5{
+                                    grid-area: "a5";
+                                }
                             </code>
                         </pre>
                     </footer>
@@ -102,9 +123,24 @@
                         <h2>Parte 2: Medidas de separaciones y Nombre de lineas</h2>
                     </header>
                     <ul class="list-style">
-                        <li><strong>gri-gap: </strong>shorthand de las propiedades grid-column-gap y grid-row-gap.</li>
-                        <li><strong>grid-column-gap: </strong>define la separacion entre las columnas.</li>
-                        <li><strong>grid-row-gap: </strong>define la separacion entre las filas.</li>
+                        <li><strong>gri-gap: </strong>shorthand de las propiedades grid-column-gap y grid-row-gap.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-gap: grid-column-gap / grid-row-gap</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-column-gap: </strong>define la separacion entre las columnas.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-column-gap: longitud</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-row-gap: </strong>define la separacion entre las filas.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-row-gap: longitud</dd>
+                            </dl>
+                        </li>
                         <li><strong>grid-column: </strong>shorthand de la propiedades grid-column-start y grid-column-end.</li>
                         <li><strong>grid-column-start: </strong>especifica la posición inicial de un elemento tomando como referencia la line-column.</li>
                         <li><strong>grid-column-end: </strong>especifica la posición final de un elemento tomando como referencia la line-column.</li>
@@ -117,11 +153,21 @@
                     <header>
                         <h2>Parte 3: Direccion de flujo</h2>
                     </header>
+                    <ul class="list-style">
+                        <li><strong>grid-auto-flow: </strong>establece la direccion en la cual se posicionan los items.
+                            <ul>
+                                <li>row: se crearan filas adicionales.</li>
+                                <li>column: se crearan columnas adicionales.</li>
+                                <li>dense: establece que hacer con los huecos que queden.</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </article>
                 <article class="article">
                     <header>
                         <h2>Parte 4: Alineamiento</h2>
                     </header>
+
                 </article>
             </section>
             <aside class="aside">
