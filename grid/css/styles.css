@@ -101,3 +101,49 @@ PARTE 4: Alineamiento
 .item-grid-5{
     grid-area: "a5";
 }
+/*Parte 2*/
+.container-grid-2{
+    background-color: #0000ff1f;
+    margin: 1em;
+    padding: 0.5em;
+    margin: 1em;
+    padding: 0.5em;
+    display: grid;
+    grid-gap: 0.5em 1em;
+    grid-template: 1fr 2fr / 1fr 2fr 3fr 2fr;
+}
+.item-grid-2-1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.item-grid-2-2{
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+.item-grid-2-3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.item-grid-2-4{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.item-grid-2-5{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+/*Parte 3*/
+.container-grid-3{
+    background-color: #0000ff1f;
+    margin: 1em;
+    padding: 0.5em;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content:left;
+    align-content: flex-end;
+    grid-template: 1fr 2fr / 1fr 2fr 3fr;
+}
+.item-grid-3-3{
+    background-color: #39927494;
+    order: -1;
+}

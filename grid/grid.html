@@ -123,7 +123,7 @@
                         <h2>Parte 2: Medidas de separaciones y Nombre de lineas</h2>
                     </header>
                     <ul class="list-style">
-                        <li><strong>gri-gap: </strong>shorthand de las propiedades grid-column-gap y grid-row-gap.
+                        <li><strong>grid-gap: </strong>shorthand de las propiedades grid-column-gap y grid-row-gap.
                             <dl class="dictionary-style">
                                 <dt>Sintaxis:</dt>
                                     <dd>grid-gap: grid-column-gap / grid-row-gap</dd>
@@ -141,17 +141,88 @@
                                     <dd>grid-row-gap: longitud</dd>
                             </dl>
                         </li>
-                        <li><strong>grid-column: </strong>shorthand de la propiedades grid-column-start y grid-column-end.</li>
-                        <li><strong>grid-column-start: </strong>especifica la posición inicial de un elemento tomando como referencia la line-column.</li>
-                        <li><strong>grid-column-end: </strong>especifica la posición final de un elemento tomando como referencia la line-column.</li>
-                        <li><strong>grid-row: </strong>shorthand de las propiedades grid-row-start y grid-row-end.</li>
-                        <li><strong>grid-row-start: </strong>especifica la posición inicial de un elemento tomando como referencia la line-row.</li>
-                        <li><strong>grid-row-end: </strong>especifica la posición final de un elemento tomando como referencia la line-row.</li>
+                        <li><strong>grid-column: </strong>shorthand de la propiedades grid-column-start y grid-column-end.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-column: grid-column-start / grid-column-end</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-column-start: </strong>especifica la posición inicial de un elemento tomando como referencia la line-column.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-column-start: line-column</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-column-end: </strong>especifica la posición final de un elemento tomando como referencia la line-column.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-column-end: line-column</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-row: </strong>shorthand de las propiedades grid-row-start y grid-row-end.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-row: grid-row-start / grid-row-end</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-row-start: </strong>especifica la posición inicial de un elemento tomando como referencia la line-row.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-row-start: line-row</dd>
+                            </dl>
+                        </li>
+                        <li><strong>grid-row-end: </strong>especifica la posición final de un elemento tomando como referencia la line-row.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-row-end: line-row</dd>
+                            </dl>
+                        </li>
                     </ul>
+                    <div class="container-ej">
+                        <div class="container-grid-2">
+                            <div class="item-grid-2-1">Primero</div>
+                            <div class="item-grid-2-2">Segundo</div>
+                            <div class="item-grid-2-3">Tercero</div>
+                            <div class="item-grid-2-4">Cuarto</div>
+                            <div class="item-grid-2-5">Quinto</div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .container-grid-2{
+                                    display: grid;
+                                    grid-gap: 0.5em 1em;
+                                    grid-template: 1fr 2fr / 1fr 2fr 3fr 2fr;
+                                }
+                                .item-grid-2-1{
+                                    grid-column: 1/2;
+                                    grid-row: 1/3;
+                                }
+                                .item-grid-2-2{
+                                    grid-column: 2/5;
+                                    grid-row: 1/2;
+                                }
+                                .item-grid-2-3{
+                                    grid-column: 2/3;
+                                    grid-row: 2/3;
+                                }
+                                .item-grid-2-4{
+                                    grid-column: 3/4;
+                                    grid-row: 2/3;
+                                }
+                                .item-grid-2-5{
+                                    grid-column: 4/5;
+                                    grid-row: 2/3;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
                 </article>
                 <article class="article">
                     <header>
-                        <h2>Parte 3: Direccion de flujo</h2>
+                        <h2>Parte 3: Direccion de flujo y alineamiento</h2>
                     </header>
                     <ul class="list-style">
                         <li><strong>grid-auto-flow: </strong>establece la direccion en la cual se posicionan los items.
@@ -160,14 +231,91 @@
                                 <li>column: se crearan columnas adicionales.</li>
                                 <li>dense: establece que hacer con los huecos que queden.</li>
                             </ul>
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>grid-auto-flow: row | column | dense</dd>
+                            </dl>
+                        </li>
+                        <li><strong>justify-items: </strong>alinea los elementos horizontalmente respecto a la celda.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>justify-items: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>align-items: </strong>alinea los elementos verticalmente respecto a la celda.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>align-items: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>justify-content: </strong>alinea los elementos horizontalmente respecto al contenedor.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>justify-content: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>align-content: </strong>alinea los elemetos verticalmente respecto al contenedor.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>align-content: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>justify-self: </strong>alinea los elementos horizontalmente respecto a la celda, esta propiedad se establece en el item especifico.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>justify-self: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>align-self: </strong>alinea los elementos verticalmente respecto a la celda, esta propiedad se establece en el item especifico.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>align-self: valor</dd>
+                            </dl>
+                        </li>
+                        <li><strong>Valores basicos:</strong>
+                            <ul>
+                                <li>left: alineacion a la izquierda</li>
+                                <li>right: alineacion a la derecha</li>
+                                <li>center: alinacion al centro</li>
+                            </ul>
+                        </li>
+                        <li><strong>order: </strong>establece el orden de alineamiento, independientemente del orden establecido en el documento html.
+                            <dl class="dictionary-style">
+                                <dt>Sintaxis:</dt>
+                                    <dd>order: numero</dd>
+                            </dl>
                         </li>
                     </ul>
-                </article>
-                <article class="article">
-                    <header>
-                        <h2>Parte 4: Alineamiento</h2>
-                    </header>
-
+                    <div class="container-ej">
+                        <div class="container-grid-3">
+                            <div class="item-grid-3-1">Primero</div>
+                            <div class="item-grid-3-2">Segundo</div>
+                            <div class="item-grid-3-3">Tercero</div>
+                            <div class="item-grid-3-4">Cuarto</div>
+                            <div class="item-grid-3-5">Quinto</div>
+                        </div>
+                    </div>
+                    <footer class="footer-article">
+                        <pre>
+                            <code>
+                                Codigo:
+                                .container-grid-3{
+                                    background-color: #0000ff1f;
+                                    margin: 1em;
+                                    padding: 0.5em;
+                                    display: grid;
+                                    grid-auto-flow: row;
+                                    justify-content:left;
+                                    align-content: flex-end;
+                                    grid-template: 1fr 2fr / 1fr 2fr 3fr;
+                                }
+                                .item-grid-3-3{
+                                    background-color: #39927494;
+                                    order: -1;
+                                }
+                            </code>
+                        </pre>
+                    </footer>
                 </article>
             </section>
             <aside class="aside">
